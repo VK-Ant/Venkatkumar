@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venkatkumar (VK)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="icon" href="assets/icon2.png">
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-blue-600">Venkatkumar (VK)</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition">About</a>
+                    <a href="#education" class="text-gray-700 hover:text-blue-600 transition">Education</a>
+                    <a href="#skills" class="text-gray-700 hover:text-blue-600 transition">Skills</a>
+                    <a href="#publications" class="text-gray-700 hover:text-blue-600 transition">Publications / Certifications</a>
+                    <a href="#projects" class="text-gray-700 hover:text-blue-600 transition">Projects</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+            <div class="px-4 pt-2 pb-4 space-y-3">
+                <a href="#home" class="block text-gray-700 hover:text-blue-600 transition">Home</a>
+                <a href="#about" class="block text-gray-700 hover:text-blue-600 transition">About</a>
+                <a href="#education" class="block text-gray-700 hover:text-blue-600 transition">Education</a>
+                <a href="#skills" class="block text-gray-700 hover:text-blue-600 transition">Skills</a>
+                <a href="#publications" class="block text-gray-700 hover:text-blue-600 transition">Publications / Certifications</a>
+                <a href="#projects" class="block text-gray-700 hover:text-blue-600 transition">Projects</a>
+                <a href="#contact" class="block text-gray-700 hover:text-blue-600 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="w-full md:w-1/2 text-white mb-8 md:mb-0">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
+                        Hi folks, I'm<span class="text-blue-500">Venkatkumar R</span>
+                    </h1>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-medium mb-6">
+                        <span id="typed-text"></span>
+                        <span class="typed-cursor">|</span>
+                    </h2>
+                    <p class="text-gray-300 mb-8 text-lg">
+                          
+                    My vision is to advance the frontiers of artificial intelligence through innovative research, developing cutting-edge solutions that address real-world challenges and drive meaningful impact by transforming data into actionable insights and intelligent systems.
+
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition duration-300">
+                            Contact Me
+                        </a>
+                        <a href="assets/Venkatkumar_Genai.pdf" download class="border border-white text-white hover:bg-white hover:text-blue-600 font-medium py-2 px-6 rounded-full transition duration-300">
+                            Download Resume
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <img src="assets/main_imresizer.png" alt="Your Profile" class="rounded-full w-64 h-64 object-cover border-4 border-blue-500 shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- About Section -->
+<section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-2">About Me</h2>
+        <div class="w-16 h-1 bg-blue-600 mx-auto"></div>
+      </div>
+      <!-- Main content with everything centered -->
+      <div class="flex flex-col items-center justify-center max-w-3xl mx-auto text-center">
+        <p class="text-gray-700 mb-4">
+          Hello! I'm an Generative AI Engineer with an M.Tech in Artificial Intelligence and Machine Learning from BITS Pilani. Currently, I'm shaping innovative AI solutions as a Generative AI Engineer at EXL Service, building end-to-end systems that drive efficiency and transform business processes.
+        </p>
+        <p class="text-gray-700 mb-4">
+          I take pride in being a Kaggle Master and 3x Kaggle Expert across Notebooks, Competitions, and Datasets, with 50+ accolades recognizing my contributions to the global data science community. My hands-on experience with Nvidia Jetson AGX and Raspberry Pi has enabled me to deploy AI-driven applications across industrial automation and quality assurance.
+        </p>
+        <p class="text-gray-700 mb-6">
+          My passion for AI research has led me to publish multiple research papers and explore advanced topics like 3D computer vision, MLOps, and self-driving car technologies. As I continue to push the boundaries of innovation, I remain committed to solving real-world challenges and shaping the future of artificial intelligence. 🌐
+        </p>
+        <!-- Contact information in centered layout -->
+        <div class="flex flex-col gap-4 items-center">
+          <div class="bg-gray-100 px-6 py-3 rounded-lg w-90 text-center">
+            <p class="font-medium">Email</p>
+            <p class="text-gray-700">venkatkumarr.vk99@gmail.com</p>
+          </div>
+          
+          <!-- Social Media Links -->
+          <div class="flex gap-4 my-4">
+            <!-- Kaggle -->
+            <a href="https://www.kaggle.com/venkatkumar001" target="_blank" rel="noopener noreferrer" class="group">
+                <div class="bg-gray-100 hover:bg-blue-500 p-4 rounded-full transition-all duration-300 shadow-md group-hover:shadow-lg">
+                    <i class="fab fa-kaggle text-2xl text-blue-500 group-hover:text-white"></i>
+                </div>
+                <p class="mt-2 text-center text-gray-700">Kaggle</p>
+            </a>
+            
+            <!-- Medium -->
+            <a href="https://medium.com/@VK_Venkatkumar" target="_blank" rel="noopener noreferrer" class="group">
+                <div class="bg-gray-100 hover:bg-black p-4 rounded-full transition-all duration-300 shadow-md group-hover:shadow-lg">
+                    <i class="fab fa-medium text-2xl text-black group-hover:text-white"></i>
+                </div>
+                <p class="mt-2 text-center text-gray-700">Medium</p>
+            </a>
+            <!-- GitHub -->
+            <a href="https://github.com/VK-Ant" target="_blank" rel="noopener noreferrer" class="group">
+                <div class="bg-gray-100 hover:bg-gray-800 p-4 rounded-full transition-all duration-300 shadow-md group-hover:shadow-lg">
+                    <i class="fab fa-github text-2xl text-gray-800 group-hover:text-white"></i>
+                </div>
+                <p class="mt-2 text-center text-gray-700">GitHub</p>
+            </a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-2">EDUCATION</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Education Item 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-all hover:shadow-xl">
+                    <div class="flex flex-col items-center mb-6">
+                        <img src="assets/bits_mtech.png" alt="BITS Pilani Logo" class="h-20 mb-4">
+                        <div class="text-center">
+                            <h3 class="text-xl font-bold mb-2">Master of Technology in Artificial Intelligence & Machine Learning</h3>
+                            <p class="text-gray-500 font-medium">2023 - 2025</p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-gray-700 mb-4">
+                            Birla Institute of Technology and Science, Pilani
+                        </p>
+                        <div class="mt-4 text-sm text-gray-600">
+                            
+                            <p><strong>Relevant Coursework:</strong> Statistics, Probability, Deep learning, Deep Reinforcement learning, Probabilistic Generative Models, Graph Neural Network, Video Analytics, Social Media Analytics, Distributed Machine learning </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Item 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-all hover:shadow-xl">
+                    <div class="flex flex-col items-center mb-6">
+                        <img src="assets/anna_ug.png" alt="Anna University Logo" class="h-20 mb-4">
+                        <div class="text-center">
+                            <h3 class="text-xl font-bold mb-2">Bachelor of Technology in Electronics & Communication Engineering</h3>
+                            <p class="text-gray-500 font-medium">2016 - 2020</p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-gray-700 mb-4">
+                            Anna University
+                        </p>
+                        <div class="mt-4 text-sm text-gray-600">
+                            <p><strong>Relevant Coursework:</strong> Data Structures, Algorithms, Digital Signal Processing, Digital Image Processing, Signals & Systems, Embedded Systems, Electronics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   <!-- Skills Section - Refined -->
+    <section id="skills" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-2">My Skills</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Programming Languages -->
+                <div class="bg-gray-900 border border-blue-500 rounded-lg p-6 hover:border-blue-400 transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="text-blue-500 mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold">Programming Languages</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mt-4">
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Python</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">C++</div>
+                    </div>
+                </div>
+
+                <!-- AI Frameworks -->
+                <div class="bg-gray-900 border border-blue-500 rounded-lg p-6 hover:border-blue-400 transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="text-blue-500 mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold">AI Frameworks</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mt-4">
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">TensorFlow</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">PyTorch</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">PyTorch Lightning</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Fastai</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">OpenCV</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Kornia</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Gym</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">PySpark</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Prophet</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">NetworkX</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">PyG</div>
+                    </div>
+                </div>
+
+                <!-- Backend & Deployment -->
+                <div class="bg-gray-900 border border-blue-500 rounded-lg p-6 hover:border-blue-400 transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="text-blue-500 mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold">Backend & Deployment</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mt-4">
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">FastAPI</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Flask</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Docker</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Kubernetes</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Kubeflow</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">MLflow</div>
+                    </div>
+                </div>
+
+                            <!-- Frontend Development -->
+                            <div class="bg-gray-900 border border-blue-500 rounded-lg p-6 hover:border-blue-400 transition-all duration-300">
+                                <div class="flex items-center mb-6">
+                                    <div class="text-blue-500 mr-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-xl font-bold">Frontend Development</h3>
+                                </div>
+                                <div class="grid grid-cols-2 gap-2 mt-4">
+                                    <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">HTML</div>
+                                    <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">CSS</div>
+                                    <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Tailwind CSS</div>
+                                    <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Streamlit, Gradio, Taipy (Cross-Platform)</div>
+                                </div>
+                            </div>
+                
+
+                <!-- Cloud Platforms -->
+                <div class="bg-gray-900 border border-blue-500 rounded-lg p-6 hover:border-blue-400 transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="text-blue-500 mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold">Cloud Platforms - AI Service</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mt-4">
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Azure</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">AWS</div>
+                    </div>
+                </div>
+
+                <!-- Database -->
+                <div class="bg-gray-900 border border-blue-500 rounded-lg p-6 hover:border-blue-400 transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="text-blue-500 mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold">Database</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mt-4">
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">MongoDB</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">MySQL</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">SQLite</div>
+                    </div>
+                </div>
+
+                <!-- Edge Computing -->
+                <div class="bg-gray-900 border border-blue-500 rounded-lg p-6 hover:border-blue-400 transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="text-blue-500 mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold">Edge Computing</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mt-4">
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Nvidia Jetson AGX</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Raspberry Pi</div>
+                    </div>
+                </div>
+
+                <!-- Data Visualization -->
+                <div class="bg-gray-900 border border-blue-500 rounded-lg p-6 hover:border-blue-400 transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="text-blue-500 mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 13v-1m4 1v-3m4 3V8M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold">Data Visualization & Automation</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mt-4">
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">PowerBI</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Tableau</div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mt-4">
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Power App</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Power Automation</div>
+                    </div>
+                </div>
+
+
+
+                <!-- GenAI Frameworks -->
+                <div class="bg-gray-900 border border-blue-500 rounded-lg p-6 hover:border-blue-400 transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="text-blue-500 mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold">GenAI Frameworks</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mt-4">
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Langchain</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Docling</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">LLamaIndex</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">PandasAI</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Groq</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Ollama</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">CrewAI</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Ragas</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">LLMOps</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Phidata</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Autogen</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Langflow</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Langgraph</div>
+                        <div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">TimeGPT</div>
+                    </div>
+                </div>
+                
+                <!-- Experience Summary -->
+                <div class="bg-gray-900 border border-blue-500 rounded-lg p-6 hover:border-blue-400 transition-all duration-300 md:col-span-2 lg:col-span-3">
+                    <div class="flex items-center mb-6 justify-center">
+                        <div class="text-blue-500 mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold">Experience Summary</h3>
+                    </div>
+                    <p class="text-blue-400 text-center mt-2 px-4 py-3 border border-blue-800 rounded bg-gray-900">
+                        Experienced in end-to-end implementation of text, image, audio and financial data, with a strong background in deep learning, machine learning, reinforcement learning, and graph neural networks (GNN) from academic research.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Publications Section - Matching Certifications Style -->
+    <section id="publications" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-2">Publications</h2>
+            <div class="w-16 h-1 bg-blue-600 mx-auto"></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Publication 1 -->
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+              <div class="flex items-center mb-4">
+                <img src="assets/arxiv.png" alt="arXiv" class="w-12 h-12 mr-4">
+                <h3 class="text-xl font-bold">3D Reconstruction from Text</h3>
+              </div>
+              <p class="text-gray-700 mb-2">arXiv (March 2025)</p>
+              <p class="text-gray-600 text-sm mb-4">A Generative Approach to High Fidelity 3D Reconstruction from Text Data</p>
+              <a href="https://arxiv.org/abs/2503.03664v1" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
+                Read Paper <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+            
+            <!-- Publication 2 -->
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+              <div class="flex items-center mb-4">
+                <img src="assets/ieee.png" alt="IEEE" class="w-12 h-12 mr-4">
+                <h3 class="text-xl font-bold">Audio Fingerprinting with AI</h3>
+              </div>
+              <p class="text-gray-700 mb-2">IEEE Conference Proceedings (Feb 2024)</p>
+              <p class="text-gray-600 text-sm mb-4">Advancing Audio Fingerprinting Accuracy with AI and ML: Addressing Background Noise and Distortion Challenges</p>
+              <a href="https://ieeexplore.ieee.org/document/10475656" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
+                Read Paper <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+            
+            <!-- Publication 3 -->
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+              <div class="flex items-center mb-4">
+                <img src="assets/IRJET.jpg" alt="IRJIET" class="w-12 h-12 mr-4">
+                <h3 class="text-xl font-bold">PCB Layout with CNC Machine</h3>
+              </div>
+              <p class="text-gray-700 mb-2">IRJIET (March 2020)</p>
+              <p class="text-gray-600 text-sm mb-4">Implementation of PCB Layout using CNC Machine Controlling with Wireless Communication</p>
+              <a href="https://irjiet.com/Volume-4/Issue-3-March-2020/Implementation-of-PCB-Layout-using-CNC-Machine-Controlling-with-Wireless-Communication/191" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
+                Read Paper <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    
+      
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-2">Certifications</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Certification 1 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/tf.png" alt="Google" class="w-12 h-12 mr-4">
+                        <h3 class="text-xl font-bold">TensorFlow Developer Certification</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Issued: October 2023</p>
+                    <p class="text-gray-600 text-sm mb-4">Expires: October 2026</p>
+
+                    <a href="https://www.credential.net/9c379562-5cb7-4b74-ba3a-da4ca9679d52#acc.hBYuWCwe" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
+                        View Credential <i class="fas fa-external-link-alt ml-1"></i>
+                    </a>
+                </div>
+                
+                <!-- Certification 2 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/nvidia.jpeg" alt="Nvidia" class="w-12 h-12 mr-4">
+                        <h3 class="text-xl font-bold">Nvidia Jetson AI Specialist</h3>
+                    </div>
+                    <p class="text-gray-700 mb-2">Nvidia Deep learning Institute</p>
+                    <p class="text-gray-600 text-sm mb-4">Issued: March 2023</p>
+                    <a href="https://drive.google.com/file/d/121XQ28MHbITebsopndSsV3Ry6d_plOcI/view?usp=sharing" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
+                        View Credential <i class="fas fa-external-link-alt ml-1"></i>
+                    </a>
+                </div>
+                
+                <!-- Certification 3 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/microsoft-certified-fundamentals-badge.svg" alt="Microsoft Azure" class="w-12 h-12 mr-4">
+                        <h3 class="text-xl font-bold"> Microsoft Certified: Azure AI Fundamentals</h3>
+                    </div>
+                    <p class="text-gray-700 mb-2">Microsoft Azure </p>
+                    <p class="text-gray-600 text-sm mb-4">Issued: April 2024</p>
+                    <a href="https://learn.microsoft.com/en-us/users/venkatkumarr-3905/credentials/39aa1df6ddf3610a?ref=https%3A%2F%2Fwww.linkedin.com%2F" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
+                        View Credential <i class="fas fa-external-link-alt ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Udacity Nanodegree Section -->
+<section id="nanodegrees" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-2">Udacity Nanodegree</h2>
+        <div class="w-16 h-1 bg-blue-600 mx-auto"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Nanodegree 1 -->
+            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <div class="flex items-center mb-6">
+                <img src="assets/udacity.png" alt="Udacity" class="w-16 h-16 mr-4">
+                <h3 class="text-2xl font-bold"> Self Driving Car Engineer</h3>
+                </div>
+                <p class="text-gray-700 mb-4">Waymo: Work on the future of autonomous vehicles and help make the self-driving car revolution a reality!</p>
+                <div class="flex items-center text-gray-600 mb-6">
+                <i class="far fa-calendar-alt mr-2"></i>
+                <p class="text-sm">Issued: January 2025</p>
+                </div>
+                <div class="flex flex-wrap gap-2 mb-6">
+                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Computer Vision</span>
+                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Sensor fusion</span>
+                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Localization</span>
+                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Planning</span>
+                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Control</span>
+                </div>
+                <a href="https://www.udacity.com/certificate/e/e01bebb4-a8e7-11ef-a775-4bbfc380b4ae" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+                View Credential <i class="fas fa-external-link-alt ml-1"></i>
+                </a>
+            </div>
+            
+
+                <!-- Nanodegree 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <div class="flex items-center mb-6">
+                      <img src="assets/udacity.png" alt="Udacity" class="w-16 h-16 mr-4">
+                      <h3 class="text-2xl font-bold">Introduction to Self-Driving Cars</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Waymo: Learn the essentials of building a self-driving car, including probability, C++, machine learning, and linear algebra.
+                  </p>
+                    <div class="flex items-center text-gray-600 mb-6">
+                      <i class="far fa-calendar-alt mr-2"></i>
+                      <p class="text-sm">Issued: November 2024</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                      <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Bayesian Thinking</span>
+                      <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Working with Matrices</span>
+                      <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">C++ Basics & Performance Programming in C++</span>
+                      <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Vehicle Motion and Control</span>
+                      <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Computer vision and Machine learning</span>
+                    </div>
+                    <a href="https://www.udacity.com/certificate/e/f8fbb5f8-9819-11ef-9b0a-e71392cf5d82" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+                      View Credential <i class="fas fa-external-link-alt ml-1"></i>
+                    </a>
+                  </div>
+        
+
+      </div>
+    </div>
+  </section>
+
+<!-- Specializations Section -->
+<section id="specializations" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-2">Specializations</h2>
+        <div class="w-16 h-1 bg-blue-600 mx-auto"></div>
+        <p class="mt-4 text-gray-600">Advanced training and specialized certifications</p>
+
+      </div>
+      
+      <!-- First Row -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <!-- Specialization 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+          <div class="flex items-center mb-4">
+            <img src="assets/coursera.png" alt="Coursera" class="w-12 h-12 mr-4">
+            <h3 class="text-xl font-bold">Reinforcement Learning Specialization</h3>
+          </div>
+          <p class="text-gray-700 mb-2">University of Alberta</p>
+          <p class="text-gray-600 text-sm mb-4">Issued: October 2024</p>
+          <a href="https://www.coursera.org/account/accomplishments/specialization/59Y70ET9IIND" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
+            View Credential  <i class="fas fa-external-link-alt ml-1"></i>
+          </a>
+        </div>
+        <!-- Specialization 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+          <div class="flex items-center mb-4">
+            <img src="assets/coursera.png" alt="Coursera" class="w-12 h-12 mr-4">
+            <h3 class="text-xl font-bold">Self-Driving Cars</h3>
+          </div>
+          <p class="text-gray-700 mb-2">University of Toronto</p>
+          <p class="text-gray-600 text-sm mb-4">Issued: June 2024</p>
+          <a href="https://www.coursera.org/account/accomplishments/specialization/4AAX5DDXSXRB" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
+            View Credential  <i class="fas fa-external-link-alt ml-1"></i>
+          </a>
+        </div>
+        <!-- Specialization 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+          <div class="flex items-center mb-4">
+            <img src="assets/deeplearning_ai.png" alt="Coursera" class="w-12 h-12 mr-4">
+            <h3 class="text-xl font-bold">Generative AI for Software Development</h3>
+          </div>
+          <p class="text-gray-700 mb-2">Deeplearning.ai</p>
+          <p class="text-gray-600 text-sm mb-4">Issued: October 2024</p>
+          <a href="https://www.coursera.org/account/accomplishments/professional-cert/49ZX9ZSE5980" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
+            View Credential  <i class="fas fa-external-link-alt ml-1"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Second Row -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Specialization 4 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+          <div class="flex items-center mb-4">
+            <img src="assets/coursera.png" alt="Coursera" class="w-12 h-12 mr-4">
+            <h3 class="text-xl font-bold">First Principles of Computer Vision</h3>
+          </div>
+          <p class="text-gray-700 mb-2">Columbia University</p>
+          <p class="text-gray-600 text-sm mb-4">Issued: April 2023</p>
+          <a href="https://www.coursera.org/account/accomplishments/specialization/XPN47BU4ASH5" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
+            View Credential  <i class="fas fa-external-link-alt ml-1"></i>
+          </a>
+        </div>
+        <!-- Specialization 5 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+          <div class="flex items-center mb-4">
+            <img src="assets/edge.png" alt="edgeimpulse" class="w-12 h-12 mr-4">
+            <h3 class="text-xl font-bold">Computer Vision with Embedded Machine Learning</h3>
+          </div>
+          <p class="text-gray-700 mb-2">Edge Impulse</p>
+          <p class="text-gray-600 text-sm mb-4">Issued: February 2024</p>
+          <a href="https://www.coursera.org/account/accomplishments/verify/NE9Y7XC7YWPB" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
+            View Credential  <i class="fas fa-external-link-alt ml-1"></i>
+          </a>
+        </div>
+        <!-- Specialization 6 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+          <div class="flex items-center mb-4">
+            <img src="assets/deeplearning_ai.png" alt="deeplearning_ai" class="w-12 h-12 mr-4">
+            <h3 class="text-xl font-bold">Mathematics for Machine Learning and Data Science</h3>
+          </div>
+          <p class="text-gray-700 mb-2">Deeplearning.ai</p>
+          <p class="text-gray-600 text-sm mb-4">Issued: August 2023</p>
+          <a href="https://www.coursera.org/account/accomplishments/specialization/QN8KZCKATAQ2" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
+            View Credential  <i class="fas fa-external-link-alt ml-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-2">Projects</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto"></div>
+                <p class="mt-4 text-gray-600">Explore my innovative open-source projects and research explorations. for more projects, check out my <a href="https://github.com/VK-Ant" target="_blank" style="color: blue; text-decoration: underline;">GitHub</a>.</p>
+
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card hover:shadow-xl transition-all">
+                    <div class="relative">
+                        <img src="assets/p1.png" alt="Project 1" class="w-full h-48 object-cover">
+                        <div class="project-overlay absolute inset-0 bg-blue-600 bg-opacity-90 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <a href="https://vk-ant.github.io/AHIFA3D" class="inline-block bg-white text-blue-600 rounded-full p-3 mx-2 hover:bg-gray-100 transition">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                                <a href="https://github.com/VK-Ant/Text-to-3D-Reconstruction-Research" class="inline-block bg-white text-blue-600 rounded-full p-3 mx-2 hover:bg-gray-100 transition">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">A Generative Approach to High Fidelity 3D Reconstruction from Text Data</h3>
+                        <p class="text-gray-700 mb-4">I’m researching text and single-image-to-3D reconstruction using generative AI, deep learning, and reinforcement learning, focusing on high-quality 3D model generation through advanced image preprocessing and neural networks.</p>
+
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Generative AI</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">3D Computer Vision</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Reinforcement learning</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Image Processing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card hover:shadow-xl transition-all">
+                    <div class="relative">
+                        <img src="assets/cv.png" alt="Project 6" class="w-full h-48 object-cover">
+                        <div class="project-overlay absolute inset-0 bg-blue-600 bg-opacity-90 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <a href="https://github.com/VK-Ant/ComputerVision-Upgrade-Project" class="inline-block bg-white text-blue-600 rounded-full p-3 mx-2 hover:bg-gray-100 transition">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Comprehensive Computer Vision Solutions</h3>
+                        <p class="text-gray-700 mb-4">I’ve developed several computer vision-based projects, covering areas like
+                            object detection, tracking, and real-time video analysis. If you’d like to explore them, please check my complete project portfolio.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Computer Vision</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Deep Learning</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Real time computer vision solutions</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">AI</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Innovative Implementation </span>
+
+                        </div>
+                    </div>
+                </div>
+
+                   
+                <!-- Project 5 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card hover:shadow-xl transition-all">
+                    <div class="relative">
+                        <img src="assets/p5.png" alt="Project 5" class="w-full h-48 object-cover">
+                        <div class="project-overlay absolute inset-0 bg-blue-600 bg-opacity-90 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <a href="https://medium.com/@VK_Venkatkumar/face-based-attendance-system-using-nvidia-jetson-agx-xavier-device-c2502ed195d8" class="inline-block bg-white text-blue-600 rounded-full p-3 mx-2 hover:bg-gray-100 transition">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                                <a href="https://github.com/VK-Ant/AttendanceSystem-JetsonAGX" class="inline-block bg-white text-blue-600 rounded-full p-3 mx-2 hover:bg-gray-100 transition">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Face Based Attendance System using Nvidia Jetson AGX Xavier Device</h3>
+                        <p class="text-gray-700 mb-4">A face-based attendance system uses facial recognition technology to automatically verify and record attendance. this non-contact approach efficiently manages employees, especially when they’re out in the field.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Edge Device (Nvidia AGX))</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Computer Vision</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Deep learning</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Python</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card hover:shadow-xl transition-all">
+                    <div class="relative">
+                        <img src="assets/p2.png" alt="Project 2" class="w-full h-48 object-cover">
+                        <div class="project-overlay absolute inset-0 bg-blue-600 bg-opacity-90 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <a href="https://www.linkedin.com/posts/venkatkumarvk_python-pythondeveloper-deeplearning-activity-7236956878562304000-izo3?utm_source=share&utm_medium=member_desktop&rcm=ACoAADjELkEBZOB8fPE-99nNze2_2aXghAfd_4Y" class="inline-block bg-white text-blue-600 rounded-full p-3 mx-2 hover:bg-gray-100 transition">
+                                    <i class="fas fa-link"></i>
+                                </a>
+     
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Advanced Video Analytics for Vehicle Behavior Analysis</h3>
+                        <p class="text-gray-700 mb-4">My final dissertation focuses on developing a robust video analytics system for vehicle behavior analysis using the KITTI dataset, enhancing movement prediction and behavior analysis through advanced computer vision and machine learning.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Video Analytics</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Computer Vision</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Deeplearning</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">KITTI Datasets</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Image Processing</span>
+
+                        </div>
+                    </div>
+                </div>
+
+            
+                <!-- Project 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card hover:shadow-xl transition-all">
+                    <div class="relative">
+                        <img src="assets/p3.png" alt="Project 3" class="w-full h-48 object-cover">
+                        <div class="project-overlay absolute inset-0 bg-blue-600 bg-opacity-90 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <a href="https://www.linkedin.com/posts/venkatkumarvk_python-pythondeveloper-deeplearning-activity-7274068051904327682-9eCJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAADjELkEBZOB8fPE-99nNze2_2aXghAfd_4Y" class="inline-block bg-white text-blue-600 rounded-full p-3 mx-2 hover:bg-gray-100 transition">
+                                    <i class="fas fa-link"></i>
+                                </a>
+            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Advanced Real-Time Video Analysis and Recruitment Tool</h3>
+                        <p class="text-gray-700 mb-4">I developed a real-time video analysis system for eye contact, emotion, age, and gender recognition, aiming to build a data-driven recruitment tool with dynamic candidate selection and conversational AI integration.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">React Native</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Firebase</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">GraphQL</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">AWS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card hover:shadow-xl transition-all">
+                    <div class="relative">
+                        <img src="assets/p4.png" alt="Project 4" class="w-full h-48 object-cover">
+                        <div class="project-overlay absolute inset-0 bg-blue-600 bg-opacity-90 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <a href="https://www.linkedin.com/posts/venkatkumarvk_python-pythondeveloper-deeplearning-activity-7179545347281620992--sgP?utm_source=share&utm_medium=member_desktop&rcm=ACoAADjELkEBZOB8fPE-99nNze2_2aXghAfd_4Y" class="inline-block bg-white text-blue-600 rounded-full p-3 mx-2 hover:bg-gray-100 transition">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                                <a href="https://github.com/VK-Ant/PDF_CSV_VISION_DRAGGING_BASED_CHATBOT_WITH_TRANSLATOR_AUDIO_USING_GEMINIAI" class="inline-block bg-white text-blue-600 rounded-full p-3 mx-2 hover:bg-gray-100 transition">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Generative AI-Powered RAG/CAG and Knowledge Graph System</h3>
+                        <p class="text-gray-700 mb-4">I enhanced my LLM-powered image captioning tool with a follow-up question feature, providing text and audio responses in multiple languages for real-time applications like security and drone development. I also built a Generative AI-powered RAG/CAG and knowledge graph system, integrating diverse data sources for efficient information retrieval and context-based generation.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Generative AI</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Langchain</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">RAG/CAG/KnowledgeGraph/neojs</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Streamlit</span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+ 
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-2">Contact Me</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="max-w-2xl mx-auto">
+                <div class="flex flex-col items-center justify-center">
+                    <p class="text-xl text-gray-700 mb-8 text-center">
+                        Feel free to reach out to me through any of these platforms. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                    </p>
+
+                    <div class="flex flex-col gap-4 items-center">
+                        <div class="bg-gray-100 px-6 py-3 rounded-lg w-90 text-center">
+                          <p class="font-medium">Email</p>
+                          <p class="text-gray-700">venkatkumarr.vk99@gmail.com</p>
+                        </div>
+                    
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/venkatkumarvk" target="_blank" rel="noopener noreferrer" class="group">
+                            <div class="bg-gray-100 hover:bg-blue-600 p-4 rounded-full transition-all duration-300 shadow-md group-hover:shadow-lg">
+                                <i class="fab fa-linkedin-in text-2xl text-blue-600 group-hover:text-white"></i>
+                            </div>
+                            <p class="mt-2 text-center text-gray-700">LinkedIn</p>
+                        </a>
+
+                        <!-- Kaggle -->
+                        <a href="https://www.kaggle.com/venkatkumar001" target="_blank" rel="noopener noreferrer" class="group">
+                            <div class="bg-gray-100 hover:bg-blue-500 p-4 rounded-full transition-all duration-300 shadow-md group-hover:shadow-lg">
+                                <i class="fab fa-kaggle text-2xl text-blue-500 group-hover:text-white"></i>
+                            </div>
+                            <p class="mt-2 text-center text-gray-700">Kaggle</p>
+                        </a>
+                        
+                        <!-- Medium -->
+                        <a href="https://medium.com/@VK_Venkatkumar" target="_blank" rel="noopener noreferrer" class="group">
+                            <div class="bg-gray-100 hover:bg-black p-4 rounded-full transition-all duration-300 shadow-md group-hover:shadow-lg">
+                                <i class="fab fa-medium text-2xl text-black group-hover:text-white"></i>
+                            </div>
+                            <p class="mt-2 text-center text-gray-700">Medium</p>
+                        </a>
+                        <!-- GitHub -->
+                        <a href="https://github.com/VK-Ant" target="_blank" rel="noopener noreferrer" class="group">
+                            <div class="bg-gray-100 hover:bg-gray-800 p-4 rounded-full transition-all duration-300 shadow-md group-hover:shadow-lg">
+                                <i class="fab fa-github text-2xl text-gray-800 group-hover:text-white"></i>
+                            </div>
+                            <p class="mt-2 text-center text-gray-700">GitHub</p>
+                        </a>
+                        
+                        <!-- Twitter -->
+                        <a href="https://x.com/VK_VENKATKUMAR" target="_blank" rel="noopener noreferrer" class="group">
+                            <div class="bg-gray-100 hover:bg-blue-400 p-4 rounded-full transition-all duration-300 shadow-md group-hover:shadow-lg">
+                                <i class="fab fa-twitter text-2xl text-blue-400 group-hover:text-white"></i>
+                            </div>
+                            <p class="mt-2 text-center text-gray-700">Twitter</p>
+                        </a>
+                        
+                        <!-- Email -->
+                        <a href="mailto:venkatkumarr.vk99@gmail.com" class="group">
+                            <div class="bg-gray-100 hover:bg-red-500 p-4 rounded-full transition-all duration-300 shadow-md group-hover:shadow-lg">
+                                <i class="fas fa-envelope text-2xl text-red-500 group-hover:text-white"></i>
+                            </div>
+                            <p class="mt-2 text-center text-gray-700">Email</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p>&copy; 2025 VK. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
