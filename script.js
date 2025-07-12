@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Typing Animation
     const typedTextElement = document.getElementById('typed-text');
-    const textArray = ["Kaggle Master","Generative AI Engineer", "Computer Vision Engineer", "Researcher/Problem solver","AI Engineer"];
+    const textArray = ["Kaggle Master","Computer Vision Engineer", "Researcher/Problem solver","Full Stack AI Engineer"];
     let textIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
