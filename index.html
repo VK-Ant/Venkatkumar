@@ -4,477 +4,293 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Venkatkumar Rajan — Generative AI Engineer</title>
-<script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="assets/icon2.png">
 </head>
 <body>
 
-<!-- Particle canvas -->
-<canvas id="particles-canvas"></canvas>
+<canvas id="bg-canvas"></canvas>
 
-<!-- ── NAV ── -->
-<div class="nav-glass">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
-      <a href="#" class="text-white font-black text-lg tracking-tight">VK<span class="text-blue-400">.</span></a>
-      <div class="hidden lg:flex items-center gap-7">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#education" class="nav-link">Education</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#publications" class="nav-link">Publications</a>
-        <a href="#certifications" class="nav-link">Certifications</a>
-        <a href="#opensource" class="nav-link">Open Source</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </div>
-      <button id="mobile-menu-button" class="lg:hidden text-gray-400 hover:text-white">
-        <i class="fas fa-bars text-lg"></i>
-      </button>
-    </div>
-  </div>
-  <div id="mobile-menu" class="hidden lg:hidden px-4 pb-4 space-y-2 border-t border-white/5">
-    <a href="#about" class="block py-2 text-sm text-gray-400 hover:text-blue-400">About</a>
-    <a href="#experience" class="block py-2 text-sm text-gray-400 hover:text-blue-400">Experience</a>
-    <a href="#education" class="block py-2 text-sm text-gray-400 hover:text-blue-400">Education</a>
-    <a href="#skills" class="block py-2 text-sm text-gray-400 hover:text-blue-400">Skills</a>
-    <a href="#publications" class="block py-2 text-sm text-gray-400 hover:text-blue-400">Publications</a>
-    <a href="#certifications" class="block py-2 text-sm text-gray-400 hover:text-blue-400">Certifications</a>
-    <a href="#opensource" class="block py-2 text-sm text-gray-400 hover:text-blue-400">Open Source</a>
-    <a href="#projects" class="block py-2 text-sm text-gray-400 hover:text-blue-400">Projects</a>
-    <a href="#contact" class="block py-2 text-sm text-gray-400 hover:text-blue-400">Contact</a>
+<!-- MODAL OVERLAY -->
+<div class="modal-overlay" id="modal">
+  <div class="modal-box" id="modal-box">
+    <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
+    <div id="modal-content"></div>
   </div>
 </div>
 
-<!-- ── HERO ── -->
-<section id="home" class="hero-section">
-  <div class="hero-glow hero-glow-1"></div>
-  <div class="hero-glow hero-glow-2"></div>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
-    <div class="flex flex-col-reverse lg:flex-row items-center gap-12 py-16">
-      <div class="w-full lg:w-3/5">
-        <div class="hero-badge"><span class="dot"></span> Open to Senior GenAI Roles</div>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-4">
-          Hi, I'm <span class="grad">Venkatkumar</span><br>Rajan
-        </h1>
-        <h2 class="text-xl sm:text-2xl font-medium text-slate-400 mb-6 min-h-[2rem]">
-          <span id="typed-text"></span><span class="typed-cursor"></span>
-        </h2>
-        <p class="text-slate-400 text-base leading-relaxed mb-8 max-w-xl">
-          Generative AI Engineer with <strong class="text-slate-300">3.5+ years</strong> building production-grade AI systems across multimodal applications. Translating cutting-edge research into real-world solutions with measurable business impact. <strong class="text-slate-300">Kaggle Master</strong> &amp; author of <strong class="text-blue-400">llmevalkit</strong>.
-        </p>
-        <div class="flex flex-wrap gap-3 mb-10">
-          <a href="#contact" class="btn-primary"><i class="fas fa-paper-plane text-sm"></i> Contact Me</a>
-          <a href="assets/Venkatkumar_AIEngineer.pdf" download class="btn-outline"><i class="fas fa-download text-sm"></i> Resume</a>
-          <a href="https://github.com/VK-Ant" target="_blank" class="btn-outline"><i class="fab fa-github text-sm"></i> GitHub</a>
-        </div>
-        <div class="flex gap-8">
-          <div class="stat-item"><div class="stat-num grad">3.5+</div><div class="stat-label">Years Exp.</div></div>
-          <div class="stat-item"><div class="stat-num grad">3</div><div class="stat-label">Publications</div></div>
-          <div class="stat-item"><div class="stat-num grad">15+</div><div class="stat-label">Projects</div></div>
-          <div class="stat-item"><div class="stat-num grad">Top 1%</div><div class="stat-label">Kaggle</div></div>
-        </div>
+<!-- NAV -->
+<div class="vk-nav">
+  <div class="vk-nav-inner">
+    <a href="#" class="vk-logo">VK<span>.</span></a>
+    <nav class="vk-links">
+      <a href="#about" class="vk-link">About</a>
+      <a href="#experience" class="vk-link">Experience</a>
+      <a href="#education" class="vk-link">Education</a>
+      <a href="#skills" class="vk-link">Skills</a>
+      <a href="#publications" class="vk-link">Publications</a>
+      <a href="#certifications" class="vk-link">Certifications</a>
+      <a href="#opensource" class="vk-link">Open Source</a>
+      <a href="#projects" class="vk-link">Projects</a>
+      <a href="#contact" class="vk-link">Contact</a>
+    </nav>
+    <button class="vk-hamburger" id="ham"><i class="fas fa-bars"></i></button>
+  </div>
+  <div class="vk-mobile-menu" id="mob-menu">
+    <a href="#about" class="vk-mobile-link">About</a>
+    <a href="#experience" class="vk-mobile-link">Experience</a>
+    <a href="#education" class="vk-mobile-link">Education</a>
+    <a href="#skills" class="vk-mobile-link">Skills</a>
+    <a href="#publications" class="vk-mobile-link">Publications</a>
+    <a href="#certifications" class="vk-mobile-link">Certifications</a>
+    <a href="#opensource" class="vk-mobile-link">Open Source</a>
+    <a href="#projects" class="vk-mobile-link">Projects</a>
+    <a href="#contact" class="vk-mobile-link">Contact</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge"><span class="pulse"></span>Open to Senior GenAI Roles</div>
+      <h1 class="hero-name">Hi, I'm<br><span class="accent">Venkatkumar</span> Rajan</h1>
+      <div class="hero-typed"><span id="typed"></span><span class="cursor"></span></div>
+      <p class="hero-desc">Generative AI Engineer with <strong>3.5+ years</strong> building production-grade AI systems across multimodal applications. Translating research into real-world solutions with measurable business impact. <strong>Kaggle Master</strong> &amp; author of <strong>llmevalkit</strong>.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-amber"><i class="fas fa-paper-plane"></i> Contact Me</a>
+        <a href="assets/Venkatkumar_AIEngineer.pdf" download class="btn-ghost"><i class="fas fa-download"></i> Resume</a>
+        <a href="https://github.com/VK-Ant" target="_blank" class="btn-ghost"><i class="fab fa-github"></i> GitHub</a>
       </div>
-      <div class="w-full lg:w-2/5 flex justify-center">
-        <div class="avatar-ring"><img src="assets/main_imresize.png" alt="Venkatkumar" class="w-56 h-56 sm:w-64 sm:h-64 object-cover"></div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-n">3.5+</div><div class="stat-l">Years Exp.</div></div>
+        <div class="stat"><div class="stat-n">3</div><div class="stat-l">Publications</div></div>
+        <div class="stat"><div class="stat-n">15+</div><div class="stat-l">Projects</div></div>
+        <div class="stat"><div class="stat-n">Top 1%</div><div class="stat-l">Kaggle</div></div>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-ring">
+        <img src="assets/main_imresize.png" alt="Venkatkumar Rajan">
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── ABOUT ── -->
-<section id="about" class="section section-dark fade-up">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="section-tag">About</div>
-    <h2 class="section-title">Who I Am</h2>
-    <div class="section-divider"></div>
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-      <div class="lg:col-span-2 space-y-4 text-slate-400 text-sm leading-relaxed">
-        <p>I'm an AI Engineer passionate about building intelligent solutions that blend research, real-world deployment, and innovation. My work spans Generative AI, Computer Vision, NLP, and end-to-end AI pipelines — from designing algorithms to deploying production-ready systems.</p>
-        <p>With experience across healthcare, manufacturing, and automotive domains, I've built real-time RAG pipelines, 3D reconstruction systems using NeRF &amp; photogrammetry, document processing platforms on Azure AI, and AI-powered automation tools. I hold an <strong class="text-slate-300">M.Tech in AI from BITS Pilani</strong> and am a <strong class="text-slate-300">Kaggle Master</strong> (Competitions Expert top ~0.4%, Notebooks Master top ~1.3%).</p>
-        <p>I enjoy bridging the gap between deep research and applied business impact — with a strong focus on responsible, secure AI systems and governance.</p>
-        <div class="pt-2 flex flex-wrap gap-2">
-          <a href="https://linkedin.com/in/venkatkumarvk" target="_blank" class="social-btn linkedin"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/VK-Ant" target="_blank" class="social-btn github"><i class="fab fa-github"></i></a>
-          <a href="https://www.kaggle.com/venkatkumar001" target="_blank" class="social-btn kaggle"><i class="fab fa-kaggle"></i></a>
-          <a href="https://medium.com/@VK_Venkatkumar" target="_blank" class="social-btn medium"><i class="fab fa-medium"></i></a>
-          <a href="https://x.com/VK_VENKATKUMAR" target="_blank" class="social-btn twitter"><i class="fab fa-twitter"></i></a>
-          <a href="mailto:venkatkumarr.vk99@gmail.com" class="social-btn email"><i class="fas fa-envelope"></i></a>
+<!-- ABOUT -->
+<section id="about" class="sec sec-alt reveal">
+  <div class="sec-inner">
+    <div class="sec-eyebrow">About</div>
+    <h2 class="sec-title">Who I Am</h2>
+    <div class="sec-bar"></div>
+    <div class="about-grid">
+      <div>
+        <p class="about-text">I'm a Generative AI Engineer passionate about building intelligent solutions that blend research, real-world deployment, and innovation. My work spans Generative AI, Computer Vision, NLP, and end-to-end AI pipelines — from designing algorithms to deploying production-ready systems.</p>
+        <p class="about-text">With experience across healthcare, manufacturing, and automotive domains, I've built real-time RAG pipelines, 3D reconstruction systems using NeRF &amp; photogrammetry, document processing platforms on Azure AI, and AI-powered automation tools. I hold an <strong>M.Tech in AI from BITS Pilani</strong> and am a <strong>Kaggle Master</strong> (Competitions Expert top ~0.4%, Notebooks Master top ~1.3%).</p>
+        <p class="about-text">I enjoy bridging the gap between deep research and applied business impact — with a strong focus on <strong>responsible, secure AI systems and governance</strong>.</p>
+        <div class="socials">
+          <a href="https://linkedin.com/in/venkatkumarvk" target="_blank" class="soc-btn li"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/VK-Ant" target="_blank" class="soc-btn gh"><i class="fab fa-github"></i></a>
+          <a href="https://www.kaggle.com/venkatkumar001" target="_blank" class="soc-btn kg"><i class="fab fa-kaggle"></i></a>
+          <a href="https://medium.com/@VK_Venkatkumar" target="_blank" class="soc-btn md"><i class="fab fa-medium"></i></a>
+          <a href="https://x.com/VK_VENKATKUMAR" target="_blank" class="soc-btn tw"><i class="fab fa-twitter"></i></a>
+          <a href="mailto:venkatkumarr.vk99@gmail.com" class="soc-btn em"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
-      <div class="space-y-3">
-        <div class="card card-glow p-4 flex items-center gap-4">
-          <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-map-marker-alt text-blue-400 text-sm"></i></div>
-          <div><div class="text-xs text-slate-500">Location</div><div class="text-sm text-slate-300 font-medium">Madurai, Tamil Nadu, India</div></div>
-        </div>
-        <div class="card card-glow p-4 flex items-center gap-4">
-          <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-envelope text-purple-400 text-sm"></i></div>
-          <div><div class="text-xs text-slate-500">Email</div><div class="text-sm text-slate-300 font-medium break-all">venkatkumarr.vk99@gmail.com</div></div>
-        </div>
-        <div class="card card-glow p-4 flex items-center gap-4">
-          <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-trophy text-emerald-400 text-sm"></i></div>
-          <div><div class="text-xs text-slate-500">Kaggle</div><div class="text-sm text-slate-300 font-medium">Master — Top ~0.4% globally</div></div>
-        </div>
-        <div class="card card-glow p-4 flex items-center gap-4">
-          <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-graduation-cap text-amber-400 text-sm"></i></div>
-          <div><div class="text-xs text-slate-500">Education</div><div class="text-sm text-slate-300 font-medium">M.Tech AI — BITS Pilani</div></div>
-        </div>
+      <div class="info-cards">
+        <div class="info-card"><div class="info-icon" style="background:rgba(96,165,250,0.1)"><i class="fas fa-map-marker-alt" style="color:#60a5fa"></i></div><div><div class="info-label">Location</div><div class="info-val">Madurai, Tamil Nadu, India</div></div></div>
+        <div class="info-card"><div class="info-icon" style="background:rgba(167,139,250,0.1)"><i class="fas fa-envelope" style="color:#a78bfa"></i></div><div><div class="info-label">Email</div><div class="info-val" style="font-size:0.75rem">venkatkumarr.vk99@gmail.com</div></div></div>
+        <div class="info-card"><div class="info-icon" style="background:rgba(16,185,129,0.1)"><i class="fas fa-trophy" style="color:#10b981"></i></div><div><div class="info-label">Kaggle</div><div class="info-val">Master — Top ~0.4% globally</div></div></div>
+        <div class="info-card"><div class="info-icon" style="background:rgba(245,158,11,0.1)"><i class="fas fa-graduation-cap" style="color:#f59e0b"></i></div><div><div class="info-label">Education</div><div class="info-val">M.Tech AI — BITS Pilani</div></div></div>
+        <div class="info-card"><div class="info-icon" style="background:rgba(239,68,68,0.1)"><i class="fas fa-briefcase" style="color:#ef4444"></i></div><div><div class="info-label">Status</div><div class="info-val" style="color:#10b981">Open to Opportunities</div></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── EXPERIENCE ── -->
-<section id="experience" class="section section-light fade-up">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="section-tag">Experience</div>
-    <h2 class="section-title">Work History</h2>
-    <div class="section-divider"></div>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- EXPERIENCE -->
+<section id="experience" class="sec reveal">
+  <div class="sec-inner">
+    <div class="sec-eyebrow">Experience</div>
+    <h2 class="sec-title">Work History</h2>
+    <div class="sec-bar"></div>
+    <div class="timeline">
 
       <!-- EXL -->
-      <div class="card card-glow p-6">
-        <div class="flex items-center gap-4 mb-5">
-          <img src="assets/exl3.png" alt="EXL" class="h-12 object-contain bg-white/5 rounded-lg p-1">
+      <div class="exp-card">
+        <div class="exp-header">
+          <img src="assets/exl3.png" alt="EXL" class="exp-logo">
           <div>
-            <div class="text-base font-bold text-white">Generative AI Engineer <span class="text-slate-500 font-normal text-sm">| Business Analyst</span></div>
-            <div class="text-blue-400 text-xs font-semibold mt-0.5">EXL Service (India) Pvt. Ltd.</div>
-            <div class="text-slate-500 text-xs mt-0.5">Dec 2023 – Present &nbsp;·&nbsp; Noida, India (Remote)</div>
+            <div class="exp-role">Generative AI Engineer <span style="color:#475569;font-weight:400;font-size:0.82rem">| Business Analyst</span></div>
+            <div class="exp-company">EXL Service (India) Pvt. Ltd.</div>
+            <div class="exp-period">Dec 2023 – Present &nbsp;·&nbsp; Noida, India (Remote)</div>
           </div>
         </div>
-        <div class="space-y-3">
-          <div class="exp-project">
-            <div class="exp-project-title">AI-Powered Credential Extraction System</div>
-            <div class="exp-project-tag">Unified Text RAG + Multimodal RAG · Azure</div>
-            <p>Architected end-to-end unified dual-mode RAG pipeline extracting <strong class="text-slate-300">46+ structured fields</strong> from unstructured docs (PDFs, scanned images). Built on Azure OpenAI GPT-5, Document Intelligence, AI Search (per-field vector indexing), and OpenAI Embeddings. Confidence-based routing + human-in-loop review. <strong class="text-slate-300">70% accuracy · 30% manual effort reduction.</strong></p>
-          </div>
-          <div class="exp-project">
-            <div class="exp-project-title">Unified GenAI Document Intelligence &amp; Automation System</div>
-            <div class="exp-project-tag">Azure · NLP · Computer Vision</div>
-            <p>Owned end-to-end production deployment. Single extensible codebase handles multiple document types — new type needs only a <strong class="text-slate-300">config entry + prompt update, zero redevelopment.</strong> &gt;95% extraction confidence · <strong class="text-slate-300">40–50% manual effort reduction.</strong></p>
-          </div>
-          <div class="exp-project">
-            <div class="exp-project-title">AI-Based Document Classification System</div>
-            <div class="exp-project-tag">Unified · Azure · &gt;97% accuracy</div>
-            <p>Unified classifier for 15+ document categories. New categories via reference document — no engineering changes required.</p>
-          </div>
-          <div class="exp-project">
-            <div class="exp-project-title">Custom AI Agent Builder</div>
-            <div class="exp-project-tag">Databricks · Unity Catalog · RAG · Internal</div>
-            <p>No-code agent builder connecting multiple Unity Catalog tables + PDF knowledge bases. Built for <strong class="text-slate-300">denial management analytics.</strong> Deployed as governed Databricks App.</p>
-          </div>
-          <div class="exp-project">
-            <div class="exp-project-title">Internal AI Productivity Tools</div>
-            <div class="exp-project-tag">Excel AI · SQL Chatbot · Power App · Doc Intelligence</div>
-            <p>Suite of internal tools reducing manual effort across data, ops, and analyst teams. <strong class="text-slate-300">10+ GenAI PoC presentations</strong> to prospective clients.</p>
-          </div>
-        </div>
+        <div class="proj-item"><div class="proj-name">AI-Powered Credential Extraction System</div><div class="proj-tech">Unified Text RAG + Multimodal RAG · Azure GPT-5 · AI Search · Doc Intelligence</div><div class="proj-desc">Architected end-to-end unified dual-mode RAG pipeline extracting <strong>46+ structured fields</strong> from unstructured docs. Confidence-based routing + human-in-loop review. <strong>70% accuracy · 30% manual effort reduction.</strong></div></div>
+        <div class="proj-item"><div class="proj-name">Unified GenAI Document Intelligence &amp; Automation System</div><div class="proj-tech">Azure · NLP · Computer Vision · Config-driven</div><div class="proj-desc">Owned end-to-end production. New document type = <strong>config entry + prompt update, zero redevelopment.</strong> &gt;95% extraction confidence · <strong>40–50% manual effort reduction.</strong></div></div>
+        <div class="proj-item"><div class="proj-name">AI-Based Document Classification System</div><div class="proj-tech">Unified · Azure · &gt;97% accuracy</div><div class="proj-desc">15+ document categories. New categories via reference document — no engineering changes.</div></div>
+        <div class="proj-item"><div class="proj-name">Custom AI Agent Builder</div><div class="proj-tech">Databricks · Unity Catalog · RAG</div><div class="proj-desc">No-code agent builder for <strong>denial management analytics.</strong> Unity Catalog tables + PDF knowledge bases. Governed Databricks App.</div></div>
+        <div class="proj-item"><div class="proj-name">Internal AI Productivity Tools + 10+ GenAI PoCs</div><div class="proj-tech">Excel AI · SQL Chatbot · Power App · Doc Intelligence</div><div class="proj-desc">Suite of internal tools reducing manual effort. 10+ PoC presentations to prospective clients.</div></div>
       </div>
 
       <!-- AugRay -->
-      <div class="card card-glow p-6">
-        <div class="flex items-center gap-4 mb-5">
-          <img src="assets/augray_logo.jpg" alt="AugRay" class="h-12 object-contain bg-white/5 rounded-lg p-1">
+      <div class="exp-card">
+        <div class="exp-header">
+          <img src="assets/augray_logo.jpg" alt="AugRay" class="exp-logo">
           <div>
-            <div class="text-base font-bold text-white">Machine Learning Engineer</div>
-            <div class="text-purple-400 text-xs font-semibold mt-0.5">AugRay</div>
-            <div class="text-slate-500 text-xs mt-0.5">Sept 2022 – Oct 2023 &nbsp;·&nbsp; Chennai, Tamil Nadu (Onsite)</div>
+            <div class="exp-role">Machine Learning Engineer</div>
+            <div class="exp-company" style="color:#a78bfa">AugRay</div>
+            <div class="exp-period">Sept 2022 – Oct 2023 &nbsp;·&nbsp; Chennai, Tamil Nadu (Onsite)</div>
           </div>
         </div>
-        <div class="space-y-3">
-          <div class="exp-project purple">
-            <div class="exp-project-title">Real-Time Ball Fault Detection</div>
-            <div class="exp-project-tag">Edge AI · MobileNetV2 · NVIDIA Jetson AGX</div>
-            <p>Lightweight real-time defect detection for a leading sports goods manufacturer. <strong class="text-slate-300">90%+ accuracy · QA error rate –40% · throughput 3×.</strong></p>
-          </div>
-          <div class="exp-project purple">
-            <div class="exp-project-title">Automated 3D Reconstruction</div>
-            <div class="exp-project-tag">Generative AI · Photogrammetry · NeRF</div>
-            <p>End-to-end pipeline: photogrammetry + NeRF. <strong class="text-slate-300">95% accuracy</strong> for non-reflective objects, ~50% for reflective. Reducing manual processing time significantly.</p>
-          </div>
-          <div class="exp-project purple">
-            <div class="exp-project-title">Wall &amp; Floor Segmentation</div>
-            <div class="exp-project-tag">SegFormer-B0 · segformer-b0-finetuned-ade-512-512</div>
-            <p>Fine-tuned SegFormer-B0 for semantic segmentation. <strong class="text-slate-300">80% accuracy · designer effort –20+ hrs/month.</strong> Enabled automated colour preview generation.</p>
-          </div>
-          <div class="exp-project purple">
-            <div class="exp-project-title">Foot Detection &amp; Virtual Shoe Try-On</div>
-            <div class="exp-project-tag">Computer Vision · AR · 10,000+ annotations</div>
-            <p>CV-based virtual try-on. <strong class="text-slate-300">79% placement accuracy · customer returns –5%</strong> in pilot trials.</p>
-          </div>
-          <div class="exp-project purple">
-            <div class="exp-project-title">Generative AI PoCs</div>
-            <div class="exp-project-tag">Stable Diffusion · Flyer Gen · Chatbot</div>
-            <p>Automated flyer generation, face texture synthesis, site-based conversational chatbot for interactive marketing.</p>
-          </div>
-        </div>
+        <div class="proj-item purple"><div class="proj-name">Real-Time Ball Fault Detection</div><div class="proj-tech">Edge AI · MobileNetV2 · NVIDIA Jetson AGX</div><div class="proj-desc"><strong>90%+ accuracy · QA error rate –40% · throughput 3×.</strong> Lightweight real-time defect detection, edge-optimised.</div></div>
+        <div class="proj-item purple"><div class="proj-name">Automated 3D Reconstruction</div><div class="proj-tech">Generative AI · Photogrammetry · NeRF</div><div class="proj-desc">End-to-end pipeline: photogrammetry + NeRF. <strong>95% accuracy</strong> for non-reflective, ~50% for reflective objects.</div></div>
+        <div class="proj-item purple"><div class="proj-name">Wall &amp; Floor Segmentation</div><div class="proj-tech">SegFormer-B0 · segformer-b0-finetuned-ade-512-512</div><div class="proj-desc">Fine-tuned SegFormer-B0. <strong>80% accuracy · designer effort –20+ hrs/month.</strong> Automated colour preview generation.</div></div>
+        <div class="proj-item purple"><div class="proj-name">Foot Detection &amp; Virtual Shoe Try-On</div><div class="proj-tech">Computer Vision · AR · 10,000+ annotations</div><div class="proj-desc"><strong>79% placement accuracy · customer returns –5%</strong> in pilot trials.</div></div>
+        <div class="proj-item purple"><div class="proj-name">Generative AI PoCs</div><div class="proj-tech">Stable Diffusion · Face Texture · Chatbot</div><div class="proj-desc">Automated flyer generation, face texture synthesis, site-based conversational chatbot.</div></div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ── EDUCATION ── -->
-<section id="education" class="section section-dark fade-up">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="section-tag">Education</div>
-    <h2 class="section-title">Academic Background</h2>
-    <div class="section-divider"></div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="card card-glow p-6 flex items-start gap-5">
-        <img src="assets/bits_mtech.png" alt="BITS" class="h-14 object-contain flex-shrink-0 bg-white/5 rounded-xl p-1">
+<!-- EDUCATION -->
+<section id="education" class="sec sec-alt reveal">
+  <div class="sec-inner">
+    <div class="sec-eyebrow">Education</div>
+    <h2 class="sec-title">Academic Background</h2>
+    <div class="sec-bar"></div>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <img src="assets/bits_mtech.png" alt="BITS" class="edu-logo">
         <div>
-          <div class="text-white font-bold text-base mb-1">M.Tech. in Artificial Intelligence &amp; Machine Learning</div>
-          <div class="text-blue-400 text-xs font-semibold mb-1">Birla Institute of Technology and Science (BITS), Pilani</div>
-          <div class="text-slate-500 text-xs mb-3">2023 – 2025 &nbsp;·&nbsp; Rajasthan, India</div>
-          <div class="text-slate-500 text-xs"><strong class="text-slate-400">Coursework:</strong> Deep Learning, Reinforcement Learning, Probabilistic Generative Models, Graph Neural Networks, Video Analytics, Distributed ML</div>
+          <div class="edu-degree">M.Tech. in Artificial Intelligence &amp; Machine Learning</div>
+          <div class="edu-school">Birla Institute of Technology and Science (BITS), Pilani</div>
+          <div class="edu-period">2023 – 2025 &nbsp;·&nbsp; Rajasthan, India</div>
+          <div class="edu-course"><strong>Coursework:</strong> Deep Learning, Reinforcement Learning, Probabilistic Generative Models, Graph Neural Networks, Video Analytics, Social Media Analytics, Distributed ML</div>
         </div>
       </div>
-      <div class="card card-glow p-6 flex items-start gap-5">
-        <img src="assets/sacs-ug.png" alt="SACS" class="h-14 object-contain flex-shrink-0 bg-white/5 rounded-xl p-1">
+      <div class="edu-card">
+        <img src="assets/sacs-ug.png" alt="SACS" class="edu-logo">
         <div>
-          <div class="text-white font-bold text-base mb-1">B.E. in Electronics &amp; Communication Engineering</div>
-          <div class="text-blue-400 text-xs font-semibold mb-1">SACS MAVMM Engineering College, Anna University</div>
-          <div class="text-slate-500 text-xs mb-3">2016 – 2020 &nbsp;·&nbsp; Madurai, Tamil Nadu</div>
-          <div class="text-slate-500 text-xs"><strong class="text-slate-400">Coursework:</strong> Data Structures, Algorithms, Digital Signal Processing, Digital Image Processing, Embedded Systems, Electronics</div>
+          <div class="edu-degree">B.E. in Electronics &amp; Communication Engineering</div>
+          <div class="edu-school">SACS MAVMM Engineering College, Anna University</div>
+          <div class="edu-period">2016 – 2020 &nbsp;·&nbsp; Madurai, Tamil Nadu</div>
+          <div class="edu-course"><strong>Coursework:</strong> Data Structures, Algorithms, Digital Signal Processing, Digital Image Processing, Embedded Systems, Electronics</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── SKILLS ── -->
-<section id="skills" class="section section-light fade-up">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="section-tag">Skills</div>
-    <h2 class="section-title">Technical Stack</h2>
-    <div class="section-divider"></div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- SKILLS -->
+<section id="skills" class="sec reveal">
+  <div class="sec-inner">
+    <div class="sec-eyebrow">Skills</div>
+    <h2 class="sec-title">Technical Stack</h2>
+    <div class="sec-bar"></div>
+    <div class="skills-grid">
+      <div class="skill-card"><div class="skill-card-header"><div class="skill-icon" style="background:rgba(96,165,250,0.1)"><i class="fas fa-code" style="color:#60a5fa"></i></div><div class="skill-cat">Programming Languages</div></div><div class="pills"><span class="pill">Python</span><span class="pill">C++</span></div></div>
+      <div class="skill-card"><div class="skill-card-header"><div class="skill-icon" style="background:rgba(167,139,250,0.1)"><i class="fas fa-robot" style="color:#a78bfa"></i></div><div class="skill-cat">LLM Systems &amp; AI Engineering</div></div><div class="pills"><span class="pill">RAG</span><span class="pill">GraphRAG</span><span class="pill">AI Agents</span><span class="pill">LLM Evaluation</span><span class="pill">Prompt Engineering</span><span class="pill">End-to-End Orchestration</span><span class="pill">Monitoring</span></div></div>
+      <div class="skill-card"><div class="skill-card-header"><div class="skill-icon" style="background:rgba(16,185,129,0.1)"><i class="fas fa-link" style="color:#10b981"></i></div><div class="skill-cat">LLM Frameworks</div></div><div class="pills"><span class="pill">LangChain</span><span class="pill">LlamaIndex</span><span class="pill">LangGraph</span><span class="pill">MCP</span><span class="pill">Groq</span><span class="pill">Ollama</span><span class="pill">Docling</span></div></div>
+      <div class="skill-card"><div class="skill-card-header"><div class="skill-icon" style="background:rgba(245,158,11,0.1)"><i class="fas fa-brain" style="color:#f59e0b"></i></div><div class="skill-cat">ML / DL Frameworks</div></div><div class="pills"><span class="pill">PyTorch</span><span class="pill">TensorFlow</span><span class="pill">OpenCV</span><span class="pill">scikit-learn</span><span class="pill">Kornia</span><span class="pill">librosa</span><span class="pill">Mediapipe</span><span class="pill">PySpark</span><span class="pill">NetworkX</span><span class="pill">Gym</span><span class="pill">Prophet</span></div></div>
+      <div class="skill-card"><div class="skill-card-header"><div class="skill-icon" style="background:rgba(14,165,233,0.1)"><i class="fas fa-cloud" style="color:#0ea5e9"></i></div><div class="skill-cat">Cloud &amp; Platforms</div></div><div class="pills"><span class="pill">Azure OpenAI</span><span class="pill">Azure AI Search</span><span class="pill">Doc Intelligence</span><span class="pill">Azure Blob</span><span class="pill">Key Vault</span><span class="pill">Azure DevOps</span><span class="pill">AWS</span><span class="pill">Databricks</span></div></div>
+      <div class="skill-card"><div class="skill-card-header"><div class="skill-icon" style="background:rgba(239,68,68,0.1)"><i class="fas fa-server" style="color:#ef4444"></i></div><div class="skill-cat">MLOps &amp; LLMOps</div></div><div class="pills"><span class="pill">Docker</span><span class="pill">Kubernetes</span><span class="pill">Kubeflow</span><span class="pill">MLflow</span><span class="pill">Kafka</span><span class="pill">CI/CD</span></div></div>
+      <div class="skill-card"><div class="skill-card-header"><div class="skill-icon" style="background:rgba(20,184,166,0.1)"><i class="fas fa-microchip" style="color:#14b8a6"></i></div><div class="skill-cat">Edge AI</div></div><div class="pills"><span class="pill">NVIDIA Jetson AGX Xavier</span><span class="pill">TensorRT</span><span class="pill">RaspberryPi</span></div></div>
+      <div class="skill-card"><div class="skill-card-header"><div class="skill-icon" style="background:rgba(99,102,241,0.1)"><i class="fas fa-globe" style="color:#6366f1"></i></div><div class="skill-cat">Web &amp; Backend</div></div><div class="pills"><span class="pill">FastAPI</span><span class="pill">Flask</span><span class="pill">Django</span><span class="pill">REST APIs</span><span class="pill">Streamlit</span><span class="pill">Gradio</span><span class="pill">ReactJS</span></div></div>
+      <div class="skill-card"><div class="skill-card-header"><div class="skill-icon" style="background:rgba(249,115,22,0.1)"><i class="fas fa-database" style="color:#f97316"></i></div><div class="skill-cat">Database &amp; Tools</div></div><div class="pills"><span class="pill">MongoDB</span><span class="pill">MySQL</span><span class="pill">Power BI</span><span class="pill">Power Automate</span><span class="pill">Power Apps</span><span class="pill">Pytest</span></div></div>
+    </div>
+  </div>
+</section>
 
-      <div class="card card-glow p-5">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center"><i class="fas fa-code text-blue-400 text-sm"></i></div>
-          <div class="text-sm font-700 text-white font-bold">Programming Languages</div>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="skill-pill">Python</span><span class="skill-pill">C++</span>
-        </div>
+<!-- PUBLICATIONS -->
+<section id="publications" class="sec sec-alt reveal">
+  <div class="sec-inner">
+    <div class="sec-eyebrow">Research</div>
+    <h2 class="sec-title">Publications</h2>
+    <div class="sec-bar"></div>
+    <div class="pubs-grid">
+
+      <div class="pub-card" onclick="openModal('pub1')">
+        <img src="assets/arxiv.png" class="pub-img" alt="arXiv">
+        <span class="pub-venue-badge badge-arxiv">arXiv · March 2025</span>
+        <div class="pub-title">A Generative Approach to High Fidelity 3D Reconstruction from Text Data</div>
+        <div class="pub-sub">Text-to-3D pipeline: Stable Diffusion → RL enhancement → Stable Delight → volumetric 3D reconstruction for AR/VR applications.</div>
+        <span class="pub-read">Click to read &rarr;</span>
       </div>
 
-      <div class="card card-glow p-5">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center"><i class="fas fa-robot text-purple-400 text-sm"></i></div>
-          <div class="text-sm font-bold text-white">LLM Systems &amp; AI Engineering</div>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="skill-pill">RAG</span><span class="skill-pill">GraphRAG</span><span class="skill-pill">AI Agents</span><span class="skill-pill">LLM Evaluation</span><span class="skill-pill">Prompt Engineering</span><span class="skill-pill">End-to-End Orchestration</span><span class="skill-pill">Monitoring</span>
-        </div>
+      <div class="pub-card" onclick="openModal('pub2')">
+        <img src="assets/ieee.png" class="pub-img" alt="IEEE">
+        <span class="pub-venue-badge badge-ieee">IEEE · Feb 2024</span>
+        <div class="pub-title">Advancing Audio Fingerprinting Accuracy with AI and ML</div>
+        <div class="pub-sub">Addressing background noise and distortion challenges in audio fingerprinting using advanced AI and ML approaches.</div>
+        <span class="pub-read">Click to read &rarr;</span>
       </div>
 
-      <div class="card card-glow p-5">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center"><i class="fas fa-link text-emerald-400 text-sm"></i></div>
-          <div class="text-sm font-bold text-white">LLM Frameworks</div>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="skill-pill">LangChain</span><span class="skill-pill">LlamaIndex</span><span class="skill-pill">LangGraph</span><span class="skill-pill">MCP</span><span class="skill-pill">Groq</span><span class="skill-pill">Ollama</span><span class="skill-pill">Docling</span>
-        </div>
-      </div>
-
-      <div class="card card-glow p-5">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center"><i class="fas fa-brain text-amber-400 text-sm"></i></div>
-          <div class="text-sm font-bold text-white">ML / DL Frameworks</div>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="skill-pill">PyTorch</span><span class="skill-pill">TensorFlow</span><span class="skill-pill">OpenCV</span><span class="skill-pill">scikit-learn</span><span class="skill-pill">Kornia</span><span class="skill-pill">librosa</span><span class="skill-pill">Mediapipe</span><span class="skill-pill">PySpark</span><span class="skill-pill">NetworkX</span><span class="skill-pill">Gym</span><span class="skill-pill">Prophet</span>
-        </div>
-      </div>
-
-      <div class="card card-glow p-5">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-8 h-8 rounded-lg bg-sky-500/10 flex items-center justify-center"><i class="fas fa-cloud text-sky-400 text-sm"></i></div>
-          <div class="text-sm font-bold text-white">Cloud &amp; Platforms</div>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="skill-pill">Azure OpenAI</span><span class="skill-pill">Azure AI Search</span><span class="skill-pill">Document Intelligence</span><span class="skill-pill">Azure Blob</span><span class="skill-pill">Key Vault</span><span class="skill-pill">Azure DevOps</span><span class="skill-pill">AWS</span><span class="skill-pill">Databricks</span>
-        </div>
-      </div>
-
-      <div class="card card-glow p-5">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-8 h-8 rounded-lg bg-rose-500/10 flex items-center justify-center"><i class="fas fa-server text-rose-400 text-sm"></i></div>
-          <div class="text-sm font-bold text-white">MLOps &amp; LLMOps</div>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="skill-pill">Docker</span><span class="skill-pill">Kubernetes</span><span class="skill-pill">Kubeflow</span><span class="skill-pill">MLflow</span><span class="skill-pill">Kafka</span><span class="skill-pill">CI/CD</span>
-        </div>
-      </div>
-
-      <div class="card card-glow p-5">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-8 h-8 rounded-lg bg-teal-500/10 flex items-center justify-center"><i class="fas fa-microchip text-teal-400 text-sm"></i></div>
-          <div class="text-sm font-bold text-white">Edge AI</div>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="skill-pill">NVIDIA Jetson AGX Xavier</span><span class="skill-pill">TensorRT</span><span class="skill-pill">RaspberryPi</span>
-        </div>
-      </div>
-
-      <div class="card card-glow p-5">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-8 h-8 rounded-lg bg-indigo-500/10 flex items-center justify-center"><i class="fas fa-globe text-indigo-400 text-sm"></i></div>
-          <div class="text-sm font-bold text-white">Web &amp; Backend</div>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="skill-pill">FastAPI</span><span class="skill-pill">Flask</span><span class="skill-pill">Django</span><span class="skill-pill">REST APIs</span><span class="skill-pill">Streamlit</span><span class="skill-pill">Gradio</span><span class="skill-pill">ReactJS</span>
-        </div>
-      </div>
-
-      <div class="card card-glow p-5">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-8 h-8 rounded-lg bg-orange-500/10 flex items-center justify-center"><i class="fas fa-database text-orange-400 text-sm"></i></div>
-          <div class="text-sm font-bold text-white">Database &amp; Tools</div>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="skill-pill">MongoDB</span><span class="skill-pill">MySQL</span><span class="skill-pill">Power BI</span><span class="skill-pill">Power Automate</span><span class="skill-pill">Power Apps</span><span class="skill-pill">Pytest</span>
-        </div>
+      <div class="pub-card" onclick="openModal('pub3')">
+        <img src="assets/IRJET.jpg" class="pub-img" alt="IRJIET">
+        <span class="pub-venue-badge badge-irjiet">IRJIET · March 2020</span>
+        <div class="pub-title">PCB Layout using CNC Machine Controlling with Wireless Communication</div>
+        <div class="pub-sub">Implementation of automated PCB layout using CNC machine with wireless control systems.</div>
+        <span class="pub-read">Click to read &rarr;</span>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ── PUBLICATIONS ── -->
-<section id="publications" class="section section-dark fade-up">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="section-tag">Research</div>
-    <h2 class="section-title">Publications</h2>
-    <div class="section-divider"></div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-      <div class="pub-card">
-        <div class="flex items-center justify-between mb-3">
-          <img src="assets/arxiv.png" alt="arXiv" class="h-8 object-contain">
-          <span class="pub-badge arxiv">arXiv</span>
-        </div>
-        <div class="text-sm font-bold text-white mb-1">3D Reconstruction from Text Data</div>
-        <div class="text-xs text-slate-500 mb-3">A Generative Approach to High Fidelity 3D Reconstruction from Text Data · March 2025</div>
-        <a href="https://arxiv.org/abs/2503.03664v1" target="_blank" class="text-xs text-blue-400 hover:text-blue-300 font-semibold mt-auto">Read Paper →</a>
-      </div>
-      <div class="pub-card">
-        <div class="flex items-center justify-between mb-3">
-          <img src="assets/ieee.png" alt="IEEE" class="h-8 object-contain">
-          <span class="pub-badge ieee">IEEE</span>
-        </div>
-        <div class="text-sm font-bold text-white mb-1">Audio Fingerprinting with AI &amp; ML</div>
-        <div class="text-xs text-slate-500 mb-3">Advancing Audio Fingerprinting Accuracy with AI and ML: Addressing Background Noise and Distortion Challenges · Feb 2024</div>
-        <a href="https://ieeexplore.ieee.org/document/10475656" target="_blank" class="text-xs text-blue-400 hover:text-blue-300 font-semibold mt-auto">Read Paper →</a>
-      </div>
-      <div class="pub-card">
-        <div class="flex items-center justify-between mb-3">
-          <img src="assets/IRJET.jpg" alt="IRJIET" class="h-8 object-contain">
-          <span class="pub-badge irjiet">IRJIET</span>
-        </div>
-        <div class="text-sm font-bold text-white mb-1">PCB Layout with CNC Machine</div>
-        <div class="text-xs text-slate-500 mb-3">Implementation of PCB Layout using CNC Machine Controlling with Wireless Communication · March 2020</div>
-        <a href="https://irjiet.com/Volume-4/Issue-3-March-2020/Implementation-of-PCB-Layout-using-CNC-Machine-Controlling-with-Wireless-Communication/191" target="_blank" class="text-xs text-blue-400 hover:text-blue-300 font-semibold mt-auto">Read Paper →</a>
-      </div>
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="sec reveal">
+  <div class="sec-inner">
+    <div class="sec-eyebrow">Credentials</div>
+    <h2 class="sec-title">Certifications</h2>
+    <div class="sec-bar"></div>
+    <div class="certs-grid">
+      <div class="cert-card" onclick="openModal('cert1')"><img src="assets/tf.png" class="cert-logo" alt="TF"><div class="cert-name">TensorFlow Developer</div><div class="cert-issuer">Google · Oct 2023 – Oct 2026</div><span class="cert-view">View Credential &rarr;</span></div>
+      <div class="cert-card" onclick="openModal('cert2')"><img src="assets/nvidia.jpeg" class="cert-logo" alt="Nvidia"><div class="cert-name">Nvidia Jetson AI Specialist</div><div class="cert-issuer">Nvidia Deep Learning Institute · March 2023</div><span class="cert-view">View Credential &rarr;</span></div>
+      <div class="cert-card" onclick="openModal('cert3')"><img src="assets/microsoft-certified-fundamentals-badge.svg" class="cert-logo" alt="Azure"><div class="cert-name">Azure AI Fundamentals</div><div class="cert-issuer">Microsoft · April 2024</div><span class="cert-view">View Credential &rarr;</span></div>
+      <div class="cert-card" onclick="openModal('cert4')"><img src="assets/udacity.png" class="cert-logo" alt="Udacity"><div class="cert-name">Self Driving Car Engineer</div><div class="cert-issuer">Udacity Nanodegree · January 2025</div><span class="cert-view">View Credential &rarr;</span></div>
+      <div class="cert-card" onclick="openModal('cert5')"><img src="assets/coursera.png" class="cert-logo" alt="Coursera"><div class="cert-name">Reinforcement Learning Specialization</div><div class="cert-issuer">University of Alberta · Oct 2024</div><span class="cert-view">View Credential &rarr;</span></div>
+      <div class="cert-card" onclick="openModal('cert6')"><img src="assets/deeplearning_ai.png" class="cert-logo" alt="DL.ai"><div class="cert-name">Generative AI for Software Development</div><div class="cert-issuer">DeepLearning.ai · Oct 2024</div><span class="cert-view">View Credential &rarr;</span></div>
     </div>
   </div>
 </section>
 
-<!-- ── CERTIFICATIONS ── -->
-<section id="certifications" class="section section-light fade-up">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="section-tag">Credentials</div>
-    <h2 class="section-title">Certifications</h2>
-    <div class="section-divider"></div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      <div class="pub-card">
-        <img src="assets/tf.png" alt="TensorFlow" class="h-10 object-contain mb-3">
-        <div class="text-sm font-bold text-white mb-1">TensorFlow Developer</div>
-        <div class="text-xs text-slate-500 mb-3">Google · Oct 2023 – Oct 2026</div>
-        <a href="https://www.credential.net/9c379562-5cb7-4b74-ba3a-da4ca9679d52#acc.hBYuWCwe" target="_blank" class="text-xs text-blue-400 hover:text-blue-300 font-semibold">View Credential →</a>
-      </div>
-      <div class="pub-card">
-        <img src="assets/nvidia.jpeg" alt="Nvidia" class="h-10 object-contain mb-3">
-        <div class="text-sm font-bold text-white mb-1">Nvidia Jetson AI Specialist</div>
-        <div class="text-xs text-slate-500 mb-3">Nvidia DLI · March 2023</div>
-        <a href="https://drive.google.com/file/d/121XQ28MHbITebsopndSsV3Ry6d_plOcI/view?usp=sharing" target="_blank" class="text-xs text-blue-400 hover:text-blue-300 font-semibold">View Credential →</a>
-      </div>
-      <div class="pub-card">
-        <img src="assets/microsoft-certified-fundamentals-badge.svg" alt="Azure" class="h-10 object-contain mb-3">
-        <div class="text-sm font-bold text-white mb-1">Azure AI Fundamentals</div>
-        <div class="text-xs text-slate-500 mb-3">Microsoft · April 2024</div>
-        <a href="https://learn.microsoft.com/en-us/users/venkatkumarr-3905/credentials/39aa1df6ddf3610a" target="_blank" class="text-xs text-blue-400 hover:text-blue-300 font-semibold">View Credential →</a>
-      </div>
-      <div class="pub-card">
-        <img src="assets/udacity.png" alt="Udacity" class="h-10 object-contain mb-3">
-        <div class="text-sm font-bold text-white mb-1">Self Driving Car Engineer</div>
-        <div class="text-xs text-slate-500 mb-3">Udacity Nanodegree · Jan 2025</div>
-        <a href="https://www.udacity.com/certificate/e/e01bebb4-a8e7-11ef-a775-4bbfc380b4ae" target="_blank" class="text-xs text-blue-400 hover:text-blue-300 font-semibold">View Credential →</a>
-      </div>
-      <div class="pub-card">
-        <img src="assets/coursera.png" alt="Coursera" class="h-10 object-contain mb-3">
-        <div class="text-sm font-bold text-white mb-1">Reinforcement Learning Specialization</div>
-        <div class="text-xs text-slate-500 mb-3">University of Alberta · Oct 2024</div>
-        <a href="https://www.coursera.org/account/accomplishments/specialization/59Y70ET9IIND" target="_blank" class="text-xs text-blue-400 hover:text-blue-300 font-semibold">View Credential →</a>
-      </div>
-      <div class="pub-card">
-        <img src="assets/deeplearning_ai.png" alt="deeplearning.ai" class="h-10 object-contain mb-3">
-        <div class="text-sm font-bold text-white mb-1">Generative AI for Software Dev</div>
-        <div class="text-xs text-slate-500 mb-3">DeepLearning.ai · Oct 2024</div>
-        <a href="https://www.coursera.org/account/accomplishments/professional-cert/49ZX9ZSE5980" target="_blank" class="text-xs text-blue-400 hover:text-blue-300 font-semibold">View Credential →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── OPEN SOURCE ── -->
-<section id="opensource" class="section section-dark fade-up">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="section-tag">Open Source</div>
-    <h2 class="section-title">llmevalkit</h2>
-    <div class="section-divider"></div>
-    <div class="oss-card">
-      <div class="grid grid-cols-1 lg:grid-cols-5">
-        <div class="lg:col-span-3 p-8">
-          <div class="flex items-center gap-4 mb-5">
-            <div class="w-14 h-14 rounded-2xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center">
-              <i class="fas fa-cubes text-blue-400 text-2xl"></i>
-            </div>
-            <div>
-              <div class="text-2xl font-black text-white">llmevalkit</div>
-              <div class="flex gap-2 mt-1">
-                <span class="pub-badge ieee">PyPI v1.0.3</span>
-                <span class="pub-badge irjiet">Stable</span>
-              </div>
-            </div>
+<!-- OPEN SOURCE -->
+<section id="opensource" class="sec sec-alt reveal">
+  <div class="sec-inner">
+    <div class="sec-eyebrow">Open Source</div>
+    <h2 class="sec-title">llmevalkit</h2>
+    <div class="sec-bar"></div>
+    <div class="oss-wrap">
+      <div class="oss-grid">
+        <div class="oss-left">
+          <div class="oss-icon-wrap"><i class="fas fa-cubes"></i></div>
+          <div class="oss-name">llmevalkit</div>
+          <div class="oss-badges"><span class="oss-badge oss-badge-blue">PyPI v1.0.3</span><span class="oss-badge oss-badge-green">Stable</span></div>
+          <p class="oss-desc">Universal Python library for evaluating and benchmarking LLMs across <strong style="color:#cbd5e1">15 metrics</strong> (pure math-based + LLM-as-Judge) with <strong style="color:#cbd5e1">no ground-truth requirement</strong>. Multi-provider: OpenAI, Anthropic, Azure OpenAI, Groq, Ollama. Grounded in SelfCheckGPT, G-Eval, FActScoring, RAGAS research.</p>
+          <p class="oss-roadmap"><strong>v2.0 Roadmap:</strong> Compliance metrics for HIPAA, GDPR, India DPDP Act, EU AI Act, NIST AI RMF, CoSAI — dual-mode (regex + LLM-judgment).</p>
+          <div class="oss-checks">
+            <div class="oss-check"><i class="fas fa-check-circle"></i> 15+ evaluation metrics</div>
+            <div class="oss-check"><i class="fas fa-check-circle"></i> No ground truth needed</div>
+            <div class="oss-check"><i class="fas fa-check-circle"></i> Multi-provider support</div>
+            <div class="oss-check"><i class="fas fa-check-circle"></i> RAG evaluation ready</div>
           </div>
-          <p class="text-slate-400 text-sm leading-relaxed mb-5">Universal Python library for evaluating and benchmarking LLMs across <strong class="text-slate-300">15 metrics</strong> (pure math-based + LLM-as-Judge) with <strong class="text-slate-300">no ground-truth requirement</strong>. Multi-provider: OpenAI, Anthropic, Azure OpenAI, Groq, Ollama. Grounded in SelfCheckGPT, G-Eval, FActScoring, RAGAS research.</p>
-          <p class="text-slate-500 text-xs mb-5"><strong class="text-blue-400">v2.0 Roadmap:</strong> Compliance metrics for HIPAA, GDPR, India DPDP Act, EU AI Act, NIST AI RMF, CoSAI — dual-mode (regex + LLM-judgment).</p>
-          <div class="grid grid-cols-2 gap-2 mb-6 text-xs text-slate-400">
-            <div class="flex items-center gap-2"><i class="fas fa-check text-blue-400"></i> 15+ evaluation metrics</div>
-            <div class="flex items-center gap-2"><i class="fas fa-check text-blue-400"></i> No ground truth needed</div>
-            <div class="flex items-center gap-2"><i class="fas fa-check text-blue-400"></i> Multi-provider support</div>
-            <div class="flex items-center gap-2"><i class="fas fa-check text-blue-400"></i> RAG evaluation ready</div>
-          </div>
-          <div class="flex flex-wrap gap-3">
-            <a href="https://pypi.org/project/llmevalkit/" target="_blank" class="btn-primary text-sm"><i class="fab fa-python"></i> PyPI</a>
-            <a href="https://github.com/VK-Ant/llmevalkit" target="_blank" class="btn-outline text-sm"><i class="fab fa-github"></i> GitHub</a>
+          <div class="oss-btns">
+            <a href="https://pypi.org/project/llmevalkit/" target="_blank" class="btn-amber" style="font-size:0.8rem;padding:10px 18px"><i class="fab fa-python"></i> PyPI</a>
+            <a href="https://github.com/VK-Ant/llmevalkit" target="_blank" class="btn-ghost" style="font-size:0.8rem;padding:9px 16px"><i class="fab fa-github"></i> GitHub</a>
           </div>
         </div>
-        <div class="lg:col-span-2 p-8 border-t lg:border-t-0 lg:border-l border-white/5 flex items-center">
-          <div class="code-block w-full">
-            <span class="text-pink-400">pip</span> <span class="text-slate-400">install</span> <span class="text-blue-400">llmevalkit</span><br><br>
-            <span class="text-purple-400">from</span> <span class="text-white">llmevalkit</span> <span class="text-purple-400">import</span> <span class="text-emerald-400">Evaluator</span><br><br>
-            <span class="text-slate-500"># Evaluate your LLM</span><br>
-            <span class="text-white">eval</span> <span class="text-slate-400">=</span> <span class="text-emerald-400">Evaluator</span>(preset=<span class="text-amber-300">"rag"</span>)<br>
-            <span class="text-white">results</span> <span class="text-slate-400">=</span> <span class="text-white">eval</span>.run(query, output)<br><br>
-            <span class="text-blue-400">print</span>(<span class="text-white">results</span>.score)
+        <div class="oss-right">
+          <div class="code-block">
+            <span style="color:#f472b6">pip</span> <span style="color:#94a3b8">install</span> <span style="color:#60a5fa">llmevalkit</span><br><br>
+            <span style="color:#c084fc">from</span> <span style="color:#f8fafc">llmevalkit</span> <span style="color:#c084fc">import</span> <span style="color:#4ade80">Evaluator</span><br><br>
+            <span style="color:#475569"># Start evaluating</span><br>
+            <span style="color:#f8fafc">eval</span> <span style="color:#94a3b8">=</span> <span style="color:#4ade80">Evaluator</span>(preset=<span style="color:#fbbf24">"rag"</span>)<br>
+            <span style="color:#f8fafc">results</span> <span style="color:#94a3b8">=</span> <span style="color:#f8fafc">eval</span>.run(query, output)<br><br>
+            <span style="color:#60a5fa">print</span>(<span style="color:#f8fafc">results</span>.score)
           </div>
         </div>
       </div>
@@ -482,142 +298,174 @@
   </div>
 </section>
 
-<!-- ── PROJECTS ── -->
-<section id="projects" class="section section-light fade-up">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="section-tag">Projects</div>
-    <h2 class="section-title">Featured Projects</h2>
-    <div class="section-divider"></div>
-    <p class="text-slate-500 text-sm mb-8">Explore my open-source projects and research. For more, check <a href="https://github.com/VK-Ant" target="_blank" class="text-blue-400 hover:underline">github.com/VK-Ant</a>.</p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- PROJECTS -->
+<section id="projects" class="sec reveal">
+  <div class="sec-inner">
+    <div class="sec-eyebrow">Projects</div>
+    <h2 class="sec-title">Featured Projects</h2>
+    <div class="sec-bar"></div>
+    <p style="font-size:0.82rem;color:#475569;margin-bottom:28px">Click any card to explore. For the full portfolio visit <a href="https://github.com/VK-Ant" target="_blank" style="color:#f59e0b">github.com/VK-Ant</a>.</p>
+    <div class="proj-grid">
 
-      <div class="proj-card">
-        <div class="relative"><img src="assets/p1.png" alt="3D Reconstruction" class="proj-img"><div class="proj-overlay"><div class="flex gap-2"><a href="https://vk-ant.github.io/AHIFA3D" target="_blank" class="social-btn github text-xs px-3 py-1 w-auto h-auto rounded-lg"><i class="fas fa-link mr-1"></i>Demo</a><a href="https://github.com/VK-Ant/Text-to-3D-Reconstruction-Research" target="_blank" class="social-btn github text-xs px-3 py-1 w-auto h-auto rounded-lg"><i class="fab fa-github mr-1"></i>Code</a></div></div></div>
-        <div class="p-5"><div class="flex flex-wrap gap-1 mb-2"><span class="proj-tag">Generative AI</span><span class="proj-tag">NeRF</span><span class="proj-tag">3D Vision</span></div><h3 class="text-sm font-bold text-white mb-1">Text-to-3D Reconstruction Pipeline</h3><p class="text-xs text-slate-500 leading-relaxed">Automated pipeline: text → Stable Diffusion → RL enhancement → Stable Delight → 3D reconstruction. arXiv published.</p></div>
+      <div class="project-card" onclick="openModal('proj1')">
+        <div class="proj-thumb-wrap"><img src="assets/p1.png" class="proj-thumb" alt="3D"><div class="proj-overlay"></div></div>
+        <div class="proj-body"><div class="proj-tags"><span class="proj-tag-pill">Generative AI</span><span class="proj-tag-pill">NeRF</span><span class="proj-tag-pill">3D Vision</span></div><div class="proj-title">Text-to-3D Reconstruction Pipeline</div><div class="proj-brief">Text → Stable Diffusion → RL enhancement → Stable Delight → 3D reconstruction. arXiv published.</div></div>
       </div>
 
-      <div class="proj-card">
-        <div class="relative"><img src="assets/cv.png" alt="CV" class="proj-img"><div class="proj-overlay"><div class="flex gap-2"><a href="https://github.com/VK-Ant/ComputerVision-Upgrade-Project" target="_blank" class="social-btn github text-xs px-3 py-1 w-auto h-auto rounded-lg"><i class="fab fa-github mr-1"></i>Code</a></div></div></div>
-        <div class="p-5"><div class="flex flex-wrap gap-1 mb-2"><span class="proj-tag">Computer Vision</span><span class="proj-tag">Deep Learning</span></div><h3 class="text-sm font-bold text-white mb-1">Comprehensive Computer Vision Portfolio</h3><p class="text-xs text-slate-500 leading-relaxed">Object detection, multi-object tracking, real-time video analysis solutions.</p></div>
+      <div class="project-card" onclick="openModal('proj2')">
+        <div class="proj-thumb-wrap"><img src="assets/cv.png" class="proj-thumb" alt="CV"><div class="proj-overlay"></div></div>
+        <div class="proj-body"><div class="proj-tags"><span class="proj-tag-pill">Computer Vision</span><span class="proj-tag-pill">Deep Learning</span></div><div class="proj-title">Comprehensive Computer Vision Portfolio</div><div class="proj-brief">Object detection, multi-object tracking, and real-time video analysis solutions.</div></div>
       </div>
 
-      <div class="proj-card">
-        <div class="relative"><img src="assets/p5.png" alt="Attendance" class="proj-img"><div class="proj-overlay"><div class="flex gap-2"><a href="https://github.com/VK-Ant/AttendanceSystem-JetsonAGX" target="_blank" class="social-btn github text-xs px-3 py-1 w-auto h-auto rounded-lg"><i class="fab fa-github mr-1"></i>Code</a></div></div></div>
-        <div class="p-5"><div class="flex flex-wrap gap-1 mb-2"><span class="proj-tag">Edge AI</span><span class="proj-tag">Jetson AGX</span></div><h3 class="text-sm font-bold text-white mb-1">Face-Based Attendance System</h3><p class="text-xs text-slate-500 leading-relaxed">Facial recognition attendance system on NVIDIA Jetson AGX Xavier for field employees.</p></div>
+      <div class="project-card" onclick="openModal('proj3')">
+        <div class="proj-thumb-wrap"><img src="assets/p5.png" class="proj-thumb" alt="Attendance"><div class="proj-overlay"></div></div>
+        <div class="proj-body"><div class="proj-tags"><span class="proj-tag-pill">Edge AI</span><span class="proj-tag-pill">Jetson AGX</span></div><div class="proj-title">Face-Based Attendance System</div><div class="proj-brief">Facial recognition attendance system on NVIDIA Jetson AGX Xavier for field employees.</div></div>
       </div>
 
-      <div class="proj-card">
-        <div class="relative"><img src="assets/p4.png" alt="RAG" class="proj-img"><div class="proj-overlay"><div class="flex gap-2"><a href="https://github.com/VK-Ant/PDF_CSV_VISION_DRAGGING_BASED_CHATBOT_WITH_TRANSLATOR_AUDIO_USING_GEMINIAI" target="_blank" class="social-btn github text-xs px-3 py-1 w-auto h-auto rounded-lg"><i class="fab fa-github mr-1"></i>Code</a></div></div></div>
-        <div class="p-5"><div class="flex flex-wrap gap-1 mb-2"><span class="proj-tag">RAG/CAG</span><span class="proj-tag">Knowledge Graph</span><span class="proj-tag">Multimodal</span></div><h3 class="text-sm font-bold text-white mb-1">GenAI RAG/CAG + Knowledge Graph &amp; Multimodal Chatbot</h3><p class="text-xs text-slate-500 leading-relaxed">PDF/CSV/Vision drag-drop chatbot with multilingual text + audio responses. Security and drone applications.</p></div>
+      <div class="project-card" onclick="openModal('proj4')">
+        <div class="proj-thumb-wrap"><img src="assets/p4.png" class="proj-thumb" alt="RAG"><div class="proj-overlay"></div></div>
+        <div class="proj-body"><div class="proj-tags"><span class="proj-tag-pill">RAG/CAG</span><span class="proj-tag-pill">Knowledge Graph</span><span class="proj-tag-pill">Multimodal</span></div><div class="proj-title">GenAI RAG/CAG + Knowledge Graph &amp; Multimodal Chatbot</div><div class="proj-brief">PDF/CSV/Vision drag-drop chatbot with multilingual text + audio. Security and drone domains.</div></div>
       </div>
 
-      <div class="proj-card">
-        <div class="relative"><img src="assets/p2.png" alt="Vehicle" class="proj-img"><div class="proj-overlay"><div class="flex gap-2"><a href="https://www.linkedin.com/posts/venkatkumarvk_python-pythondeveloper-deeplearning-activity-7274068051904327682-9eCJ" target="_blank" class="social-btn github text-xs px-3 py-1 w-auto h-auto rounded-lg"><i class="fas fa-link mr-1"></i>Post</a></div></div></div>
-        <div class="p-5"><div class="flex flex-wrap gap-1 mb-2"><span class="proj-tag">Video Analytics</span><span class="proj-tag">KITTI</span></div><h3 class="text-sm font-bold text-white mb-1">Advanced Video Analytics for Vehicle Behavior</h3><p class="text-xs text-slate-500 leading-relaxed">Robust video analytics for vehicle behaviour analysis using KITTI dataset with advanced CV and ML.</p></div>
+      <div class="project-card" onclick="openModal('proj5')">
+        <div class="proj-thumb-wrap"><img src="assets/p2.png" class="proj-thumb" alt="Vehicle"><div class="proj-overlay"></div></div>
+        <div class="proj-body"><div class="proj-tags"><span class="proj-tag-pill">Video Analytics</span><span class="proj-tag-pill">KITTI</span></div><div class="proj-title">Advanced Video Analytics for Vehicle Behavior</div><div class="proj-brief">Vehicle behaviour analysis using KITTI dataset with advanced CV and ML.</div></div>
       </div>
 
-      <div class="proj-card">
-        <div class="relative"><img src="assets/p3.png" alt="Recruitment" class="proj-img"><div class="proj-overlay"><div class="flex gap-2"><a href="https://www.linkedin.com/posts/venkatkumarvk_python-pythondeveloper-deeplearning-activity-7179545347281620992--sgP" target="_blank" class="social-btn github text-xs px-3 py-1 w-auto h-auto rounded-lg"><i class="fas fa-link mr-1"></i>Post</a></div></div></div>
-        <div class="p-5"><div class="flex flex-wrap gap-1 mb-2"><span class="proj-tag">Real-time CV</span><span class="proj-tag">Emotion AI</span></div><h3 class="text-sm font-bold text-white mb-1">AI-Powered Real-Time Video Recruitment Tool</h3><p class="text-xs text-slate-500 leading-relaxed">Real-time eye contact, emotion, age, and gender recognition for data-driven recruitment.</p></div>
+      <div class="project-card" onclick="openModal('proj6')">
+        <div class="proj-thumb-wrap"><img src="assets/p3.png" class="proj-thumb" alt="Recruitment"><div class="proj-overlay"></div></div>
+        <div class="proj-body"><div class="proj-tags"><span class="proj-tag-pill">Real-time CV</span><span class="proj-tag-pill">Emotion AI</span></div><div class="proj-title">AI-Powered Real-Time Video Recruitment Tool</div><div class="proj-brief">Eye contact, emotion, age, gender recognition for data-driven AI recruitment.</div></div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ── CONTACT ── -->
-<section id="contact" class="section section-dark fade-up">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="section-tag">Contact</div>
-    <h2 class="section-title">Get In Touch</h2>
-    <div class="section-divider"></div>
-    <div class="max-w-xl">
-      <p class="text-slate-400 text-sm mb-6">Open to new opportunities, collaborations, and conversations about AI. Feel free to reach out through any of these platforms.</p>
-      <div class="card card-glow p-5 mb-6 flex items-center gap-4">
-        <div class="w-10 h-10 rounded-lg bg-red-500/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-envelope text-red-400 text-sm"></i></div>
-        <div>
-          <div class="text-xs text-slate-500">Email</div>
-          <a href="mailto:venkatkumarr.vk99@gmail.com" class="text-sm text-slate-300 hover:text-blue-400 transition">venkatkumarr.vk99@gmail.com</a>
-        </div>
+<!-- CONTACT -->
+<section id="contact" class="sec sec-alt reveal">
+  <div class="sec-inner">
+    <div class="sec-eyebrow">Contact</div>
+    <h2 class="sec-title">Get In Touch</h2>
+    <div class="sec-bar"></div>
+    <div class="contact-wrap">
+      <p class="contact-desc">Open to new opportunities, collaborations, and conversations about AI. Currently looking for Senior GenAI Engineer roles at product companies.</p>
+      <div class="contact-email">
+        <div class="contact-email-icon"><i class="fas fa-envelope"></i></div>
+        <div><div class="contact-email-label">Email</div><div class="contact-email-val">venkatkumarr.vk99@gmail.com</div></div>
       </div>
-      <div class="flex flex-wrap gap-3">
-        <a href="https://www.linkedin.com/in/venkatkumarvk" target="_blank" class="social-btn linkedin"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/VK-Ant" target="_blank" class="social-btn github"><i class="fab fa-github"></i></a>
-        <a href="https://www.kaggle.com/venkatkumar001" target="_blank" class="social-btn kaggle"><i class="fab fa-kaggle"></i></a>
-        <a href="https://medium.com/@VK_Venkatkumar" target="_blank" class="social-btn medium"><i class="fab fa-medium"></i></a>
-        <a href="https://x.com/VK_VENKATKUMAR" target="_blank" class="social-btn twitter"><i class="fab fa-twitter"></i></a>
-        <a href="mailto:venkatkumarr.vk99@gmail.com" class="social-btn email"><i class="fas fa-envelope"></i></a>
+      <div class="contact-socials">
+        <a href="https://linkedin.com/in/venkatkumarvk" target="_blank" class="soc-btn li"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/VK-Ant" target="_blank" class="soc-btn gh"><i class="fab fa-github"></i></a>
+        <a href="https://www.kaggle.com/venkatkumar001" target="_blank" class="soc-btn kg"><i class="fab fa-kaggle"></i></a>
+        <a href="https://medium.com/@VK_Venkatkumar" target="_blank" class="soc-btn md"><i class="fab fa-medium"></i></a>
+        <a href="https://x.com/VK_VENKATKUMAR" target="_blank" class="soc-btn tw"><i class="fab fa-twitter"></i></a>
+        <a href="mailto:venkatkumarr.vk99@gmail.com" class="soc-btn em"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
-<footer style="background:rgba(5,8,15,0.9);border-top:1px solid rgba(255,255,255,0.05);padding:24px 0;text-align:center;">
-  <p style="color:#475569;font-size:0.8rem;">&copy; 2025 Venkatkumar Rajan. Built with passion for AI.</p>
-</footer>
+<footer><span>&copy; 2025 Venkatkumar Rajan &nbsp;·&nbsp; Built with passion for AI</span></footer>
 
 <script>
-// Particle background
+// ── CANVAS BACKGROUND (neural network style) ──
 (function(){
-  const canvas = document.getElementById('particles-canvas');
-  const ctx = canvas.getContext('2d');
-  let particles = [];
-  function resize(){ canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-  resize();
-  window.addEventListener('resize', resize);
-  for(let i=0;i<70;i++) particles.push({ x:Math.random()*window.innerWidth, y:Math.random()*window.innerHeight, r:Math.random()*1.5+0.3, vx:(Math.random()-0.5)*0.3, vy:(Math.random()-0.5)*0.3, a:Math.random()*0.5+0.1 });
+  const c=document.getElementById('bg-canvas'),ctx=c.getContext('2d');
+  let W,H,pts=[];
+  function resize(){W=c.width=window.innerWidth;H=c.height=window.innerHeight}
+  resize();window.addEventListener('resize',resize);
+  for(let i=0;i<55;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25,r:Math.random()*1.2+.4});
   function draw(){
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-    particles.forEach(p=>{
-      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle=`rgba(96,165,250,${p.a})`; ctx.fill();
-      p.x+=p.vx; p.y+=p.vy;
-      if(p.x<0)p.x=canvas.width; if(p.x>canvas.width)p.x=0;
-      if(p.y<0)p.y=canvas.height; if(p.y>canvas.height)p.y=0;
+    ctx.clearRect(0,0,W,H);
+    pts.forEach(p=>{
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle='rgba(245,158,11,0.45)';ctx.fill();
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;
     });
-    // Draw faint connecting lines
-    for(let i=0;i<particles.length;i++) for(let j=i+1;j<particles.length;j++){
-      const dx=particles[i].x-particles[j].x, dy=particles[i].y-particles[j].y;
-      const dist=Math.sqrt(dx*dx+dy*dy);
-      if(dist<120){ ctx.beginPath(); ctx.moveTo(particles[i].x,particles[i].y); ctx.lineTo(particles[j].x,particles[j].y); ctx.strokeStyle=`rgba(96,165,250,${0.06*(1-dist/120)})`; ctx.stroke(); }
+    for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){
+      const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<130){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle=`rgba(245,158,11,${.07*(1-d/130)})`;ctx.stroke();}
     }
     requestAnimationFrame(draw);
   }
   draw();
 })();
 
-// Typed text
+// ── TYPED ──
 (function(){
-  const texts = ['Generative AI Engineer', 'LLM Systems Architect', 'AI/ML Researcher', 'Open Source Builder'];
-  let ti=0, ci=0, deleting=false;
-  const el = document.getElementById('typed-text');
-  function type(){
-    const current = texts[ti];
-    if(!deleting){ el.textContent=current.substring(0,++ci); if(ci===current.length){ deleting=true; setTimeout(type,1800); return; } }
-    else { el.textContent=current.substring(0,--ci); if(ci===0){ deleting=false; ti=(ti+1)%texts.length; } }
-    setTimeout(type, deleting?40:80);
+  const texts=['Generative AI Engineer','LLM Systems Architect','AI/ML Researcher','Open Source Builder'];
+  let ti=0,ci=0,del=false;
+  const el=document.getElementById('typed');
+  function t(){
+    const cur=texts[ti];
+    if(!del){el.textContent=cur.substring(0,++ci);if(ci===cur.length){del=true;setTimeout(t,1900);return;}}
+    else{el.textContent=cur.substring(0,--ci);if(ci===0){del=false;ti=(ti+1)%texts.length;}}
+    setTimeout(t,del?38:78);
   }
-  type();
+  t();
 })();
 
-// Mobile menu
-document.getElementById('mobile-menu-button').addEventListener('click', function(){
-  document.getElementById('mobile-menu').classList.toggle('hidden');
-});
-document.querySelectorAll('#mobile-menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('mobile-menu').classList.add('hidden')));
+// ── MOBILE MENU ──
+const ham=document.getElementById('ham'),mob=document.getElementById('mob-menu');
+ham.addEventListener('click',()=>mob.classList.toggle('open'));
+document.querySelectorAll('.vk-mobile-link').forEach(a=>a.addEventListener('click',()=>mob.classList.remove('open')));
 
-// Scroll fade-in
-const observer = new IntersectionObserver(entries=>entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1});
-document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+// ── SCROLL REVEAL ──
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-// Active nav
+// ── ACTIVE NAV ──
 window.addEventListener('scroll',()=>{
-  const sections=document.querySelectorAll('section[id]');
-  let cur='';
-  sections.forEach(s=>{ if(window.scrollY>=s.offsetTop-100) cur=s.id; });
-  document.querySelectorAll('.nav-link').forEach(a=>{ a.style.color=a.getAttribute('href')==='#'+cur?'#60a5fa':''; });
+  const secs=document.querySelectorAll('section[id]');let cur='';
+  secs.forEach(s=>{if(window.scrollY>=s.offsetTop-80)cur=s.id;});
+  document.querySelectorAll('.vk-link').forEach(a=>{a.classList.toggle('active',a.getAttribute('href')==='#'+cur);});
 });
+
+// ── MODAL DATA ──
+const modalData={
+  pub1:{title:'3D Reconstruction from Text Data',sub:'arXiv · March 2025',img:'assets/arxiv.png',body:'A fully automated pipeline that transforms natural language descriptions into detailed 3D models. Multi-stage workflow: text → Stable Diffusion image generation → RL-agent-based enhancement → reflection removal (Stable Delight) → image upscaling & background removal → volumetric 3D reconstruction. Addresses semantic coherence, geometric complexity, and visual fidelity for AR/VR and digital content creation.',cta:'Read on arXiv',url:'https://arxiv.org/abs/2503.03664v1'},
+  pub2:{title:'Audio Fingerprinting Accuracy with AI & ML',sub:'IEEE Conference Proceedings · Feb 2024',img:'assets/ieee.png',body:'Advancing Audio Fingerprinting Accuracy with AI and ML: Addressing Background Noise and Distortion Challenges. This paper presents novel AI and ML approaches to improve audio fingerprinting accuracy in challenging acoustic environments with background noise and signal distortion.',cta:'Read on IEEE',url:'https://ieeexplore.ieee.org/document/10475656'},
+  pub3:{title:'PCB Layout using CNC Machine',sub:'IRJIET · March 2020',img:'assets/IRJET.jpg',body:'Implementation of PCB Layout using CNC Machine Controlling with Wireless Communication. This paper presents an automated system for PCB layout fabrication using CNC machines controlled wirelessly, reducing manual effort and improving precision in PCB manufacturing.',cta:'Read on IRJIET',url:'https://irjiet.com/Volume-4/Issue-3-March-2020/Implementation-of-PCB-Layout-using-CNC-Machine-Controlling-with-Wireless-Communication/191'},
+  cert1:{title:'TensorFlow Developer Certification',sub:'Google · Issued Oct 2023 · Expires Oct 2026',img:'assets/tf.png',body:'Professional certification validating expertise in building and deploying ML models using TensorFlow. Covers model building, image classification, NLP, time series, and sequences.',cta:'View Credential',url:'https://www.credential.net/9c379562-5cb7-4b74-ba3a-da4ca9679d52#acc.hBYuWCwe'},
+  cert2:{title:'Nvidia Jetson AI Specialist',sub:'Nvidia Deep Learning Institute · March 2023',img:'assets/nvidia.jpeg',body:'Specialist certification for deploying AI at the edge using NVIDIA Jetson AGX platforms. Covers computer vision, deep learning inference, TensorRT optimisation, and real-time AI deployment on edge hardware.',cta:'View Credential',url:'https://drive.google.com/file/d/121XQ28MHbITebsopndSsV3Ry6d_plOcI/view?usp=sharing'},
+  cert3:{title:'Microsoft Azure AI Fundamentals',sub:'Microsoft · April 2024',img:'assets/microsoft-certified-fundamentals-badge.svg',body:'Microsoft Certified Azure AI Fundamentals validates foundational knowledge of AI and machine learning concepts, and related Azure services including Azure Cognitive Services, Azure Machine Learning, and responsible AI principles.',cta:'View Credential',url:'https://learn.microsoft.com/en-us/users/venkatkumarr-3905/credentials/39aa1df6ddf3610a'},
+  cert4:{title:'Self Driving Car Engineer',sub:'Udacity Nanodegree · January 2025',img:'assets/udacity.png',body:'Advanced Nanodegree covering the full self-driving car stack: computer vision, sensor fusion, localisation, path planning, and vehicle control. Topics include CNNs for object detection, Kalman filters, particle filters, and model predictive control.',cta:'View Credential',url:'https://www.udacity.com/certificate/e/e01bebb4-a8e7-11ef-a775-4bbfc380b4ae'},
+  cert5:{title:'Reinforcement Learning Specialization',sub:'University of Alberta via Coursera · Oct 2024',img:'assets/coursera.png',body:'4-course specialization covering fundamentals of reinforcement learning: MDPs, dynamic programming, temporal-difference learning, function approximation, and policy gradient methods. Includes hands-on OpenAI Gym implementations.',cta:'View Credential',url:'https://www.coursera.org/account/accomplishments/specialization/59Y70ET9IIND'},
+  cert6:{title:'Generative AI for Software Development',sub:'DeepLearning.ai Professional Certificate · Oct 2024',img:'assets/deeplearning_ai.png',body:'Professional certificate covering practical generative AI for software development: prompt engineering, LLM APIs, RAG systems, and integrating AI capabilities into production software applications.',cta:'View Credential',url:'https://www.coursera.org/account/accomplishments/professional-cert/49ZX9ZSE5980'},
+  proj1:{title:'Text-to-3D Reconstruction Pipeline',sub:'Generative AI · NeRF · Research',img:'assets/p1.png',body:'Proposed and built a fully automated pipeline transforming natural language descriptions into 3D models. Multi-stage: text → Stable Diffusion → RL-agent enhancement → Stable Delight reflection removal → image upscaling → volumetric 3D reconstruction. Targets AR/VR and digital content creation. Published on arXiv.',demo:'https://vk-ant.github.io/AHIFA3D',code:'https://github.com/VK-Ant/Text-to-3D-Reconstruction-Research',arxiv:'https://arxiv.org/abs/2503.03664v1'},
+  proj2:{title:'Comprehensive Computer Vision Portfolio',sub:'Object Detection · Tracking · Video Analysis',img:'assets/cv.png',body:'Wide-ranging computer vision solutions covering object detection (YOLO, Faster RCNN), multi-object tracking, semantic and instance segmentation, and real-time video analysis pipelines. Full collection of exploration projects showcasing CV breadth.',code:'https://github.com/VK-Ant/ComputerVision-Upgrade-Project'},
+  proj3:{title:'Face-Based Attendance System',sub:'Edge AI · NVIDIA Jetson AGX Xavier',img:'assets/p5.png',body:'Non-contact facial recognition attendance system deployed on NVIDIA Jetson AGX Xavier edge device. Uses face detection + recognition pipeline for automated attendance tracking for field employees. Real-time inference optimised for edge hardware.',code:'https://github.com/VK-Ant/AttendanceSystem-JetsonAGX',blog:'https://medium.com/@VK_Venkatkumar/face-based-attendance-system-using-nvidia-jetson-agx-xavier-device-c2502ed195d8'},
+  proj4:{title:'GenAI RAG/CAG + Knowledge Graph & Multimodal Chatbot',sub:'LangChain · RAG/CAG · Knowledge Graph · Gemini',img:'assets/p4.png',body:'Generative AI-powered RAG/CAG and knowledge graph system integrating diverse data sources for efficient information retrieval. Multimodal chatbot supporting PDF, CSV, and vision-based drag-and-drop input with multilingual text + audio responses. Applicable to real-time domains like security and drone development.',code:'https://github.com/VK-Ant/PDF_CSV_VISION_DRAGGING_BASED_CHATBOT_WITH_TRANSLATOR_AUDIO_USING_GEMINIAI'},
+  proj5:{title:'Advanced Video Analytics for Vehicle Behavior',sub:'Computer Vision · KITTI Dataset',img:'assets/p2.png',body:'Robust video analytics system for vehicle behaviour analysis using the KITTI dataset. Enhances movement prediction and behaviour analysis through advanced computer vision and machine learning. Final M.Tech dissertation project.',blog:'https://www.linkedin.com/posts/venkatkumarvk_python-pythondeveloper-deeplearning-activity-7274068051904327682-9eCJ'},
+  proj6:{title:'AI-Powered Real-Time Video Recruitment Tool',sub:'Real-time CV · Emotion AI · Analytics',img:'assets/p3.png',body:'Real-time video analysis system for eye contact, emotion, age, and gender recognition aimed at building a data-driven AI recruitment tool. Includes dynamic candidate selection and conversational AI integration for automated interview assessment.',blog:'https://www.linkedin.com/posts/venkatkumarvk_python-pythondeveloper-deeplearning-activity-7179545347281620992--sgP'},
+};
+
+// ── OPEN MODAL ──
+function openModal(id){
+  const d=modalData[id];if(!d)return;
+  const box=document.getElementById('modal-content');
+  let btns='';
+  if(d.cta&&d.url)btns+=`<a href="${d.url}" target="_blank" class="modal-cta"><i class="fas fa-external-link-alt"></i> ${d.cta}</a> `;
+  if(d.demo)btns+=`<a href="${d.demo}" target="_blank" class="modal-cta" style="background:linear-gradient(135deg,#06b6d4,#0891b2);margin-left:6px"><i class="fas fa-link"></i> Demo</a> `;
+  if(d.code)btns+=`<a href="${d.code}" target="_blank" class="modal-cta" style="background:rgba(255,255,255,0.08);color:#f1f5f9;border:1px solid rgba(255,255,255,0.1);margin-left:6px"><i class="fab fa-github"></i> Code</a> `;
+  if(d.arxiv)btns+=`<a href="${d.arxiv}" target="_blank" class="modal-cta" style="background:linear-gradient(135deg,#dc2626,#b91c1c);margin-left:6px"><i class="fas fa-book"></i> arXiv</a>`;
+  if(d.blog)btns+=`<a href="${d.blog}" target="_blank" class="modal-cta" style="background:rgba(255,255,255,0.08);color:#f1f5f9;border:1px solid rgba(255,255,255,0.1);margin-left:6px"><i class="fas fa-link"></i> Post</a>`;
+  box.innerHTML=`
+    <img src="${d.img}" class="modal-logo" alt="">
+    <div class="modal-title">${d.title}</div>
+    <div class="modal-sub">${d.sub}</div>
+    <div class="modal-body">${d.body}</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px">${btns}</div>`;
+  document.getElementById('modal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+// ── CLOSE MODAL ──
+document.getElementById('modal-close').addEventListener('click',closeModal);
+document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)closeModal();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+function closeModal(){document.getElementById('modal').classList.remove('open');document.body.style.overflow='';}
 </script>
 </body>
 </html>
