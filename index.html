@@ -1,1810 +1,623 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Venkatkumar (VK)</title>
-
-<!-- Tailwind CSS -->
-
+<title>Venkatkumar Rajan — Generative AI Engineer</title>
 <script src="https://cdn.tailwindcss.com"></script>
-
-<!-- Font Awesome -->
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<!-- Google Fonts -->
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- Custom CSS -->
-
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-
 <link rel="icon" href="assets/icon2.png">
-
 </head>
-
-<body class="bg-gray-100 text-gray-800">
-
-<!-- Navigation -->
-
-<nav class="fixed w-full bg-white shadow-md z-50">
-
-<div class="container mx-auto px-4 sm:px-6 lg:px-8">
-
-<div class="flex justify-between h-16">
-
-<div class="flex items-center">
-
-<a href="#" class="text-2xl font-bold text-blue-600">VENKATKUMAR (VK)</a>
-
-</div>
-
-<div class="hidden md:flex items-center space-x-8">
-
-<a href="#home" class="text-gray-700 hover:text-blue-600 transition">Home</a>
-
-<a href="#about" class="text-gray-700 hover:text-blue-600 transition">About</a>
-
-<a href="#experience" class="text-gray-700 hover:text-blue-600 transition">Experience</a>
-
-<a href="#education" class="text-gray-700 hover:text-blue-600 transition">Education</a>
-
-<a href="#skills" class="text-gray-700 hover:text-blue-600 transition">Skills</a>
-
-<a href="#publications" class="text-gray-700 hover:text-blue-600 transition">Publications / Certifications</a>
-
- <a href="#opensource" class="text-gray-700 hover:text-blue-600 transition">Open Source</a>
-
-<a href="#projects" class="text-gray-700 hover:text-blue-600 transition">Projects</a>
-
-<a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
-
-</div>
-
-<div class="md:hidden flex items-center">
-
-<button id="mobile-menu-button" class="text-gray-700">
-
-<i class="fas fa-bars text-xl"></i>
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Mobile menu -->
-
-<div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
-
-<div class="px-4 pt-2 pb-4 space-y-3">
-
-<a href="#home" class="block text-gray-700 hover:text-blue-600 transition">Home</a>
-
-<a href="#about" class="block text-gray-700 hover:text-blue-600 transition">About</a>
-
-<a href="#experience" class="block text-gray-700 hover:text-blue-600 transition">Experience</a>
-
-<a href="#education" class="block text-gray-700 hover:text-blue-600 transition">Education</a>
-
-<a href="#skills" class="block text-gray-700 hover:text-blue-600 transition">Skills</a>
-
-<a href="#publications" class="block text-gray-700 hover:text-blue-600 transition">Publications / Certifications</a>
-
-<a href="#projects" class="block text-gray-700 hover:text-blue-600 transition">Projects</a>
-
-<a href="#contact" class="block text-gray-700 hover:text-blue-600 transition">Contact</a>
-
-</div>
-
-</div>
-
-</nav>
-
-<!-- Hero Section -->
-
-<section id="home" class="hero-bg min-h-screen flex items-center pt-16">
-
-<div class="container mx-auto px-4 sm:px-6 lg:px-8">
-
-<div class="flex flex-col md:flex-row items-center justify-between">
-
-<div class="w-full md:w-1/2 text-white mb-8 md:mb-0">
-
-<h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
-
-Hi folks, I'm<span class="text-blue-500">Venkatkumar Rajan</span>
-
-</h1>
-
-<h2 class="text-2xl sm:text-3xl md:text-4xl font-medium mb-6">
-
-<span id="typed-text"></span>
-
-<span class="typed-cursor"></span>
-
-</h2>
-
-<p class="text-gray-300 mb-8 text-lg">
-
-My vision is to advance the frontiers of artificial intelligence through innovative research, developing cutting-edge solutions that address real-world challenges and drive meaningful impact by transforming data into actionable insights and intelligent systems.
-
-</p>
-
-<div class="flex space-x-4">
-
-<a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition duration-300">
-
-Contact Me
-
-</a>
-
-<a href="assets/Venkatkumar_AIEngineer.pdf" download class="border border-white text-white hover:bg-white hover:text-blue-600 font-medium py-2 px-6 rounded-full transition duration-300">
-
-Download Resume
-
-</a>
-
-</div>
-
-</div>
-
-<div class="w-full md:w-1/2 flex justify-center">
-
-<img src="assets/main_imresize.png" alt="Your Profile" class="rounded-full w-64 h-64 object-cover border-4 border-yellow-500 shadow-xl">
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- About Section -->
-
-<section id="about" class="py-20 bg-white">
-
-<div class="container mx-auto px-4 sm:px-6 lg:px-8">
-
-<div class="text-center mb-16">
-
-<h2 class="text-3xl font-bold mb-2">About Me</h2>
-
-<div class="w-16 h-1 bg-blue-600 mx-auto"></div>
-
-</div>
-
-<!-- Main content with everything centered -->
-
-<div class="flex flex-col items-center justify-center max-w-3xl mx-auto text-center">
-
-<p class="text-gray-700 mb-4">
-
-Hi folks, I’m an AI Engineer passionate about building intelligent solutions that blend research, real-world deployment, and innovation. My work spans across Generative AI, Computer Vision, Natural Language Processing, and end-to-end AI pipelines from designing algorithms to deploying production-ready systems.
-
-</p>
-
-<p class="text-gray-700 mb-4">
-
-With experience across industries like healthcare, manufacturing, and automotive, I’ve developed real-time video analytics, 3D reconstruction with NeRF & photogrammetry, document processing pipelines using Azure AI, and AI-powered automation tools. I also bring strong hands-on skills with cloud platforms (Azure, AWS), edge devices (Nvidia Jetson, Raspberry Pi), and modern AI frameworks.
-
-</p>
-
-<p class="text-gray-700 mb-6">
-
-My work includes multiple research publications (Arxiv, IEEE, IRJIET), Kaggle Master-level contributions, and certifications from NVIDIA, TensorFlow, and Azure AI. I enjoy bridging the gap between deep tech and applied business problems 🌐.
-
-</p>
-
-<!-- Contact information in centered layout -->
-
-<div class="flex flex-col gap-4 items-center">
-
-<div class="bg-gray-100 px-6 py-3 rounded-lg w-90 text-center">
-
-<p class="font-medium">Email</p>
-
-<p class="text-gray-700">venkatkumarr.vk99@gmail.com</p>
-
-</div>
-
-<!-- Social Media Links -->
-
-<div class="flex gap-4 my-4">
-
-<!-- Kaggle -->
-
-<a href="https://www.kaggle.com/venkatkumar001" target="_blank" rel="noopener noreferrer" class="group">
-
-<div class="bg-gray-100 hover:bg-blue-500 p-4 rounded-full transition-all duration-300 shadow-md group-hover:shadow-lg">
-
-<i class="fab fa-kaggle text-2xl text-blue-500 group-hover:text-white"></i>
-
-</div>
-
-<p class="mt-2 text-center text-gray-700">Kaggle</p>
-
-</a>
-
-<!-- Medium -->
-
-<a href="https://medium.com/@VK_Venkatkumar" target="_blank" rel="noopener noreferrer" class="group">
-
-<div class="bg-gray-100 hover:bg-black p-4 rounded-full transition-all duration-300 shadow-md group-hover:shadow-lg">
-
-<i class="fab fa-medium text-2xl text-black group-hover:text-white"></i>
-
-</div>
-
-<p class="mt-2 text-center text-gray-700">Medium</p>
-
-</a>
-
-<!-- GitHub -->
-
-<a href="https://github.com/VK-Ant" target="_blank" rel="noopener noreferrer" class="group">
-
-<div class="bg-gray-100 hover:bg-gray-800 p-4 rounded-full transition-all duration-300 shadow-md group-hover:shadow-lg">
-
-<i class="fab fa-github text-2xl text-gray-800 group-hover:text-white"></i>
-
-</div>
-
-<p class="mt-2 text-center text-gray-700">GitHub</p>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Experience Section -->
-
-<section id="experience" class="py-20 bg-gray-100">
-
-<div class="container mx-auto px-4 sm:px-6 lg:px-8">
-
-<div class="text-center mb-16">
-
-<h2 class="text-4xl font-bold mb-2">EXPERIENCE</h2>
-
-<div class="w-16 h-1 bg-blue-600 mx-auto"></div>
-
-</div>
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<!-- Experience Item 1: EXL -->
-<div class="bg-white p-6 rounded-lg shadow-lg transition-all hover:shadow-xl">
-  <div class="flex flex-col items-center mb-6">
-    <img src="assets/exl3.png" alt="EXL Service Logo" class="h-20 mb-4 object-contain">
-    <div class="text-center">
-      <h3 class="text-xl font-bold mb-1">Generative AI Engineer <span class="text-gray-400 font-normal text-base">| Business Analyst</span></h3>
-      <p class="text-blue-600 font-medium text-sm mb-1">EXL Service (India) Pvt. Ltd.</p>
-      <p class="text-gray-500 text-sm">Dec 2023 &ndash; Present &nbsp;&middot;&nbsp; Noida, India (Remote)</p>
+<body>
+
+<!-- Particle canvas -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- ── NAV ── -->
+<div class="nav-glass">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <a href="#" class="text-white font-black text-lg tracking-tight">VK<span class="text-blue-400">.</span></a>
+      <div class="hidden lg:flex items-center gap-7">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#publications" class="nav-link">Publications</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#opensource" class="nav-link">Open Source</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <button id="mobile-menu-button" class="lg:hidden text-gray-400 hover:text-white">
+        <i class="fas fa-bars text-lg"></i>
+      </button>
     </div>
   </div>
-  <div class="space-y-3 text-sm text-gray-600 text-left">
-    <div class="border-l-2 border-blue-500 pl-3">
-      <p class="font-semibold text-gray-800 mb-1">AI-Powered Credential Extraction System <span class="text-blue-500 font-normal">(Unified Text RAG + Multimodal RAG, Azure)</span></p>
-      <p>Architected and owned end-to-end design, development, and production deployment of a <strong>unified</strong> dual-mode RAG pipeline that automates extraction of <strong>46+ structured fields</strong> from complex, unstructured documents (native PDFs, scanned images, mixed-format files). Built on Azure OpenAI (GPT-5), Azure Document Intelligence (OCR, layout parsing), Azure AI Search (per-field vector indexing, semantic retrieval), and Azure OpenAI Embeddings (chunking + embedding pipeline). Implemented confidence-based routing, automated aggregation, and human-in-the-loop review &mdash; achieving <strong>70% extraction accuracy</strong> and <strong>reducing manual effort by 30%</strong>. Deployed via Azure DevOps CI/CD with Azure Blob Storage, Azure Key Vault, and structured logging.</p>
-    </div>
-    <div class="border-l-2 border-blue-500 pl-3">
-      <p class="font-semibold text-gray-800 mb-1">Unified GenAI Document Intelligence &amp; Automation System <span class="text-blue-500 font-normal">(Azure)</span></p>
-      <p>Owned end-to-end design, development, and production deployment of a real-time, <strong>unified</strong> Generative AI document parsing and intelligence system built on Azure OpenAI, NLP, and computer vision. A single extensible codebase handles multiple complex document types &mdash; onboarding a new type requires only a <strong>config entry and prompt update, with zero redevelopment</strong>. Achieved <strong>&gt;95% extraction confidence</strong>, <strong>reduced manual processing effort by 40&ndash;50%</strong>, with Azure Blob Storage, Azure Key Vault, Azure DevOps CI/CD, and full audit logging.</p>
-    </div>
-    <div class="border-l-2 border-blue-500 pl-3">
-      <p class="font-semibold text-gray-800 mb-1">AI-Based Document Classification System <span class="text-blue-500 font-normal">(Unified, Azure)</span></p>
-      <p>Built a scalable, <strong>unified</strong> AI document classifier supporting <strong>15+ document categories</strong> with <strong>&gt;97% accuracy</strong>. New categories added instantly via a reference document &mdash; no engineering or prompt changes required.</p>
-    </div>
-    <div class="border-l-2 border-blue-500 pl-3">
-      <p class="font-semibold text-gray-800 mb-1">Custom AI Agent Builder <span class="text-blue-500 font-normal">(Databricks, Internal)</span></p>
-      <p>Designed and built an internal framework enabling users to <strong>create and configure custom AI agents</strong> &mdash; connecting multiple Unity Catalog tables, attaching PDF knowledge bases, and defining agent behaviour without code. Built for <strong>denial management analytics</strong>, enabling analysts to run natural-language queries, root-cause analysis, and insight generation. Deployed as a governed, reusable Databricks App with RAG-powered responses.</p>
-    </div>
-    <div class="border-l-2 border-blue-500 pl-3">
-      <p class="font-semibold text-gray-800 mb-1">Internal AI Productivity Tools</p>
-      <p>Built a suite of internal tools &mdash; <strong>Excel AI assistant</strong>, <strong>SQL chatbot</strong> (plain-English to SQL), <strong>Power App</strong> integrations, and <strong>Document Intelligence field extraction</strong> &mdash; reducing manual effort across data, operations, and analyst teams.</p>
-    </div>
-    <div class="border-l-2 border-gray-300 pl-3">
-      <p>Delivered <strong>10+ GenAI PoC presentations</strong> to prospective clients; broad experience across AI system design, enterprise data pipelines, and production LLM deployment.</p>
-    </div>
+  <div id="mobile-menu" class="hidden lg:hidden px-4 pb-4 space-y-2 border-t border-white/5">
+    <a href="#about" class="block py-2 text-sm text-gray-400 hover:text-blue-400">About</a>
+    <a href="#experience" class="block py-2 text-sm text-gray-400 hover:text-blue-400">Experience</a>
+    <a href="#education" class="block py-2 text-sm text-gray-400 hover:text-blue-400">Education</a>
+    <a href="#skills" class="block py-2 text-sm text-gray-400 hover:text-blue-400">Skills</a>
+    <a href="#publications" class="block py-2 text-sm text-gray-400 hover:text-blue-400">Publications</a>
+    <a href="#certifications" class="block py-2 text-sm text-gray-400 hover:text-blue-400">Certifications</a>
+    <a href="#opensource" class="block py-2 text-sm text-gray-400 hover:text-blue-400">Open Source</a>
+    <a href="#projects" class="block py-2 text-sm text-gray-400 hover:text-blue-400">Projects</a>
+    <a href="#contact" class="block py-2 text-sm text-gray-400 hover:text-blue-400">Contact</a>
   </div>
 </div>
 
-<!-- Experience Item 2: AugRay -->
-<div class="bg-white p-6 rounded-lg shadow-lg transition-all hover:shadow-xl">
-  <div class="flex flex-col items-center mb-6">
-    <img src="assets/augray_logo.jpg" alt="AugRay Logo" class="h-20 mb-4 object-contain">
-    <div class="text-center">
-      <h3 class="text-xl font-bold mb-1">Machine Learning Engineer</h3>
-      <p class="text-blue-600 font-medium text-sm mb-1">AugRay</p>
-      <p class="text-gray-500 text-sm">Sept 2022 &ndash; Oct 2023 &nbsp;&middot;&nbsp; Chennai, Tamil Nadu (Onsite)</p>
-    </div>
-  </div>
-  <div class="space-y-3 text-sm text-gray-600 text-left">
-    <div class="border-l-2 border-purple-500 pl-3">
-      <p class="font-semibold text-gray-800 mb-1">Real-Time Ball Fault Detection <span class="text-purple-500 font-normal">(Edge AI, Computer Vision)</span></p>
-      <p>Designed and deployed a lightweight real-time defect detection system using MobileNetV2, optimised for NVIDIA Jetson AGX. Achieved <strong>90%+ detection accuracy</strong>, <strong>reduced QA error rates by 40%+</strong>, and <strong>increased manufacturing throughput by 3&times;</strong>.</p>
-    </div>
-    <div class="border-l-2 border-purple-500 pl-3">
-      <p class="font-semibold text-gray-800 mb-1">Automated 3D Reconstruction <span class="text-purple-500 font-normal">(Generative AI + Photogrammetry + NeRF)</span></p>
-      <p>Implemented an end-to-end automated 3D reconstruction pipeline combining traditional photogrammetry with Generative AI and Neural Radiance Fields (NeRF). Achieved <strong>95% accuracy</strong> for non-reflective objects and <strong>~50%</strong> for reflective objects, reducing manual processing time and improving 3D asset scalability.</p>
-    </div>
-    <div class="border-l-2 border-purple-500 pl-3">
-      <p class="font-semibold text-gray-800 mb-1">Wall &amp; Floor Segmentation with Intelligent Colour Schemes</p>
-      <p>Fine-tuned <strong>SegFormer-B0</strong> (segformer-b0-finetuned-ade-512-512) achieving <strong>80% accuracy</strong>. Enabled a paint manufacturer to automate colour preview generation &mdash; <strong>reduced designer effort by 20+ hours/month</strong>.</p>
-    </div>
-    <div class="border-l-2 border-purple-500 pl-3">
-      <p class="font-semibold text-gray-800 mb-1">Foot Detection &amp; Virtual Shoe Try-On <span class="text-purple-500 font-normal">(Computer Vision, AR)</span></p>
-      <p>Led development of a CV-based virtual shoe try-on system trained on <strong>10,000+ annotated foot images</strong>. Achieved <strong>79% placement accuracy</strong>, contributing to a <strong>5% reduction in customer return rates</strong> during pilot trials.</p>
-    </div>
-    <div class="border-l-2 border-purple-500 pl-3">
-      <p class="font-semibold text-gray-800 mb-1">Generative AI Proofs of Concept</p>
-      <p>Built multiple GenAI PoCs including automated flyer generation, face texture synthesis, and a site-based conversational chatbot &mdash; driving innovation in interactive marketing and AI-powered digital experiences.</p>
-    </div>
-  </div>
-</div>
-</div>
-
-</section>
-
-<!-- Education Section -->
-
-<section id="education" class="py-20 bg-gray-100">
-
-<div class="container mx-auto px-4 sm:px-6 lg:px-8">
-
-<div class="text-center mb-16">
-
-<h2 class="text-4xl font-bold mb-2">EDUCATION</h2>
-
-<div class="w-16 h-1 bg-blue-600 mx-auto"></div>
-
-</div>
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-<!-- Education Item 1 -->
-
-<div class="bg-white p-6 rounded-lg shadow-lg transition-all hover:shadow-xl">
-
-<div class="flex flex-col items-center mb-6">
-
-<img src="assets/bits_mtech.png" alt="BITS Pilani Logo" class="h-20 mb-4">
-
-<div class="text-center">
-
-<h3 class="text-xl font-bold mb-2">Master of Technology in Artificial Intelligence & Machine Learning</h3>
-
-<p class="text-gray-500 font-medium">2023 - 2025</p>
-
-</div>
-
-</div>
-
-<div class="text-center">
-
-<p class="text-gray-700 mb-4">
-
-Birla Institute of Technology and Science, Pilani
-
-</p>
-
-<div class="mt-4 text-sm text-gray-600">
-
-<p><strong>Relevant Coursework:</strong> Statistics, Probability, Deep learning, Deep Reinforcement learning, Probabilistic Generative Models, Graph Neural Network, Video Analytics, Social Media Analytics, Distributed Machine learning </p>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Education Item 2 -->
-
-<div class="bg-white p-6 rounded-lg shadow-lg transition-all hover:shadow-xl">
-
-<div class="flex flex-col items-center mb-6">
-
-<img src="assets/sacs-ug.png" alt="College Logo" class="h-20 mb-4">
-
-<div class="text-center">
-
-<h3 class="text-xl font-bold mb-2">Bachelor of Technology in Electronics & Communication Engineering</h3>
-
-<p class="text-gray-500 font-medium">2016 - 2020</p>
-
-</div>
-
-</div>
-
-<div class="text-center">
-
-<p class="text-gray-700 mb-4">
-
-SACS MAVMM Engineering College (Anna University)
-
-</p>
-
-<div class="mt-4 text-sm text-gray-600">
-
-<p><strong>Relevant Coursework:</strong> Data Structures, Algorithms, Digital Signal Processing, Digital Image Processing, Signals & Systems, Embedded Systems, Electronics</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Skills Section - Refined -->
-
-<section id="skills" class="py-20 bg-gray-900 text-white">
-
-<div class="container mx-auto px-4 sm:px-6 lg:px-8">
-
-<div class="text-center mb-16">
-
-<h2 class="text-4xl font-bold mb-2">My Skills</h2>
-
-<div class="w-16 h-1 bg-blue-600 mx-auto"></div>
-
-</div>
-
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-<!-- !-- Programming Languages & AI Frameworks -->
-
-<div class="bg-gray-900 border border-blue-500 rounded-lg p-6 hover:border-blue-400 transition-all duration-300">
-
-<div class="flex items-center mb-6">
-
-<div class="text-blue-500 mr-4">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-
-</svg>
-
-</div>
-
-<h3 class="text-xl font-bold"> Programming Languages & AI/ML Frameworks</h3>
-
-</div>
-
-<div class="grid grid-cols-2 gap-2 mt-4">
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Python</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">C++</div>
-
-</div>
-
-<div class="grid grid-cols-2 gap-2 mt-4">
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">TensorFlow</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">PyTorch</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">PyTorch Lightning</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Fastai</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">OpenCV</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Kornia</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Gym</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">PySpark</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Prophet</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">NetworkX</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">PyG</div>
-
-</div>
-
-</div>
-
-<!-- Generative AI & lLMOps-->
-
-<div class="bg-gray-900 border border-blue-500 rounded-lg p-6 hover:border-blue-400 transition-all duration-300">
-
-<div class="flex items-center mb-6">
-
-<div class="text-blue-500 mr-4">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
-
-</svg>
-
-</div>
-
-<h3 class="text-xl font-bold">Generative AI & LLMOps</h3>
-
-</div>
-
-<div class="grid grid-cols-2 gap-2 mt-4">
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Langchain</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Docling</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">LLamaIndex</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">PandasAI</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Groq</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Ollama</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">CrewAI</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Ragas</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">LLMOps</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Phidata</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Autogen</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Langflow</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Langgraph</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">TimeGPT</div>
-
-</div>
-
-</div>
-
-<!-- Cloud Platforms -->
-
-<div class="bg-gray-900 border border-blue-500 rounded-lg p-6 hover:border-blue-400 transition-all duration-300">
-
-<div class="flex items-center mb-6">
-
-<div class="text-blue-500 mr-4">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-
-</svg>
-
-</div>
-
-<h3 class="text-xl font-bold">Deployment, MLOps and EdgeAI</h3>
-
-</div>
-
-<div class="grid grid-cols-2 gap-2 mt-4">
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Azure</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">AWS</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Docker</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Kubernetes</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Kubeflow</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">MLflow</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Kafka</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">CI/CD (Azure DevOps, Git)</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Nvidia Jetson AGX</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Raspberry Pi</div>
-
-</div>
-
-</div>
-
-<!-- Data, Automation and Visualization -->
-
-<div class="bg-gray-900 border border-blue-500 rounded-lg p-6 hover:border-blue-400 transition-all duration-300">
-
-<div class="flex items-center mb-6">
-
-<div class="text-blue-500 mr-4">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
-
-</svg>
-
-</div>
-
-<h3 class="text-xl font-bold">Data, Automation, Testing and Visualization</h3>
-
-</div>
-
-<div class="grid grid-cols-2 gap-2 mt-4">
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">MongoDB</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">MySQL</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">PowerBI</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Tableau</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Power App</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Power Automate</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Pytest</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Unittest</div>
-
-</div>
-
-</div>
-
-<!-- Web and Backend Frameworks -->
-
-<div class="bg-gray-900 border border-blue-500 rounded-lg p-6 hover:border-blue-400 transition-all duration-300">
-
-<div class="flex items-center mb-6">
-
-<div class="text-blue-500 mr-4">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-
-</svg>
-
-</div>
-
-<h3 class="text-xl font-bold">Web and Backend Frameworks</h3>
-
-</div>
-
-<div class="grid grid-cols-2 gap-2 mt-4">
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Django</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">ReactJS</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">NodeJS, ExpressJs</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">FastAPI, Flask, RestAPI</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Streamlit, Gradio, Taipy (Cross-Platform)</div>
-
-</div>
-
-</div>
-
-<!--Professional Skills-->
-
-<div class="bg-gray-900 border border-blue-500 rounded-lg p-6 hover:border-blue-400 transition-all duration-300">
-
-<div class="flex items-center mb-6">
-
-<div class="text-blue-500 mr-4">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 13v-1m4 1v-3m4 3V8M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
-
-</svg>
-
-</div>
-
-<h3 class="text-xl font-bold">Professional Skills</h3>
-
-</div>
-
-<div class="grid grid-cols-2 gap-2 mt-4">
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Leadership</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Project Management</div>
-
-</div>
-
-<div class="grid grid-cols-2 gap-2 mt-4">
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Agile Methodologies</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Business Analysis</div>
-
-</div>
-
-<div class="grid grid-cols-2 gap-2 mt-4">
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Problem Solving / Research Driven Development</div>
-
-<div class="text-blue-400 border border-blue-800 rounded px-2 py-1 text-center">Adaptability</div>
-
-</div>
-
-</div>
-
-<!-- Experience Summary -->
-
-<div class="bg-gray-900 border border-blue-500 rounded-lg p-6 hover:border-blue-400 transition-all duration-300 md:col-span-2 lg:col-span-3">
-
-<div class="flex items-center mb-6 justify-center">
-
-<div class="text-blue-500 mr-4">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-
-</svg>
-
-</div>
-
-<h3 class="text-xl font-bold">Experience Summary</h3>
-
-</div>
-
-<p class="text-blue-400 text-center mt-2 px-4 py-3 border border-blue-800 rounded bg-gray-900">
-
-Experienced in end-to-end implementation of text, image, audio, and financial data solutions, with a strong foundation in deep learning, machine learning, reinforcement learning, and graph neural networks (GNN), applied across academic research, product development, and business innovation. </p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Publications Section - Matching Certifications Style -->
-
-<section id="publications" class="py-20 bg-white">
-
-<div class="container mx-auto px-4 sm:px-6 lg:px-8">
-
-<div class="text-center mb-16">
-
-<h2 class="text-4xl font-bold mb-2">Publications</h2>
-
-<div class="w-16 h-1 bg-blue-600 mx-auto"></div>
-
-</div>
-
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-<!-- Publication 1 -->
-
-<div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
-
-<div class="flex items-center mb-4">
-
-<img src="assets/arxiv.png" alt="arXiv" class="w-12 h-12 mr-4">
-
-<h3 class="text-xl font-bold">3D Reconstruction from Text</h3>
-
-</div>
-
-<p class="text-gray-700 mb-2">arXiv (March 2025)</p>
-
-<p class="text-gray-600 text-sm mb-4">A Generative Approach to High Fidelity 3D Reconstruction from Text Data</p>
-
-<a href="https://arxiv.org/abs/2503.03664v1" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
-
-Read Paper <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-
-</svg>
-
-</a>
-
-</div>
-
-<!-- Publication 2 -->
-
-<div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
-
-<div class="flex items-center mb-4">
-
-<img src="assets/ieee.png" alt="IEEE" class="w-12 h-12 mr-4">
-
-<h3 class="text-xl font-bold">Audio Fingerprinting with AI</h3>
-
-</div>
-
-<p class="text-gray-700 mb-2">IEEE Conference Proceedings (Feb 2024)</p>
-
-<p class="text-gray-600 text-sm mb-4">Advancing Audio Fingerprinting Accuracy with AI and ML: Addressing Background Noise and Distortion Challenges</p>
-
-<a href="https://ieeexplore.ieee.org/document/10475656" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
-
-Read Paper <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-
-</svg>
-
-</a>
-
-</div>
-
-<!-- Publication 3 -->
-
-<div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
-
-<div class="flex items-center mb-4">
-
-<img src="assets/IRJET.jpg" alt="IRJIET" class="w-12 h-12 mr-4">
-
-<h3 class="text-xl font-bold">PCB Layout with CNC Machine</h3>
-
-</div>
-
-<p class="text-gray-700 mb-2">IRJIET (March 2020)</p>
-
-<p class="text-gray-600 text-sm mb-4">Implementation of PCB Layout using CNC Machine Controlling with Wireless Communication</p>
-
-<a href="https://irjiet.com/Volume-4/Issue-3-March-2020/Implementation-of-PCB-Layout-using-CNC-Machine-Controlling-with-Wireless-Communication/191" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
-
-Read Paper <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-
-</svg>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Certifications Section -->
-
-<section id="Certifications" class="py-20 bg-gray-50">
-
-<div class="container mx-auto px-4 sm:px-6 lg:px-8">
-
-<div class="text-center mb-16">
-
-<h2 class="text-4xl font-bold mb-2">Certifications</h2>
-
-<div class="w-16 h-1 bg-blue-600 mx-auto"></div>
-
-</div>
-
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-<!-- Certification 1 -->
-
-<div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
-
-<div class="flex items-center mb-4">
-
-<img src="assets/tf.png" alt="Google" class="w-12 h-12 mr-4">
-
-<h3 class="text-xl font-bold">TensorFlow Developer Certification</h3>
-
-</div>
-
-<p class="text-gray-600 text-sm mb-4">Issued: October 2023</p>
-
-<p class="text-gray-600 text-sm mb-4">Expires: October 2026</p>
-
-<a href="https://www.credential.net/9c379562-5cb7-4b74-ba3a-da4ca9679d52#acc.hBYuWCwe" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
-
-View Credential <i class="fas fa-external-link-alt ml-1"></i>
-
-</a>
-
-</div>
-
-<!-- Certification 2 -->
-
-<div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
-
-<div class="flex items-center mb-4">
-
-<img src="assets/nvidia.jpeg" alt="Nvidia" class="w-12 h-12 mr-4">
-
-<h3 class="text-xl font-bold">Nvidia Jetson AI Specialist</h3>
-
-</div>
-
-<p class="text-gray-700 mb-2">Nvidia Deep learning Institute</p>
-
-<p class="text-gray-600 text-sm mb-4">Issued: March 2023</p>
-
-<a href="https://drive.google.com/file/d/121XQ28MHbITebsopndSsV3Ry6d_plOcI/view?usp=sharing" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
-
-View Credential <i class="fas fa-external-link-alt ml-1"></i>
-
-</a>
-
-</div>
-
-<!-- Certification 3 -->
-
-<div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
-
-<div class="flex items-center mb-4">
-
-<img src="assets/microsoft-certified-fundamentals-badge.svg" alt="Microsoft Azure" class="w-12 h-12 mr-4">
-
-<h3 class="text-xl font-bold"> Microsoft Certified: Azure AI Fundamentals</h3>
-
-</div>
-
-<p class="text-gray-700 mb-2">Microsoft Azure </p>
-
-<p class="text-gray-600 text-sm mb-4">Issued: April 2024</p>
-
-<a href="https://learn.microsoft.com/en-us/users/venkatkumarr-3905/credentials/39aa1df6ddf3610a?ref=https%3A%2F%2Fwww.linkedin.com%2F" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
-
-View Credential <i class="fas fa-external-link-alt ml-1"></i>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Udacity Nanodegree Section -->
-
-<section id="nanodegrees" class="py-20 bg-gray-50">
-
-<div class="container mx-auto px-4 sm:px-6 lg:px-8">
-
-<div class="text-center mb-16">
-
-<h2 class="text-4xl font-bold mb-2">Udacity Nanodegree</h2>
-
-<div class="w-16 h-1 bg-blue-600 mx-auto"></div>
-
-</div>
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-<!-- Nanodegree 1 -->
-
-<div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all">
-
-<div class="flex items-center mb-6">
-
-<img src="assets/udacity.png" alt="Udacity" class="w-16 h-16 mr-4">
-
-<h3 class="text-2xl font-bold"> Self Driving Car Engineer</h3>
-
-</div>
-
-<p class="text-gray-700 mb-4">Waymo: Work on the future of autonomous vehicles and help make the self-driving car revolution a reality!</p>
-
-<div class="flex items-center text-gray-600 mb-6">
-
-<i class="far fa-calendar-alt mr-2"></i>
-
-<p class="text-sm">Issued: January 2025</p>
-
-</div>
-
-<div class="flex flex-wrap gap-2 mb-6">
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Computer Vision</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Sensor fusion</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Localization</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Planning</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Control</span>
-
-</div>
-
-<a href="https://www.udacity.com/certificate/e/e01bebb4-a8e7-11ef-a775-4bbfc380b4ae" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
-
-View Credential <i class="fas fa-external-link-alt ml-1"></i>
-
-</a>
-
-</div>
-
-<!-- Nanodegree 2 -->
-
-<div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all">
-
-<div class="flex items-center mb-6">
-
-<img src="assets/udacity.png" alt="Udacity" class="w-16 h-16 mr-4">
-
-<h3 class="text-2xl font-bold">Introduction to Self-Driving Cars</h3>
-
-</div>
-
-<p class="text-gray-700 mb-4">Waymo: Learn the essentials of building a self-driving car, including probability, C++, machine learning, and linear algebra.
-
-</p>
-
-<div class="flex items-center text-gray-600 mb-6">
-
-<i class="far fa-calendar-alt mr-2"></i>
-
-<p class="text-sm">Issued: November 2024</p>
-
-</div>
-
-<div class="flex flex-wrap gap-2 mb-6">
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Bayesian Thinking</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Working with Matrices</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">C++ Basics & Performance Programming in C++</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Vehicle Motion and Control</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Computer vision and Machine learning</span>
-
-</div>
-
-<a href="https://www.udacity.com/certificate/e/f8fbb5f8-9819-11ef-9b0a-e71392cf5d82" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
-
-View Credential <i class="fas fa-external-link-alt ml-1"></i>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Specializations Section -->
-
-<section id="specializations" class="py-20 bg-gray-50">
-
-<div class="container mx-auto px-4 sm:px-6 lg:px-8">
-
-<div class="text-center mb-16">
-
-<h2 class="text-4xl font-bold mb-2">Specializations</h2>
-
-<div class="w-16 h-1 bg-blue-600 mx-auto"></div>
-
-<p class="mt-4 text-gray-600">Advanced training and specialized certifications</p>
-
-</div>
-
-<!-- First Row -->
-
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-
-<!-- Specialization 1 -->
-
-<div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
-
-<div class="flex items-center mb-4">
-
-<img src="assets/coursera.png" alt="Coursera" class="w-12 h-12 mr-4">
-
-<h3 class="text-xl font-bold">Reinforcement Learning Specialization</h3>
-
-</div>
-
-<p class="text-gray-700 mb-2">University of Alberta</p>
-
-<p class="text-gray-600 text-sm mb-4">Issued: October 2024</p>
-
-<a href="https://www.coursera.org/account/accomplishments/specialization/59Y70ET9IIND" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
-
-View Credential <i class="fas fa-external-link-alt ml-1"></i>
-
-</a>
-
-</div>
-
-<!-- Specialization 2 -->
-
-<div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
-
-<div class="flex items-center mb-4">
-
-<img src="assets/coursera.png" alt="Coursera" class="w-12 h-12 mr-4">
-
-<h3 class="text-xl font-bold">Self-Driving Cars</h3>
-
-</div>
-
-<p class="text-gray-700 mb-2">University of Toronto</p>
-
-<p class="text-gray-600 text-sm mb-4">Issued: June 2024</p>
-
-<a href="https://www.coursera.org/account/accomplishments/specialization/4AAX5DDXSXRB" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
-
-View Credential <i class="fas fa-external-link-alt ml-1"></i>
-
-</a>
-
-</div>
-
-<!-- Specialization 3 -->
-
-<div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
-
-<div class="flex items-center mb-4">
-
-<img src="assets/deeplearning_ai.png" alt="Coursera" class="w-12 h-12 mr-4">
-
-<h3 class="text-xl font-bold">Generative AI for Software Development</h3>
-
-</div>
-
-<p class="text-gray-700 mb-2">Deeplearning.ai</p>
-
-<p class="text-gray-600 text-sm mb-4">Issued: October 2024</p>
-
-<a href="https://www.coursera.org/account/accomplishments/professional-cert/49ZX9ZSE5980" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
-
-View Credential <i class="fas fa-external-link-alt ml-1"></i>
-
-</a>
-
-</div>
-
-</div>
-
-<!-- Second Row -->
-
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-<!-- Specialization 4 -->
-
-<div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
-
-<div class="flex items-center mb-4">
-
-<img src="assets/coursera.png" alt="Coursera" class="w-12 h-12 mr-4">
-
-<h3 class="text-xl font-bold">First Principles of Computer Vision</h3>
-
-</div>
-
-<p class="text-gray-700 mb-2">Columbia University</p>
-
-<p class="text-gray-600 text-sm mb-4">Issued: April 2023</p>
-
-<a href="https://www.coursera.org/account/accomplishments/specialization/XPN47BU4ASH5" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
-
-View Credential <i class="fas fa-external-link-alt ml-1"></i>
-
-</a>
-
-</div>
-
-<!-- Specialization 5 -->
-
-<div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
-
-<div class="flex items-center mb-4">
-
-<img src="assets/edge.png" alt="edgeimpulse" class="w-12 h-12 mr-4">
-
-<h3 class="text-xl font-bold">Computer Vision with Embedded Machine Learning</h3>
-
-</div>
-
-<p class="text-gray-700 mb-2">Edge Impulse</p>
-
-<p class="text-gray-600 text-sm mb-4">Issued: February 2024</p>
-
-<a href="https://www.coursera.org/account/accomplishments/verify/NE9Y7XC7YWPB" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
-
-View Credential <i class="fas fa-external-link-alt ml-1"></i>
-
-</a>
-
-</div>
-
-<!-- Specialization 6 -->
-
-<div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
-
-<div class="flex items-center mb-4">
-
-<img src="assets/deeplearning_ai.png" alt="deeplearning_ai" class="w-12 h-12 mr-4">
-
-<h3 class="text-xl font-bold">Mathematics for Machine Learning and Data Science</h3>
-
-</div>
-
-<p class="text-gray-700 mb-2">Deeplearning.ai</p>
-
-<p class="text-gray-600 text-sm mb-4">Issued: August 2023</p>
-
-<a href="https://www.coursera.org/account/accomplishments/specialization/QN8KZCKATAQ2" class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
-
-View Credential <i class="fas fa-external-link-alt ml-1"></i>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
- <section id="opensource" class="py-24 bg-slate-900 text-white relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl -mr-48 -mt-48"></div>
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl font-black mb-4 uppercase tracking-wider">Open Source Library</h2>
-                <div class="w-20 h-1.5 bg-blue-500 mx-auto rounded-full"></div>
-                <p class="mt-6 text-slate-400 text-lg">Advancing AI reliability with specialized developer tools.</p>
-            </div>
-
-            <div class="max-w-6xl mx-auto">
-                <div class="bg-slate-800/40 border border-slate-700 rounded-[40px] overflow-hidden flex flex-col lg:flex-row shadow-2xl">
-                    <div class="p-12 lg:w-3/5">
-                        <div class="flex items-center gap-5 mb-8">
-                            <div class="bg-blue-600 p-5 rounded-3xl">
-                                <i class="fas fa-cubes text-4xl text-white"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-4xl font-bold">llmevalkit</h3>
-                                <div class="flex gap-2 mt-2">
-                                    <span class="bg-blue-500/20 text-blue-400 text-xs font-black px-3 py-1 rounded-full uppercase tracking-tighter border border-blue-500/30">PyPI Library</span>
-                                    <span class="bg-emerald-500/20 text-emerald-400 text-xs font-black px-3 py-1 rounded-full uppercase tracking-tighter border border-emerald-500/30">Stable v1.0.3</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-slate-300 text-xl leading-relaxed mb-10">
-                            A reference-free Python library published on PyPI designed to automate the evaluation of Large Language Models. It provides 15+ metrics for benchmarking model performance, accuracy, and RAG reliability.
-                        </p>
-                        <div class="grid grid-cols-2 gap-y-4 mb-12 text-slate-400 text-sm">
-                            <div class="flex items-center gap-3"><i class="fas fa-check text-blue-500"></i> RAG-as-Judge Support</div>
-                            <div class="flex items-center gap-3"><i class="fas fa-check text-blue-500"></i> Local & API Model Support</div>
-                            <div class="flex items-center gap-3"><i class="fas fa-check text-blue-500"></i> 1-Line Installation</div>
-                            <div class="flex items-center gap-3"><i class="fas fa-check text-blue-500"></i> Automated Metrics Report</div>
-                        </div>
-                        <div class="flex flex-wrap gap-5">
-                            <a href="https://pypi.org/project/llmevalkit/" target="_blank" class="bg-white text-slate-900 font-black px-10 py-4 rounded-2xl hover:bg-blue-500 hover:text-white transition-all">
-                                <i class="fab fa-python mr-3"></i>PyPI Repository
-                            </a>
-                            <a href="https://github.com/VK-Ant/llmevalkit" target="_blank" class="border-2 border-slate-600 text-white font-black px-10 py-4 rounded-2xl hover:bg-slate-700 transition">
-                                <i class="fab fa-github mr-3"></i>GitHub Source
-                            </a>
-                        </div>
-                    </div>
-                    <div class="lg:w-2/5 bg-black/40 p-10 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-slate-700">
-                        <div class="code-box p-6 rounded-2xl font-mono text-sm leading-relaxed">
-                            <span class="text-pink-500">pip</span> install <span class="text-blue-400">llmevalkit</span><br><br>
-                            <span class="text-purple-400">from</span> llmevalkit <span class="text-purple-400">import</span> Evaluator<br><br>
-                            <span class="text-gray-500"># Start evaluating</span><br>
-                            eval = Evaluator(preset=<span class="text-emerald-400">"rag"</span>)<br>
-                            results = eval.run(query, output)<br><br>
-                            <span class="text-blue-400">print</span>(results.score)
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- ── HERO ── -->
+<section id="home" class="hero-section">
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
+    <div class="flex flex-col-reverse lg:flex-row items-center gap-12 py-16">
+      <div class="w-full lg:w-3/5">
+        <div class="hero-badge"><span class="dot"></span> Open to Senior GenAI Roles</div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-4">
+          Hi, I'm <span class="grad">Venkatkumar</span><br>Rajan
+        </h1>
+        <h2 class="text-xl sm:text-2xl font-medium text-slate-400 mb-6 min-h-[2rem]">
+          <span id="typed-text"></span><span class="typed-cursor"></span>
+        </h2>
+        <p class="text-slate-400 text-base leading-relaxed mb-8 max-w-xl">
+          Generative AI Engineer with <strong class="text-slate-300">3.5+ years</strong> building production-grade AI systems across multimodal applications. Translating cutting-edge research into real-world solutions with measurable business impact. <strong class="text-slate-300">Kaggle Master</strong> &amp; author of <strong class="text-blue-400">llmevalkit</strong>.
+        </p>
+        <div class="flex flex-wrap gap-3 mb-10">
+          <a href="#contact" class="btn-primary"><i class="fas fa-paper-plane text-sm"></i> Contact Me</a>
+          <a href="assets/Venkatkumar_AIEngineer.pdf" download class="btn-outline"><i class="fas fa-download text-sm"></i> Resume</a>
+          <a href="https://github.com/VK-Ant" target="_blank" class="btn-outline"><i class="fab fa-github text-sm"></i> GitHub</a>
         </div>
-    </section>
-
-<!-- Projects Section -->
-
-<section id="projects" class="py-20 bg-gray-100">
-
-<div class="container mx-auto px-4 sm:px-6 lg:px-8">
-
-<div class="text-center mb-16">
-
-<h2 class="text-4xl font-bold mb-2">Projects</h2>
-
-<div class="w-16 h-1 bg-blue-600 mx-auto"></div>
-
-<p class="mt-4 text-gray-600">Explore my innovative open-source projects and research explorations. for more projects, check out my <a href="https://github.com/VK-Ant" target="_blank" style="color: blue; text-decoration: underline;">GitHub</a>.</p>
-
-</div>
-
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-<!-- Project 1 -->
-
-<div class="bg-white rounded-lg overflow-hidden shadow-lg project-card hover:shadow-xl transition-all">
-
-<div class="relative">
-
-<img src="assets/p1.png" alt="Project 1" class="w-full h-48 object-cover">
-
-<div class="project-overlay absolute inset-0 bg-blue-600 bg-opacity-90 flex items-center justify-center">
-
-<div class="text-center p-4">
-
-<a href="https://vk-ant.github.io/AHIFA3D" class="inline-block bg-white text-blue-600 rounded-full p-3 mx-2 hover:bg-gray-100 transition">
-
-<i class="fas fa-link"></i>
-
-</a>
-
-<a href="https://github.com/VK-Ant/Text-to-3D-Reconstruction-Research" class="inline-block bg-white text-blue-600 rounded-full p-3 mx-2 hover:bg-gray-100 transition">
-
-<i class="fab fa-github"></i>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="p-6">
-
-<h3 class="text-xl font-bold mb-2">A Generative Approach to High Fidelity 3D Reconstruction from Text Data</h3>
-
-<p class="text-gray-700 mb-4">I’m researching text and single-image-to-3D reconstruction using generative AI, deep learning, and reinforcement learning, focusing on high-quality 3D model generation through advanced image preprocessing and neural networks.</p>
-
-<div class="flex flex-wrap gap-2">
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Generative AI</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">3D Computer Vision</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Reinforcement learning</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Image Processing</span>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Project 6 -->
-
-<div class="bg-white rounded-lg overflow-hidden shadow-lg project-card hover:shadow-xl transition-all">
-
-<div class="relative">
-
-<img src="assets/cv.png" alt="Project 6" class="w-full h-48 object-cover">
-
-<div class="project-overlay absolute inset-0 bg-blue-600 bg-opacity-90 flex items-center justify-center">
-
-<div class="text-center p-4">
-
-<a href="https://github.com/VK-Ant/ComputerVision-Upgrade-Project" class="inline-block bg-white text-blue-600 rounded-full p-3 mx-2 hover:bg-gray-100 transition">
-
-<i class="fab fa-github"></i>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="p-6">
-
-<h3 class="text-xl font-bold mb-2">Comprehensive Computer Vision Solutions</h3>
-
-<p class="text-gray-700 mb-4">I’ve developed several computer vision-based projects, covering areas like
-
-object detection, tracking, and real-time video analysis. If you’d like to explore them, please check my complete project portfolio.</p>
-
-<div class="flex flex-wrap gap-2">
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Computer Vision</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Deep Learning</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Real time computer vision solutions</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">AI</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Innovative Implementation </span>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Project 5 -->
-
-<div class="bg-white rounded-lg overflow-hidden shadow-lg project-card hover:shadow-xl transition-all">
-
-<div class="relative">
-
-<img src="assets/p5.png" alt="Project 5" class="w-full h-48 object-cover">
-
-<div class="project-overlay absolute inset-0 bg-blue-600 bg-opacity-90 flex items-center justify-center">
-
-<div class="text-center p-4">
-
-<a href="https://medium.com/@VK_Venkatkumar/face-based-attendance-system-using-nvidia-jetson-agx-xavier-device-c2502ed195d8" class="inline-block bg-white text-blue-600 rounded-full p-3 mx-2 hover:bg-gray-100 transition">
-
-<i class="fas fa-link"></i>
-
-</a>
-
-<a href="https://github.com/VK-Ant/AttendanceSystem-JetsonAGX" class="inline-block bg-white text-blue-600 rounded-full p-3 mx-2 hover:bg-gray-100 transition">
-
-<i class="fab fa-github"></i>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="p-6">
-
-<h3 class="text-xl font-bold mb-2">Face Based Attendance System using Nvidia Jetson AGX Xavier Device</h3>
-
-<p class="text-gray-700 mb-4">A face-based attendance system uses facial recognition technology to automatically verify and record attendance. this non-contact approach efficiently manages employees, especially when they’re out in the field.</p>
-
-<div class="flex flex-wrap gap-2">
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Edge Device (Nvidia AGX))</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Computer Vision</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Deep learning</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Python</span>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Project 2 -->
-
-<div class="bg-white rounded-lg overflow-hidden shadow-lg project-card hover:shadow-xl transition-all">
-
-<div class="relative">
-
-<img src="assets/p2.png" alt="Project 2" class="w-full h-48 object-cover">
-
-<div class="project-overlay absolute inset-0 bg-blue-600 bg-opacity-90 flex items-center justify-center">
-
-<div class="text-center p-4">
-
-<a href="https://www.linkedin.com/posts/venkatkumarvk_python-pythondeveloper-deeplearning-activity-7236956878562304000-izo3?utm_source=share&utm_medium=member_desktop&rcm=ACoAADjELkEBZOB8fPE-99nNze2_2aXghAfd_4Y" class="inline-block bg-white text-blue-600 rounded-full p-3 mx-2 hover:bg-gray-100 transition">
-
-<i class="fas fa-link"></i>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="p-6">
-
-<h3 class="text-xl font-bold mb-2">Advanced Video Analytics for Vehicle Behavior Analysis</h3>
-
-<p class="text-gray-700 mb-4">My final dissertation focuses on developing a robust video analytics system for vehicle behavior analysis using the KITTI dataset, enhancing movement prediction and behavior analysis through advanced computer vision and machine learning.</p>
-
-<div class="flex flex-wrap gap-2">
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Video Analytics</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Computer Vision</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Deeplearning</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">KITTI Datasets</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Image Processing</span>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Project 3 -->
-
-<div class="bg-white rounded-lg overflow-hidden shadow-lg project-card hover:shadow-xl transition-all">
-
-<div class="relative">
-
-<img src="assets/p3.png" alt="Project 3" class="w-full h-48 object-cover">
-
-<div class="project-overlay absolute inset-0 bg-blue-600 bg-opacity-90 flex items-center justify-center">
-
-<div class="text-center p-4">
-
-<a href="https://www.linkedin.com/posts/venkatkumarvk_python-pythondeveloper-deeplearning-activity-7274068051904327682-9eCJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAADjELkEBZOB8fPE-99nNze2_2aXghAfd_4Y" class="inline-block bg-white text-blue-600 rounded-full p-3 mx-2 hover:bg-gray-100 transition">
-
-<i class="fas fa-link"></i>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="p-6">
-
-<h3 class="text-xl font-bold mb-2">Advanced Real-Time Video Analysis and Recruitment Tool</h3>
-
-<p class="text-gray-700 mb-4">I developed a real-time video analysis system for eye contact, emotion, age, and gender recognition, aiming to build a data-driven recruitment tool with dynamic candidate selection and conversational AI integration.</p>
-
-<div class="flex flex-wrap gap-2">
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">React Native</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Firebase</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">GraphQL</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">AWS</span>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Project 4 -->
-
-<div class="bg-white rounded-lg overflow-hidden shadow-lg project-card hover:shadow-xl transition-all">
-
-<div class="relative">
-
-<img src="assets/p4.png" alt="Project 4" class="w-full h-48 object-cover">
-
-<div class="project-overlay absolute inset-0 bg-blue-600 bg-opacity-90 flex items-center justify-center">
-
-<div class="text-center p-4">
-
-<a href="https://www.linkedin.com/posts/venkatkumarvk_python-pythondeveloper-deeplearning-activity-7179545347281620992--sgP?utm_source=share&utm_medium=member_desktop&rcm=ACoAADjELkEBZOB8fPE-99nNze2_2aXghAfd_4Y" class="inline-block bg-white text-blue-600 rounded-full p-3 mx-2 hover:bg-gray-100 transition">
-
-<i class="fas fa-link"></i>
-
-</a>
-
-<a href="https://github.com/VK-Ant/PDF_CSV_VISION_DRAGGING_BASED_CHATBOT_WITH_TRANSLATOR_AUDIO_USING_GEMINIAI" class="inline-block bg-white text-blue-600 rounded-full p-3 mx-2 hover:bg-gray-100 transition">
-
-<i class="fab fa-github"></i>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="p-6">
-
-<h3 class="text-xl font-bold mb-2">Generative AI-Powered RAG/CAG and Knowledge Graph System</h3>
-
-<p class="text-gray-700 mb-4">I enhanced my LLM-powered image captioning tool with a follow-up question feature, providing text and audio responses in multiple languages for real-time applications like security and drone development. I also built a Generative AI-powered RAG/CAG and knowledge graph system, integrating diverse data sources for efficient information retrieval and context-based generation.</p>
-
-<div class="flex flex-wrap gap-2">
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Generative AI</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Langchain</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">RAG/CAG/KnowledgeGraph/neojs</span>
-
-<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Streamlit</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
+        <div class="flex gap-8">
+          <div class="stat-item"><div class="stat-num grad">3.5+</div><div class="stat-label">Years Exp.</div></div>
+          <div class="stat-item"><div class="stat-num grad">3</div><div class="stat-label">Publications</div></div>
+          <div class="stat-item"><div class="stat-num grad">15+</div><div class="stat-label">Projects</div></div>
+          <div class="stat-item"><div class="stat-num grad">Top 1%</div><div class="stat-label">Kaggle</div></div>
+        </div>
+      </div>
+      <div class="w-full lg:w-2/5 flex justify-center">
+        <div class="avatar-ring"><img src="assets/main_imresize.png" alt="Venkatkumar" class="w-56 h-56 sm:w-64 sm:h-64 object-cover"></div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Contact Section -->
-
-<section id="contact" class="py-20 bg-white">
-
-<div class="container mx-auto px-4 sm:px-6 lg:px-8">
-
-<div class="text-center mb-16">
-
-<h2 class="text-4xl font-bold mb-2">Contact Me</h2>
-
-<div class="w-16 h-1 bg-blue-600 mx-auto"></div>
-
-</div>
-
-<div class="max-w-2xl mx-auto">
-
-<div class="flex flex-col items-center justify-center">
-
-<p class="text-xl text-gray-700 mb-8 text-center">
-
-Feel free to reach out to me through any of these platforms. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-
-</p>
-
-<div class="flex flex-col gap-4 items-center">
-
-<div class="bg-gray-100 px-6 py-3 rounded-lg w-90 text-center">
-
-<p class="font-medium">Email</p>
-
-<p class="text-gray-700">venkatkumarr.vk99@gmail.com</p>
-
-</div>
-
-<div class="flex flex-wrap justify-center gap-6">
-
-<!-- LinkedIn -->
-
-<a href="https://www.linkedin.com/in/venkatkumarvk" target="_blank" rel="noopener noreferrer" class="group">
-
-<div class="bg-gray-100 hover:bg-blue-600 p-4 rounded-full transition-all duration-300 shadow-md group-hover:shadow-lg">
-
-<i class="fab fa-linkedin-in text-2xl text-blue-600 group-hover:text-white"></i>
-
-</div>
-
-<p class="mt-2 text-center text-gray-700">LinkedIn</p>
-
-</a>
-
-<!-- Kaggle -->
-
-<a href="https://www.kaggle.com/venkatkumar001" target="_blank" rel="noopener noreferrer" class="group">
-
-<div class="bg-gray-100 hover:bg-blue-500 p-4 rounded-full transition-all duration-300 shadow-md group-hover:shadow-lg">
-
-<i class="fab fa-kaggle text-2xl text-blue-500 group-hover:text-white"></i>
-
-</div>
-
-<p class="mt-2 text-center text-gray-700">Kaggle</p>
-
-</a>
-
-<!-- Medium -->
-
-<a href="https://medium.com/@VK_Venkatkumar" target="_blank" rel="noopener noreferrer" class="group">
-
-<div class="bg-gray-100 hover:bg-black p-4 rounded-full transition-all duration-300 shadow-md group-hover:shadow-lg">
-
-<i class="fab fa-medium text-2xl text-black group-hover:text-white"></i>
-
-</div>
-
-<p class="mt-2 text-center text-gray-700">Medium</p>
-
-</a>
-
-<!-- GitHub -->
-
-<a href="https://github.com/VK-Ant" target="_blank" rel="noopener noreferrer" class="group">
-
-<div class="bg-gray-100 hover:bg-gray-800 p-4 rounded-full transition-all duration-300 shadow-md group-hover:shadow-lg">
-
-<i class="fab fa-github text-2xl text-gray-800 group-hover:text-white"></i>
-
-</div>
-
-<p class="mt-2 text-center text-gray-700">GitHub</p>
-
-</a>
-
-<!-- Twitter -->
-
-<a href="https://x.com/VK_VENKATKUMAR" target="_blank" rel="noopener noreferrer" class="group">
-
-<div class="bg-gray-100 hover:bg-blue-400 p-4 rounded-full transition-all duration-300 shadow-md group-hover:shadow-lg">
-
-<i class="fab fa-twitter text-2xl text-blue-400 group-hover:text-white"></i>
-
-</div>
-
-<p class="mt-2 text-center text-gray-700">Twitter</p>
-
-</a>
-
-<!-- Email -->
-
-<a href="mailto:venkatkumarr.vk99@gmail.com" class="group">
-
-<div class="bg-gray-100 hover:bg-red-500 p-4 rounded-full transition-all duration-300 shadow-md group-hover:shadow-lg">
-
-<i class="fas fa-envelope text-2xl text-red-500 group-hover:text-white"></i>
-
-</div>
-
-<p class="mt-2 text-center text-gray-700">Email</p>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
+<!-- ── ABOUT ── -->
+<section id="about" class="section section-dark fade-up">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="section-tag">About</div>
+    <h2 class="section-title">Who I Am</h2>
+    <div class="section-divider"></div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+      <div class="lg:col-span-2 space-y-4 text-slate-400 text-sm leading-relaxed">
+        <p>I'm an AI Engineer passionate about building intelligent solutions that blend research, real-world deployment, and innovation. My work spans Generative AI, Computer Vision, NLP, and end-to-end AI pipelines — from designing algorithms to deploying production-ready systems.</p>
+        <p>With experience across healthcare, manufacturing, and automotive domains, I've built real-time RAG pipelines, 3D reconstruction systems using NeRF &amp; photogrammetry, document processing platforms on Azure AI, and AI-powered automation tools. I hold an <strong class="text-slate-300">M.Tech in AI from BITS Pilani</strong> and am a <strong class="text-slate-300">Kaggle Master</strong> (Competitions Expert top ~0.4%, Notebooks Master top ~1.3%).</p>
+        <p>I enjoy bridging the gap between deep research and applied business impact — with a strong focus on responsible, secure AI systems and governance.</p>
+        <div class="pt-2 flex flex-wrap gap-2">
+          <a href="https://linkedin.com/in/venkatkumarvk" target="_blank" class="social-btn linkedin"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/VK-Ant" target="_blank" class="social-btn github"><i class="fab fa-github"></i></a>
+          <a href="https://www.kaggle.com/venkatkumar001" target="_blank" class="social-btn kaggle"><i class="fab fa-kaggle"></i></a>
+          <a href="https://medium.com/@VK_Venkatkumar" target="_blank" class="social-btn medium"><i class="fab fa-medium"></i></a>
+          <a href="https://x.com/VK_VENKATKUMAR" target="_blank" class="social-btn twitter"><i class="fab fa-twitter"></i></a>
+          <a href="mailto:venkatkumarr.vk99@gmail.com" class="social-btn email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="space-y-3">
+        <div class="card card-glow p-4 flex items-center gap-4">
+          <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-map-marker-alt text-blue-400 text-sm"></i></div>
+          <div><div class="text-xs text-slate-500">Location</div><div class="text-sm text-slate-300 font-medium">Madurai, Tamil Nadu, India</div></div>
+        </div>
+        <div class="card card-glow p-4 flex items-center gap-4">
+          <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-envelope text-purple-400 text-sm"></i></div>
+          <div><div class="text-xs text-slate-500">Email</div><div class="text-sm text-slate-300 font-medium break-all">venkatkumarr.vk99@gmail.com</div></div>
+        </div>
+        <div class="card card-glow p-4 flex items-center gap-4">
+          <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-trophy text-emerald-400 text-sm"></i></div>
+          <div><div class="text-xs text-slate-500">Kaggle</div><div class="text-sm text-slate-300 font-medium">Master — Top ~0.4% globally</div></div>
+        </div>
+        <div class="card card-glow p-4 flex items-center gap-4">
+          <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-graduation-cap text-amber-400 text-sm"></i></div>
+          <div><div class="text-xs text-slate-500">Education</div><div class="text-sm text-slate-300 font-medium">M.Tech AI — BITS Pilani</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Footer -->
+<!-- ── EXPERIENCE ── -->
+<section id="experience" class="section section-light fade-up">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="section-tag">Experience</div>
+    <h2 class="section-title">Work History</h2>
+    <div class="section-divider"></div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-<footer class="bg-gray-800 text-white py-8">
+      <!-- EXL -->
+      <div class="card card-glow p-6">
+        <div class="flex items-center gap-4 mb-5">
+          <img src="assets/exl3.png" alt="EXL" class="h-12 object-contain bg-white/5 rounded-lg p-1">
+          <div>
+            <div class="text-base font-bold text-white">Generative AI Engineer <span class="text-slate-500 font-normal text-sm">| Business Analyst</span></div>
+            <div class="text-blue-400 text-xs font-semibold mt-0.5">EXL Service (India) Pvt. Ltd.</div>
+            <div class="text-slate-500 text-xs mt-0.5">Dec 2023 – Present &nbsp;·&nbsp; Noida, India (Remote)</div>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div class="exp-project">
+            <div class="exp-project-title">AI-Powered Credential Extraction System</div>
+            <div class="exp-project-tag">Unified Text RAG + Multimodal RAG · Azure</div>
+            <p>Architected end-to-end unified dual-mode RAG pipeline extracting <strong class="text-slate-300">46+ structured fields</strong> from unstructured docs (PDFs, scanned images). Built on Azure OpenAI GPT-5, Document Intelligence, AI Search (per-field vector indexing), and OpenAI Embeddings. Confidence-based routing + human-in-loop review. <strong class="text-slate-300">70% accuracy · 30% manual effort reduction.</strong></p>
+          </div>
+          <div class="exp-project">
+            <div class="exp-project-title">Unified GenAI Document Intelligence &amp; Automation System</div>
+            <div class="exp-project-tag">Azure · NLP · Computer Vision</div>
+            <p>Owned end-to-end production deployment. Single extensible codebase handles multiple document types — new type needs only a <strong class="text-slate-300">config entry + prompt update, zero redevelopment.</strong> &gt;95% extraction confidence · <strong class="text-slate-300">40–50% manual effort reduction.</strong></p>
+          </div>
+          <div class="exp-project">
+            <div class="exp-project-title">AI-Based Document Classification System</div>
+            <div class="exp-project-tag">Unified · Azure · &gt;97% accuracy</div>
+            <p>Unified classifier for 15+ document categories. New categories via reference document — no engineering changes required.</p>
+          </div>
+          <div class="exp-project">
+            <div class="exp-project-title">Custom AI Agent Builder</div>
+            <div class="exp-project-tag">Databricks · Unity Catalog · RAG · Internal</div>
+            <p>No-code agent builder connecting multiple Unity Catalog tables + PDF knowledge bases. Built for <strong class="text-slate-300">denial management analytics.</strong> Deployed as governed Databricks App.</p>
+          </div>
+          <div class="exp-project">
+            <div class="exp-project-title">Internal AI Productivity Tools</div>
+            <div class="exp-project-tag">Excel AI · SQL Chatbot · Power App · Doc Intelligence</div>
+            <p>Suite of internal tools reducing manual effort across data, ops, and analyst teams. <strong class="text-slate-300">10+ GenAI PoC presentations</strong> to prospective clients.</p>
+          </div>
+        </div>
+      </div>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- AugRay -->
+      <div class="card card-glow p-6">
+        <div class="flex items-center gap-4 mb-5">
+          <img src="assets/augray_logo.jpg" alt="AugRay" class="h-12 object-contain bg-white/5 rounded-lg p-1">
+          <div>
+            <div class="text-base font-bold text-white">Machine Learning Engineer</div>
+            <div class="text-purple-400 text-xs font-semibold mt-0.5">AugRay</div>
+            <div class="text-slate-500 text-xs mt-0.5">Sept 2022 – Oct 2023 &nbsp;·&nbsp; Chennai, Tamil Nadu (Onsite)</div>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div class="exp-project purple">
+            <div class="exp-project-title">Real-Time Ball Fault Detection</div>
+            <div class="exp-project-tag">Edge AI · MobileNetV2 · NVIDIA Jetson AGX</div>
+            <p>Lightweight real-time defect detection for a leading sports goods manufacturer. <strong class="text-slate-300">90%+ accuracy · QA error rate –40% · throughput 3×.</strong></p>
+          </div>
+          <div class="exp-project purple">
+            <div class="exp-project-title">Automated 3D Reconstruction</div>
+            <div class="exp-project-tag">Generative AI · Photogrammetry · NeRF</div>
+            <p>End-to-end pipeline: photogrammetry + NeRF. <strong class="text-slate-300">95% accuracy</strong> for non-reflective objects, ~50% for reflective. Reducing manual processing time significantly.</p>
+          </div>
+          <div class="exp-project purple">
+            <div class="exp-project-title">Wall &amp; Floor Segmentation</div>
+            <div class="exp-project-tag">SegFormer-B0 · segformer-b0-finetuned-ade-512-512</div>
+            <p>Fine-tuned SegFormer-B0 for semantic segmentation. <strong class="text-slate-300">80% accuracy · designer effort –20+ hrs/month.</strong> Enabled automated colour preview generation.</p>
+          </div>
+          <div class="exp-project purple">
+            <div class="exp-project-title">Foot Detection &amp; Virtual Shoe Try-On</div>
+            <div class="exp-project-tag">Computer Vision · AR · 10,000+ annotations</div>
+            <p>CV-based virtual try-on. <strong class="text-slate-300">79% placement accuracy · customer returns –5%</strong> in pilot trials.</p>
+          </div>
+          <div class="exp-project purple">
+            <div class="exp-project-title">Generative AI PoCs</div>
+            <div class="exp-project-tag">Stable Diffusion · Flyer Gen · Chatbot</div>
+            <p>Automated flyer generation, face texture synthesis, site-based conversational chatbot for interactive marketing.</p>
+          </div>
+        </div>
+      </div>
 
-<div class="text-center">
+    </div>
+  </div>
+</section>
 
-<p>&copy; 2025 VK. All rights reserved.</p>
+<!-- ── EDUCATION ── -->
+<section id="education" class="section section-dark fade-up">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="section-tag">Education</div>
+    <h2 class="section-title">Academic Background</h2>
+    <div class="section-divider"></div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="card card-glow p-6 flex items-start gap-5">
+        <img src="assets/bits_mtech.png" alt="BITS" class="h-14 object-contain flex-shrink-0 bg-white/5 rounded-xl p-1">
+        <div>
+          <div class="text-white font-bold text-base mb-1">M.Tech. in Artificial Intelligence &amp; Machine Learning</div>
+          <div class="text-blue-400 text-xs font-semibold mb-1">Birla Institute of Technology and Science (BITS), Pilani</div>
+          <div class="text-slate-500 text-xs mb-3">2023 – 2025 &nbsp;·&nbsp; Rajasthan, India</div>
+          <div class="text-slate-500 text-xs"><strong class="text-slate-400">Coursework:</strong> Deep Learning, Reinforcement Learning, Probabilistic Generative Models, Graph Neural Networks, Video Analytics, Distributed ML</div>
+        </div>
+      </div>
+      <div class="card card-glow p-6 flex items-start gap-5">
+        <img src="assets/sacs-ug.png" alt="SACS" class="h-14 object-contain flex-shrink-0 bg-white/5 rounded-xl p-1">
+        <div>
+          <div class="text-white font-bold text-base mb-1">B.E. in Electronics &amp; Communication Engineering</div>
+          <div class="text-blue-400 text-xs font-semibold mb-1">SACS MAVMM Engineering College, Anna University</div>
+          <div class="text-slate-500 text-xs mb-3">2016 – 2020 &nbsp;·&nbsp; Madurai, Tamil Nadu</div>
+          <div class="text-slate-500 text-xs"><strong class="text-slate-400">Coursework:</strong> Data Structures, Algorithms, Digital Signal Processing, Digital Image Processing, Embedded Systems, Electronics</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-</div>
+<!-- ── SKILLS ── -->
+<section id="skills" class="section section-light fade-up">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="section-tag">Skills</div>
+    <h2 class="section-title">Technical Stack</h2>
+    <div class="section-divider"></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-</div>
+      <div class="card card-glow p-5">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center"><i class="fas fa-code text-blue-400 text-sm"></i></div>
+          <div class="text-sm font-700 text-white font-bold">Programming Languages</div>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-pill">Python</span><span class="skill-pill">C++</span>
+        </div>
+      </div>
 
+      <div class="card card-glow p-5">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center"><i class="fas fa-robot text-purple-400 text-sm"></i></div>
+          <div class="text-sm font-bold text-white">LLM Systems &amp; AI Engineering</div>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-pill">RAG</span><span class="skill-pill">GraphRAG</span><span class="skill-pill">AI Agents</span><span class="skill-pill">LLM Evaluation</span><span class="skill-pill">Prompt Engineering</span><span class="skill-pill">End-to-End Orchestration</span><span class="skill-pill">Monitoring</span>
+        </div>
+      </div>
+
+      <div class="card card-glow p-5">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center"><i class="fas fa-link text-emerald-400 text-sm"></i></div>
+          <div class="text-sm font-bold text-white">LLM Frameworks</div>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-pill">LangChain</span><span class="skill-pill">LlamaIndex</span><span class="skill-pill">LangGraph</span><span class="skill-pill">MCP</span><span class="skill-pill">Groq</span><span class="skill-pill">Ollama</span><span class="skill-pill">Docling</span>
+        </div>
+      </div>
+
+      <div class="card card-glow p-5">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center"><i class="fas fa-brain text-amber-400 text-sm"></i></div>
+          <div class="text-sm font-bold text-white">ML / DL Frameworks</div>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-pill">PyTorch</span><span class="skill-pill">TensorFlow</span><span class="skill-pill">OpenCV</span><span class="skill-pill">scikit-learn</span><span class="skill-pill">Kornia</span><span class="skill-pill">librosa</span><span class="skill-pill">Mediapipe</span><span class="skill-pill">PySpark</span><span class="skill-pill">NetworkX</span><span class="skill-pill">Gym</span><span class="skill-pill">Prophet</span>
+        </div>
+      </div>
+
+      <div class="card card-glow p-5">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-sky-500/10 flex items-center justify-center"><i class="fas fa-cloud text-sky-400 text-sm"></i></div>
+          <div class="text-sm font-bold text-white">Cloud &amp; Platforms</div>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-pill">Azure OpenAI</span><span class="skill-pill">Azure AI Search</span><span class="skill-pill">Document Intelligence</span><span class="skill-pill">Azure Blob</span><span class="skill-pill">Key Vault</span><span class="skill-pill">Azure DevOps</span><span class="skill-pill">AWS</span><span class="skill-pill">Databricks</span>
+        </div>
+      </div>
+
+      <div class="card card-glow p-5">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-rose-500/10 flex items-center justify-center"><i class="fas fa-server text-rose-400 text-sm"></i></div>
+          <div class="text-sm font-bold text-white">MLOps &amp; LLMOps</div>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-pill">Docker</span><span class="skill-pill">Kubernetes</span><span class="skill-pill">Kubeflow</span><span class="skill-pill">MLflow</span><span class="skill-pill">Kafka</span><span class="skill-pill">CI/CD</span>
+        </div>
+      </div>
+
+      <div class="card card-glow p-5">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-teal-500/10 flex items-center justify-center"><i class="fas fa-microchip text-teal-400 text-sm"></i></div>
+          <div class="text-sm font-bold text-white">Edge AI</div>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-pill">NVIDIA Jetson AGX Xavier</span><span class="skill-pill">TensorRT</span><span class="skill-pill">RaspberryPi</span>
+        </div>
+      </div>
+
+      <div class="card card-glow p-5">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-indigo-500/10 flex items-center justify-center"><i class="fas fa-globe text-indigo-400 text-sm"></i></div>
+          <div class="text-sm font-bold text-white">Web &amp; Backend</div>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-pill">FastAPI</span><span class="skill-pill">Flask</span><span class="skill-pill">Django</span><span class="skill-pill">REST APIs</span><span class="skill-pill">Streamlit</span><span class="skill-pill">Gradio</span><span class="skill-pill">ReactJS</span>
+        </div>
+      </div>
+
+      <div class="card card-glow p-5">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-orange-500/10 flex items-center justify-center"><i class="fas fa-database text-orange-400 text-sm"></i></div>
+          <div class="text-sm font-bold text-white">Database &amp; Tools</div>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-pill">MongoDB</span><span class="skill-pill">MySQL</span><span class="skill-pill">Power BI</span><span class="skill-pill">Power Automate</span><span class="skill-pill">Power Apps</span><span class="skill-pill">Pytest</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── PUBLICATIONS ── -->
+<section id="publications" class="section section-dark fade-up">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="section-tag">Research</div>
+    <h2 class="section-title">Publications</h2>
+    <div class="section-divider"></div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div class="pub-card">
+        <div class="flex items-center justify-between mb-3">
+          <img src="assets/arxiv.png" alt="arXiv" class="h-8 object-contain">
+          <span class="pub-badge arxiv">arXiv</span>
+        </div>
+        <div class="text-sm font-bold text-white mb-1">3D Reconstruction from Text Data</div>
+        <div class="text-xs text-slate-500 mb-3">A Generative Approach to High Fidelity 3D Reconstruction from Text Data · March 2025</div>
+        <a href="https://arxiv.org/abs/2503.03664v1" target="_blank" class="text-xs text-blue-400 hover:text-blue-300 font-semibold mt-auto">Read Paper →</a>
+      </div>
+      <div class="pub-card">
+        <div class="flex items-center justify-between mb-3">
+          <img src="assets/ieee.png" alt="IEEE" class="h-8 object-contain">
+          <span class="pub-badge ieee">IEEE</span>
+        </div>
+        <div class="text-sm font-bold text-white mb-1">Audio Fingerprinting with AI &amp; ML</div>
+        <div class="text-xs text-slate-500 mb-3">Advancing Audio Fingerprinting Accuracy with AI and ML: Addressing Background Noise and Distortion Challenges · Feb 2024</div>
+        <a href="https://ieeexplore.ieee.org/document/10475656" target="_blank" class="text-xs text-blue-400 hover:text-blue-300 font-semibold mt-auto">Read Paper →</a>
+      </div>
+      <div class="pub-card">
+        <div class="flex items-center justify-between mb-3">
+          <img src="assets/IRJET.jpg" alt="IRJIET" class="h-8 object-contain">
+          <span class="pub-badge irjiet">IRJIET</span>
+        </div>
+        <div class="text-sm font-bold text-white mb-1">PCB Layout with CNC Machine</div>
+        <div class="text-xs text-slate-500 mb-3">Implementation of PCB Layout using CNC Machine Controlling with Wireless Communication · March 2020</div>
+        <a href="https://irjiet.com/Volume-4/Issue-3-March-2020/Implementation-of-PCB-Layout-using-CNC-Machine-Controlling-with-Wireless-Communication/191" target="_blank" class="text-xs text-blue-400 hover:text-blue-300 font-semibold mt-auto">Read Paper →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CERTIFICATIONS ── -->
+<section id="certifications" class="section section-light fade-up">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="section-tag">Credentials</div>
+    <h2 class="section-title">Certifications</h2>
+    <div class="section-divider"></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="pub-card">
+        <img src="assets/tf.png" alt="TensorFlow" class="h-10 object-contain mb-3">
+        <div class="text-sm font-bold text-white mb-1">TensorFlow Developer</div>
+        <div class="text-xs text-slate-500 mb-3">Google · Oct 2023 – Oct 2026</div>
+        <a href="https://www.credential.net/9c379562-5cb7-4b74-ba3a-da4ca9679d52#acc.hBYuWCwe" target="_blank" class="text-xs text-blue-400 hover:text-blue-300 font-semibold">View Credential →</a>
+      </div>
+      <div class="pub-card">
+        <img src="assets/nvidia.jpeg" alt="Nvidia" class="h-10 object-contain mb-3">
+        <div class="text-sm font-bold text-white mb-1">Nvidia Jetson AI Specialist</div>
+        <div class="text-xs text-slate-500 mb-3">Nvidia DLI · March 2023</div>
+        <a href="https://drive.google.com/file/d/121XQ28MHbITebsopndSsV3Ry6d_plOcI/view?usp=sharing" target="_blank" class="text-xs text-blue-400 hover:text-blue-300 font-semibold">View Credential →</a>
+      </div>
+      <div class="pub-card">
+        <img src="assets/microsoft-certified-fundamentals-badge.svg" alt="Azure" class="h-10 object-contain mb-3">
+        <div class="text-sm font-bold text-white mb-1">Azure AI Fundamentals</div>
+        <div class="text-xs text-slate-500 mb-3">Microsoft · April 2024</div>
+        <a href="https://learn.microsoft.com/en-us/users/venkatkumarr-3905/credentials/39aa1df6ddf3610a" target="_blank" class="text-xs text-blue-400 hover:text-blue-300 font-semibold">View Credential →</a>
+      </div>
+      <div class="pub-card">
+        <img src="assets/udacity.png" alt="Udacity" class="h-10 object-contain mb-3">
+        <div class="text-sm font-bold text-white mb-1">Self Driving Car Engineer</div>
+        <div class="text-xs text-slate-500 mb-3">Udacity Nanodegree · Jan 2025</div>
+        <a href="https://www.udacity.com/certificate/e/e01bebb4-a8e7-11ef-a775-4bbfc380b4ae" target="_blank" class="text-xs text-blue-400 hover:text-blue-300 font-semibold">View Credential →</a>
+      </div>
+      <div class="pub-card">
+        <img src="assets/coursera.png" alt="Coursera" class="h-10 object-contain mb-3">
+        <div class="text-sm font-bold text-white mb-1">Reinforcement Learning Specialization</div>
+        <div class="text-xs text-slate-500 mb-3">University of Alberta · Oct 2024</div>
+        <a href="https://www.coursera.org/account/accomplishments/specialization/59Y70ET9IIND" target="_blank" class="text-xs text-blue-400 hover:text-blue-300 font-semibold">View Credential →</a>
+      </div>
+      <div class="pub-card">
+        <img src="assets/deeplearning_ai.png" alt="deeplearning.ai" class="h-10 object-contain mb-3">
+        <div class="text-sm font-bold text-white mb-1">Generative AI for Software Dev</div>
+        <div class="text-xs text-slate-500 mb-3">DeepLearning.ai · Oct 2024</div>
+        <a href="https://www.coursera.org/account/accomplishments/professional-cert/49ZX9ZSE5980" target="_blank" class="text-xs text-blue-400 hover:text-blue-300 font-semibold">View Credential →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── OPEN SOURCE ── -->
+<section id="opensource" class="section section-dark fade-up">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="section-tag">Open Source</div>
+    <h2 class="section-title">llmevalkit</h2>
+    <div class="section-divider"></div>
+    <div class="oss-card">
+      <div class="grid grid-cols-1 lg:grid-cols-5">
+        <div class="lg:col-span-3 p-8">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="w-14 h-14 rounded-2xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center">
+              <i class="fas fa-cubes text-blue-400 text-2xl"></i>
+            </div>
+            <div>
+              <div class="text-2xl font-black text-white">llmevalkit</div>
+              <div class="flex gap-2 mt-1">
+                <span class="pub-badge ieee">PyPI v1.0.3</span>
+                <span class="pub-badge irjiet">Stable</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-5">Universal Python library for evaluating and benchmarking LLMs across <strong class="text-slate-300">15 metrics</strong> (pure math-based + LLM-as-Judge) with <strong class="text-slate-300">no ground-truth requirement</strong>. Multi-provider: OpenAI, Anthropic, Azure OpenAI, Groq, Ollama. Grounded in SelfCheckGPT, G-Eval, FActScoring, RAGAS research.</p>
+          <p class="text-slate-500 text-xs mb-5"><strong class="text-blue-400">v2.0 Roadmap:</strong> Compliance metrics for HIPAA, GDPR, India DPDP Act, EU AI Act, NIST AI RMF, CoSAI — dual-mode (regex + LLM-judgment).</p>
+          <div class="grid grid-cols-2 gap-2 mb-6 text-xs text-slate-400">
+            <div class="flex items-center gap-2"><i class="fas fa-check text-blue-400"></i> 15+ evaluation metrics</div>
+            <div class="flex items-center gap-2"><i class="fas fa-check text-blue-400"></i> No ground truth needed</div>
+            <div class="flex items-center gap-2"><i class="fas fa-check text-blue-400"></i> Multi-provider support</div>
+            <div class="flex items-center gap-2"><i class="fas fa-check text-blue-400"></i> RAG evaluation ready</div>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://pypi.org/project/llmevalkit/" target="_blank" class="btn-primary text-sm"><i class="fab fa-python"></i> PyPI</a>
+            <a href="https://github.com/VK-Ant/llmevalkit" target="_blank" class="btn-outline text-sm"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="lg:col-span-2 p-8 border-t lg:border-t-0 lg:border-l border-white/5 flex items-center">
+          <div class="code-block w-full">
+            <span class="text-pink-400">pip</span> <span class="text-slate-400">install</span> <span class="text-blue-400">llmevalkit</span><br><br>
+            <span class="text-purple-400">from</span> <span class="text-white">llmevalkit</span> <span class="text-purple-400">import</span> <span class="text-emerald-400">Evaluator</span><br><br>
+            <span class="text-slate-500"># Evaluate your LLM</span><br>
+            <span class="text-white">eval</span> <span class="text-slate-400">=</span> <span class="text-emerald-400">Evaluator</span>(preset=<span class="text-amber-300">"rag"</span>)<br>
+            <span class="text-white">results</span> <span class="text-slate-400">=</span> <span class="text-white">eval</span>.run(query, output)<br><br>
+            <span class="text-blue-400">print</span>(<span class="text-white">results</span>.score)
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS ── -->
+<section id="projects" class="section section-light fade-up">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="section-tag">Projects</div>
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="section-divider"></div>
+    <p class="text-slate-500 text-sm mb-8">Explore my open-source projects and research. For more, check <a href="https://github.com/VK-Ant" target="_blank" class="text-blue-400 hover:underline">github.com/VK-Ant</a>.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <div class="proj-card">
+        <div class="relative"><img src="assets/p1.png" alt="3D Reconstruction" class="proj-img"><div class="proj-overlay"><div class="flex gap-2"><a href="https://vk-ant.github.io/AHIFA3D" target="_blank" class="social-btn github text-xs px-3 py-1 w-auto h-auto rounded-lg"><i class="fas fa-link mr-1"></i>Demo</a><a href="https://github.com/VK-Ant/Text-to-3D-Reconstruction-Research" target="_blank" class="social-btn github text-xs px-3 py-1 w-auto h-auto rounded-lg"><i class="fab fa-github mr-1"></i>Code</a></div></div></div>
+        <div class="p-5"><div class="flex flex-wrap gap-1 mb-2"><span class="proj-tag">Generative AI</span><span class="proj-tag">NeRF</span><span class="proj-tag">3D Vision</span></div><h3 class="text-sm font-bold text-white mb-1">Text-to-3D Reconstruction Pipeline</h3><p class="text-xs text-slate-500 leading-relaxed">Automated pipeline: text → Stable Diffusion → RL enhancement → Stable Delight → 3D reconstruction. arXiv published.</p></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="relative"><img src="assets/cv.png" alt="CV" class="proj-img"><div class="proj-overlay"><div class="flex gap-2"><a href="https://github.com/VK-Ant/ComputerVision-Upgrade-Project" target="_blank" class="social-btn github text-xs px-3 py-1 w-auto h-auto rounded-lg"><i class="fab fa-github mr-1"></i>Code</a></div></div></div>
+        <div class="p-5"><div class="flex flex-wrap gap-1 mb-2"><span class="proj-tag">Computer Vision</span><span class="proj-tag">Deep Learning</span></div><h3 class="text-sm font-bold text-white mb-1">Comprehensive Computer Vision Portfolio</h3><p class="text-xs text-slate-500 leading-relaxed">Object detection, multi-object tracking, real-time video analysis solutions.</p></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="relative"><img src="assets/p5.png" alt="Attendance" class="proj-img"><div class="proj-overlay"><div class="flex gap-2"><a href="https://github.com/VK-Ant/AttendanceSystem-JetsonAGX" target="_blank" class="social-btn github text-xs px-3 py-1 w-auto h-auto rounded-lg"><i class="fab fa-github mr-1"></i>Code</a></div></div></div>
+        <div class="p-5"><div class="flex flex-wrap gap-1 mb-2"><span class="proj-tag">Edge AI</span><span class="proj-tag">Jetson AGX</span></div><h3 class="text-sm font-bold text-white mb-1">Face-Based Attendance System</h3><p class="text-xs text-slate-500 leading-relaxed">Facial recognition attendance system on NVIDIA Jetson AGX Xavier for field employees.</p></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="relative"><img src="assets/p4.png" alt="RAG" class="proj-img"><div class="proj-overlay"><div class="flex gap-2"><a href="https://github.com/VK-Ant/PDF_CSV_VISION_DRAGGING_BASED_CHATBOT_WITH_TRANSLATOR_AUDIO_USING_GEMINIAI" target="_blank" class="social-btn github text-xs px-3 py-1 w-auto h-auto rounded-lg"><i class="fab fa-github mr-1"></i>Code</a></div></div></div>
+        <div class="p-5"><div class="flex flex-wrap gap-1 mb-2"><span class="proj-tag">RAG/CAG</span><span class="proj-tag">Knowledge Graph</span><span class="proj-tag">Multimodal</span></div><h3 class="text-sm font-bold text-white mb-1">GenAI RAG/CAG + Knowledge Graph &amp; Multimodal Chatbot</h3><p class="text-xs text-slate-500 leading-relaxed">PDF/CSV/Vision drag-drop chatbot with multilingual text + audio responses. Security and drone applications.</p></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="relative"><img src="assets/p2.png" alt="Vehicle" class="proj-img"><div class="proj-overlay"><div class="flex gap-2"><a href="https://www.linkedin.com/posts/venkatkumarvk_python-pythondeveloper-deeplearning-activity-7274068051904327682-9eCJ" target="_blank" class="social-btn github text-xs px-3 py-1 w-auto h-auto rounded-lg"><i class="fas fa-link mr-1"></i>Post</a></div></div></div>
+        <div class="p-5"><div class="flex flex-wrap gap-1 mb-2"><span class="proj-tag">Video Analytics</span><span class="proj-tag">KITTI</span></div><h3 class="text-sm font-bold text-white mb-1">Advanced Video Analytics for Vehicle Behavior</h3><p class="text-xs text-slate-500 leading-relaxed">Robust video analytics for vehicle behaviour analysis using KITTI dataset with advanced CV and ML.</p></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="relative"><img src="assets/p3.png" alt="Recruitment" class="proj-img"><div class="proj-overlay"><div class="flex gap-2"><a href="https://www.linkedin.com/posts/venkatkumarvk_python-pythondeveloper-deeplearning-activity-7179545347281620992--sgP" target="_blank" class="social-btn github text-xs px-3 py-1 w-auto h-auto rounded-lg"><i class="fas fa-link mr-1"></i>Post</a></div></div></div>
+        <div class="p-5"><div class="flex flex-wrap gap-1 mb-2"><span class="proj-tag">Real-time CV</span><span class="proj-tag">Emotion AI</span></div><h3 class="text-sm font-bold text-white mb-1">AI-Powered Real-Time Video Recruitment Tool</h3><p class="text-xs text-slate-500 leading-relaxed">Real-time eye contact, emotion, age, and gender recognition for data-driven recruitment.</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact" class="section section-dark fade-up">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="section-tag">Contact</div>
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="section-divider"></div>
+    <div class="max-w-xl">
+      <p class="text-slate-400 text-sm mb-6">Open to new opportunities, collaborations, and conversations about AI. Feel free to reach out through any of these platforms.</p>
+      <div class="card card-glow p-5 mb-6 flex items-center gap-4">
+        <div class="w-10 h-10 rounded-lg bg-red-500/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-envelope text-red-400 text-sm"></i></div>
+        <div>
+          <div class="text-xs text-slate-500">Email</div>
+          <a href="mailto:venkatkumarr.vk99@gmail.com" class="text-sm text-slate-300 hover:text-blue-400 transition">venkatkumarr.vk99@gmail.com</a>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a href="https://www.linkedin.com/in/venkatkumarvk" target="_blank" class="social-btn linkedin"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/VK-Ant" target="_blank" class="social-btn github"><i class="fab fa-github"></i></a>
+        <a href="https://www.kaggle.com/venkatkumar001" target="_blank" class="social-btn kaggle"><i class="fab fa-kaggle"></i></a>
+        <a href="https://medium.com/@VK_Venkatkumar" target="_blank" class="social-btn medium"><i class="fab fa-medium"></i></a>
+        <a href="https://x.com/VK_VENKATKUMAR" target="_blank" class="social-btn twitter"><i class="fab fa-twitter"></i></a>
+        <a href="mailto:venkatkumarr.vk99@gmail.com" class="social-btn email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer style="background:rgba(5,8,15,0.9);border-top:1px solid rgba(255,255,255,0.05);padding:24px 0;text-align:center;">
+  <p style="color:#475569;font-size:0.8rem;">&copy; 2025 Venkatkumar Rajan. Built with passion for AI.</p>
 </footer>
 
-<!-- JavaScript -->
+<script>
+// Particle background
+(function(){
+  const canvas = document.getElementById('particles-canvas');
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+  function resize(){ canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+  for(let i=0;i<70;i++) particles.push({ x:Math.random()*window.innerWidth, y:Math.random()*window.innerHeight, r:Math.random()*1.5+0.3, vx:(Math.random()-0.5)*0.3, vy:(Math.random()-0.5)*0.3, a:Math.random()*0.5+0.1 });
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    particles.forEach(p=>{
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(96,165,250,${p.a})`; ctx.fill();
+      p.x+=p.vx; p.y+=p.vy;
+      if(p.x<0)p.x=canvas.width; if(p.x>canvas.width)p.x=0;
+      if(p.y<0)p.y=canvas.height; if(p.y>canvas.height)p.y=0;
+    });
+    // Draw faint connecting lines
+    for(let i=0;i<particles.length;i++) for(let j=i+1;j<particles.length;j++){
+      const dx=particles[i].x-particles[j].x, dy=particles[i].y-particles[j].y;
+      const dist=Math.sqrt(dx*dx+dy*dy);
+      if(dist<120){ ctx.beginPath(); ctx.moveTo(particles[i].x,particles[i].y); ctx.lineTo(particles[j].x,particles[j].y); ctx.strokeStyle=`rgba(96,165,250,${0.06*(1-dist/120)})`; ctx.stroke(); }
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
 
-<script src="script.js"></script>
+// Typed text
+(function(){
+  const texts = ['Generative AI Engineer', 'LLM Systems Architect', 'AI/ML Researcher', 'Open Source Builder'];
+  let ti=0, ci=0, deleting=false;
+  const el = document.getElementById('typed-text');
+  function type(){
+    const current = texts[ti];
+    if(!deleting){ el.textContent=current.substring(0,++ci); if(ci===current.length){ deleting=true; setTimeout(type,1800); return; } }
+    else { el.textContent=current.substring(0,--ci); if(ci===0){ deleting=false; ti=(ti+1)%texts.length; } }
+    setTimeout(type, deleting?40:80);
+  }
+  type();
+})();
 
+// Mobile menu
+document.getElementById('mobile-menu-button').addEventListener('click', function(){
+  document.getElementById('mobile-menu').classList.toggle('hidden');
+});
+document.querySelectorAll('#mobile-menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('mobile-menu').classList.add('hidden')));
+
+// Scroll fade-in
+const observer = new IntersectionObserver(entries=>entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+
+// Active nav
+window.addEventListener('scroll',()=>{
+  const sections=document.querySelectorAll('section[id]');
+  let cur='';
+  sections.forEach(s=>{ if(window.scrollY>=s.offsetTop-100) cur=s.id; });
+  document.querySelectorAll('.nav-link').forEach(a=>{ a.style.color=a.getAttribute('href')==='#'+cur?'#60a5fa':''; });
+});
+</script>
 </body>
-
-</html> 
+</html>
