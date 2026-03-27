@@ -337,3 +337,51 @@ p {
     transform: translateY(-5px);
     box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
 }
+
+/* Experience cards — stack to single column on mobile */
+@media (max-width: 768px) {
+    #experience .grid {
+        grid-template-columns: 1fr !important;
+    }
+    #experience .space-y-3 {
+        font-size: 0.8rem;
+    }
+    /* Hero text sizing on small phones */
+    #home h1 {
+        font-size: 2rem !important;
+        line-height: 1.2;
+    }
+    #home h2 {
+        font-size: 1.4rem !important;
+    }
+    /* Nav brand text on small screens */
+    nav .text-2xl {
+        font-size: 1.1rem !important;
+    }
+    /* Skills grid single column on mobile */
+    #skills .grid {
+        grid-template-columns: 1fr !important;
+    }
+    /* Education grid single column */
+    #education .grid {
+        grid-template-columns: 1fr !important;
+    }
+    /* Projects grid single column */
+    #projects .grid {
+        grid-template-columns: 1fr !important;
+    }
+    /* Footer copyright */
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Tablet: 2-col for skills, single for experience */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #experience .grid {
+        grid-template-columns: 1fr;
+    }
+    #skills .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
