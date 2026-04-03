@@ -271,14 +271,21 @@
         <div class="oss-left">
           <div class="oss-icon-wrap"><i class="fas fa-cubes"></i></div>
           <div class="oss-name">llmevalkit</div>
-          <div class="oss-badges"><span class="oss-badge oss-badge-blue">PyPI v1.0.3</span><span class="oss-badge oss-badge-green">Stable</span></div>
-          <p class="oss-desc">Universal Python library for evaluating and benchmarking LLMs across <strong style="color:#cbd5e1">15 metrics</strong> (pure math-based + LLM-as-Judge) with <strong style="color:#cbd5e1">no ground-truth requirement</strong>. Multi-provider: OpenAI, Anthropic, Azure OpenAI, Groq, Ollama. Grounded in SelfCheckGPT, G-Eval, FActScoring.</p>
-          <p class="oss-roadmap"><strong>v2.0 Roadmap:</strong> Compliance metrics for HIPAA, GDPR, India DPDP Act, EU AI Act, NIST AI RMF, CoSAI — dual-mode (regex + LLM-judgment).</p>
+          <div class="oss-badges"><span class="oss-badge oss-badge-blue">PyPI v3.0</span><span class="oss-badge oss-badge-green">Active</span></div>
+          <p class="oss-desc">
+            Universal Python library for evaluating and benchmarking LLMs across 
+            <strong style="color:#cbd5e1">36 metrics</strong> covering Quality, Compliance, Document AI, Governance, Security, and 
+            <strong style="color:#cbd5e1">Multimodal (OCR, Audio, Vision)</strong>. Works with or without APIs, supports any LLM system, and requires 
+            <strong style="color:#cbd5e1">no ground-truth labels</strong>.
+          </p>
+          <p class="oss-roadmap">
+            <strong>v3.0 Highlights:</strong> Built-in support for HIPAA, GDPR, DPDP Act, EU AI Act, NIST AI RMF, ISO 42001, SOC 2, prompt injection detection, bias analysis, and multimodal evaluation — all in one unified framework.
+          </p>
           <div class="oss-checks">
-            <div class="oss-check"><i class="fas fa-check-circle"></i> 15+ evaluation metrics</div>
+            <div class="oss-check"><i class="fas fa-check-circle"></i> 36 evaluation metrics</div>
             <div class="oss-check"><i class="fas fa-check-circle"></i> No ground truth needed</div>
-            <div class="oss-check"><i class="fas fa-check-circle"></i> Multi-provider support</div>
-            <div class="oss-check"><i class="fas fa-check-circle"></i> RAG evaluation ready</div>
+            <div class="oss-check"><i class="fas fa-check-circle"></i> Multi-provider & offline support</div>
+            <div class="oss-check"><i class="fas fa-check-circle"></i> RAG, Agents & Multimodal ready</div>
           </div>
           <div class="oss-btns">
             <a href="https://pypi.org/project/llmevalkit/" target="_blank" class="btn-amber" style="font-size:0.8rem;padding:10px 18px"><i class="fab fa-python"></i> PyPI</a>
@@ -289,10 +296,10 @@
           <div class="code-block">
             <span style="color:#f472b6">pip</span> <span style="color:#94a3b8">install</span> <span style="color:#60a5fa">llmevalkit</span><br><br>
             <span style="color:#c084fc">from</span> <span style="color:#f8fafc">llmevalkit</span> <span style="color:#c084fc">import</span> <span style="color:#4ade80">Evaluator</span><br><br>
-            <span style="color:#475569"># Start evaluating</span><br>
-            <span style="color:#f8fafc">eval</span> <span style="color:#94a3b8">=</span> <span style="color:#4ade80">Evaluator</span>(preset=<span style="color:#fbbf24">"rag"</span>)<br>
-            <span style="color:#f8fafc">results</span> <span style="color:#94a3b8">=</span> <span style="color:#f8fafc">eval</span>.run(query, output)<br><br>
-            <span style="color:#60a5fa">print</span>(<span style="color:#f8fafc">results</span>.score)
+            <span style="color:#475569"># Evaluate LLM output</span><br>
+            <span style="color:#f8fafc">evaluator</span> <span style="color:#94a3b8">=</span> <span style="color:#4ade80">Evaluator</span>(preset=<span style="color:#fbbf24">"rag"</span>)<br>
+            <span style="color:#f8fafc">result</span> <span style="color:#94a3b8">=</span> <span style="color:#f8fafc">evaluator</span>.evaluate(question, answer, context)<br><br>
+            <span style="color:#60a5fa">print</span>(<span style="color:#f8fafc">result</span>.summary())
           </div>
         </div>
       </div>
