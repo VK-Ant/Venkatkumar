@@ -295,10 +295,17 @@
         <div class="oss-right">
           <div class="code-block">
             <span style="color:#f472b6">pip</span> <span style="color:#94a3b8">install</span> <span style="color:#60a5fa">llmevalkit</span><br><br>
+
             <span style="color:#c084fc">from</span> <span style="color:#f8fafc">llmevalkit</span> <span style="color:#c084fc">import</span> <span style="color:#4ade80">Evaluator</span><br><br>
-            <span style="color:#475569"># Evaluate LLM output</span><br>
-            <span style="color:#f8fafc">evaluator</span> <span style="color:#94a3b8">=</span> <span style="color:#4ade80">Evaluator</span>(preset=<span style="color:#fbbf24">"rag"</span>)<br>
-            <span style="color:#f8fafc">result</span> <span style="color:#94a3b8">=</span> <span style="color:#f8fafc">evaluator</span>.evaluate(question, answer, context)<br><br>
+
+            <span style="color:#475569"># No API (fully local)</span><br>
+            <span style="color:#f8fafc">evaluator</span> <span style="color:#94a3b8">=</span> <span style="color:#4ade80">Evaluator</span>(provider=<span style="color:#fbbf24">"none"</span>, preset=<span style="color:#fbbf24">"rag"</span>)<br>
+            <span style="color:#f8fafc">result</span> <span style="color:#94a3b8">=</span> <span style="color:#f8fafc">evaluator</span>.evaluate(question, answer, context)<br>
+            <span style="color:#60a5fa">print</span>(<span style="color:#f8fafc">result</span>.summary())<br><br>
+
+            <span style="color:#475569"># With API (deeper evaluation)</span><br>
+            <span style="color:#f8fafc">evaluator</span> <span style="color:#94a3b8">=</span> <span style="color:#4ade80">Evaluator</span>(provider=<span style="color:#fbbf24">"groq"</span>, model=<span style="color:#fbbf24">"llama-3.3-70b-versatile"</span>, preset=<span style="color:#fbbf24">"rag"</span>)<br>
+            <span style="color:#f8fafc">result</span> <span style="color:#94a3b8">=</span> <span style="color:#f8fafc">evaluator</span>.evaluate(question, answer, context)<br>
             <span style="color:#60a5fa">print</span>(<span style="color:#f8fafc">result</span>.summary())
           </div>
         </div>
