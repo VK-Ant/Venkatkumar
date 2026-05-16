@@ -395,6 +395,138 @@
   </div>
 </section>
 
+  <section id="adaptive-intelligence" class="sec sec-alt reveal">
+  <div class="sec-inner">
+    <div class="sec-eyebrow">Open Source</div>
+    <h2 class="sec-title">adaptive-intelligence</h2>
+    <div class="sec-bar"></div>
+
+    <div class="oss-wrap">
+      <div class="oss-grid">
+
+        <div class="oss-left">
+          <div class="oss-icon-wrap">
+            <i class="fas fa-brain"></i>
+          </div>
+
+          <div class="oss-name">adaptive-intelligence</div>
+
+          <div class="oss-badges">
+            <span class="oss-badge oss-badge-blue">PyPI v1</span>
+            <span class="oss-badge oss-badge-green">Active</span>
+          </div>
+
+          <p class="oss-desc">
+            Self-improving retrieval orchestration framework that learns optimal
+            retrieval strategy for every query through
+            <strong style="color:#cbd5e1">reinforcement learning</strong>.
+            Features RL-based routing (Thompson Sampling), conditional graph activation
+            (5-signal gate), 6-metric evaluation-driven learning loop, and
+            <strong style="color:#cbd5e1">zero-configuration</strong> architecture.
+            Works with any LLM — Ollama, OpenAI, Groq, Grok, HuggingFace.
+          </p>
+
+          <p class="oss-roadmap">
+            <strong>v1 Highlights:</strong>
+            RL policy engine replaces hardcoded retrieval rules, conditional knowledge graph
+            activates only when queries need relational reasoning, every response auto-evaluated
+            on 6 metrics (faithfulness, relevance, hallucination, citations, precision, recall),
+            composite score feeds back as RL reward — system measurably improves with every query.
+          </p>
+
+          <div class="oss-checks">
+            <div class="oss-check">
+              <i class="fas fa-check-circle"></i>
+              RL-based retrieval routing (6 strategies)
+            </div>
+
+            <div class="oss-check">
+              <i class="fas fa-check-circle"></i>
+              Conditional graph activation
+            </div>
+
+            <div class="oss-check">
+              <i class="fas fa-check-circle"></i>
+              6-metric self-evaluation loop
+            </div>
+
+            <div class="oss-check">
+              <i class="fas fa-check-circle"></i>
+              10+ doc formats & any LLM provider
+            </div>
+          </div>
+
+          <div class="oss-btns">
+            <a href="https://pypi.org/project/adaptive-intelligence/" target="_blank"
+               class="btn-amber"
+               style="font-size:0.8rem;padding:10px 18px">
+              <i class="fab fa-python"></i> PyPI
+            </a>
+
+            <a href="https://github.com/VK-Ant/adaptive-intelligence" target="_blank"
+               class="btn-ghost"
+               style="font-size:0.8rem;padding:9px 16px">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="oss-right">
+          <div class="code-block">
+
+            <span style="color:#f472b6">pip</span>
+            <span style="color:#94a3b8">install</span>
+            <span style="color:#60a5fa">adaptive-intelligence</span>
+
+            <br><br>
+
+            <span style="color:#c084fc">from</span>
+            <span style="color:#f8fafc">adaptive_intelligence</span>
+            <span style="color:#c084fc">import</span>
+            <span style="color:#4ade80">AdaptiveAI</span>
+
+            <br><br>
+
+            <span style="color:#475569"># 3 lines to start. Learns from every query.</span><br>
+
+            <span style="color:#f8fafc">engine</span>
+            <span style="color:#94a3b8">=</span>
+            <span style="color:#4ade80">AdaptiveAI</span>(
+            model=<span style="color:#fbbf24">"llama-3.3-70b"</span>)<br>
+
+            <span style="color:#f8fafc">engine</span>.ingest(
+            <span style="color:#fbbf24">"./documents"</span>)<br>
+
+            <span style="color:#f8fafc">response</span>
+            <span style="color:#94a3b8">=</span>
+            <span style="color:#f8fafc">engine</span>.ask(
+            <span style="color:#fbbf24">"What are the key risks?"</span>)
+
+            <br><br>
+
+            <span style="color:#475569"># RL decided: route=graph_hybrid depth=8</span><br>
+
+            <span style="color:#60a5fa">print</span>(
+            <span style="color:#f8fafc">response</span>.confidence)
+            <span style="color:#475569">&nbsp;# 0.87</span><br>
+
+            <span style="color:#60a5fa">print</span>(
+            <span style="color:#f8fafc">response</span>.evaluation.display())
+
+            <br><br>
+
+            <span style="color:#475569"># Faithfulness: ████████████████░░ 94%</span><br>
+            <span style="color:#475569"># Relevance: &nbsp;&nbsp;&nbsp;██████████████░░░░ 88%</span><br>
+            <span style="color:#475569"># Hallucination: █░░░░░░░░░░░░░░░░░ 4%</span>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PROJECTS -->
 <section id="projects" class="sec reveal">
   <div class="sec-inner">
