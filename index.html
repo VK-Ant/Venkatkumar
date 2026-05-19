@@ -271,6 +271,7 @@
       <div class="oss-grid">
 
         <div class="oss-left">
+
           <div class="oss-icon-wrap">
             <i class="fas fa-cubes"></i>
           </div>
@@ -278,33 +279,39 @@
           <div class="oss-name">llmevalkit</div>
 
           <div class="oss-badges">
-            <span class="oss-badge oss-badge-blue">PyPI v5.0</span>
+            <span class="oss-badge oss-badge-blue">PyPI v6.0</span>
             <span class="oss-badge oss-badge-green">Active</span>
           </div>
 
           <p class="oss-desc">
             Universal Python library for evaluating and benchmarking LLM systems across
-            <strong style="color:#cbd5e1">61 metrics in 10 modules</strong> covering
+            <strong style="color:#cbd5e1">78 metrics in 13 modules</strong> covering
             Quality, Hallucination Detection, Compliance, Document AI, Governance,
             Security, Multimodal Evaluation, AI Content Detection, Observability,
-            and Anomaly Detection.
+            Anomaly Detection, Ground Truth Testing, Conversation Evaluation,
+            and Red Team Testing.
+
             Works fully offline or with any LLM provider, supports RAG pipelines,
-            AI agents, document extraction systems, and requires
-            <strong style="color:#cbd5e1">no ground-truth labels</strong>.
+            AI agents, document extraction systems, table extraction workflows,
+            and evaluation without mandatory ground-truth labels.
           </p>
 
           <p class="oss-roadmap">
-            <strong>v5.0 Highlights:</strong>
-            Added AI Content Detection, Observability, and Anomaly Detection modules,
-            expanded hallucination detection to 12 metrics, introduced auto-logging,
-            drift analysis, prompt injection detection, HIPAA/GDPR/DPDP compliance checks,
-            multimodal evaluation, and LLM-as-judge support — all in one unified framework.
+            <strong>v6.0 Highlights:</strong>
+
+            Added Ground Truth Testing, Conversation Evaluation,
+            Red Team Testing, and Table Extraction support.
+
+            Expanded the framework to 78 evaluation metrics across
+            13 modules with offline evaluation and LLM-as-judge support
+            for LLMs, RAG systems, AI agents, and governance workflows.
           </p>
 
           <div class="oss-checks">
+
             <div class="oss-check">
               <i class="fas fa-check-circle"></i>
-              61 evaluation metrics
+              78 evaluation metrics
             </div>
 
             <div class="oss-check">
@@ -314,31 +321,42 @@
 
             <div class="oss-check">
               <i class="fas fa-check-circle"></i>
-              35+ presets & 8 providers
+              13 evaluation modules
             </div>
 
             <div class="oss-check">
               <i class="fas fa-check-circle"></i>
-              RAG, Agents & Multimodal ready
+              RAG, Agents & Table workflows
             </div>
+
           </div>
 
           <div class="oss-btns">
-            <a href="https://pypi.org/project/llmevalkit/" target="_blank"
+
+            <a href="https://pypi.org/project/llmevalkit/"
+               target="_blank"
                class="btn-amber"
                style="font-size:0.8rem;padding:10px 18px">
+
               <i class="fab fa-python"></i> PyPI
+
             </a>
 
-            <a href="https://github.com/VK-Ant/llmevalkit" target="_blank"
+            <a href="https://github.com/VK-Ant/llmevalkit"
+               target="_blank"
                class="btn-ghost"
                style="font-size:0.8rem;padding:9px 16px">
+
               <i class="fab fa-github"></i> GitHub
+
             </a>
+
           </div>
+
         </div>
 
         <div class="oss-right">
+
           <div class="code-block">
 
             <span style="color:#f472b6">pip</span>
@@ -354,7 +372,9 @@
 
             <br><br>
 
-            <span style="color:#475569"># Offline evaluation (free, no API)</span><br>
+            <span style="color:#475569">
+              # Offline evaluation mode
+            </span><br>
 
             <span style="color:#f8fafc">evaluator</span>
             <span style="color:#94a3b8">=</span>
@@ -364,14 +384,17 @@
 
             <span style="color:#f8fafc">result</span>
             <span style="color:#94a3b8">=</span>
-            <span style="color:#f8fafc">evaluator</span>.evaluate(question, answer, context)<br>
+            <span style="color:#f8fafc">evaluator</span>.evaluate(
+            question, answer, context)<br>
 
             <span style="color:#60a5fa">print</span>(
             <span style="color:#f8fafc">result</span>.summary())
 
             <br><br>
 
-            <span style="color:#475569"># LLM-as-judge evaluation</span><br>
+            <span style="color:#475569">
+              # LLM-as-judge evaluation
+            </span><br>
 
             <span style="color:#f8fafc">evaluator</span>
             <span style="color:#94a3b8">=</span>
@@ -382,12 +405,14 @@
 
             <span style="color:#f8fafc">result</span>
             <span style="color:#94a3b8">=</span>
-            <span style="color:#f8fafc">evaluator</span>.evaluate(question, answer, context)<br>
+            <span style="color:#f8fafc">evaluator</span>.evaluate(
+            question, answer, context)<br>
 
             <span style="color:#60a5fa">print</span>(
             <span style="color:#f8fafc">result</span>.summary())
 
           </div>
+
         </div>
 
       </div>
