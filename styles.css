@@ -130,6 +130,11 @@ img{max-width:100%}
 .badge-arxiv{background:rgba(220,38,38,0.1);color:#fca5a5;border:1px solid rgba(220,38,38,0.2)}
 .badge-ieee{background:rgba(59,130,246,0.1);color:#93c5fd;border:1px solid rgba(59,130,246,0.2)}
 .badge-irjiet{background:rgba(16,185,129,0.1);color:#6ee7b7;border:1px solid rgba(16,185,129,0.2)}
+.badge-researchgate{
+    background:rgba(0,204,187,0.1);
+    color:#5eead4;
+    border:1px solid rgba(0,204,187,0.2);
+}
 .pub-title{font-size:0.85rem;font-weight:700;color:#e2e8f0;margin-bottom:6px}
 .pub-sub{font-size:0.72rem;color:#475569;line-height:1.5;flex:1;margin-bottom:12px}
 .pub-read{font-size:0.72rem;font-weight:600;color:#f59e0b}
