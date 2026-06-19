@@ -8,6 +8,70 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="assets/icon2.png">
+<style>
+/* ── Contact section enhancements (scoped, additive — does not touch styles.css) ── */
+.contact-wrap{max-width:920px}
+.contact-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:28px;margin-top:28px}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
+
+.contact-panel{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:16px;
+  padding:28px 26px;
+}
+.contact-panel + .contact-panel{}
+.contact-panel-title{font-size:0.78rem;letter-spacing:0.04em;text-transform:uppercase;color:#f59e0b;font-weight:700;margin-bottom:18px}
+
+.contact-rows{display:flex;flex-direction:column;gap:14px}
+.contact-row{
+  display:flex;align-items:center;gap:14px;
+  padding:12px 14px;border-radius:12px;
+  background:rgba(255,255,255,0.02);
+  border:1px solid rgba(255,255,255,0.06);
+  text-decoration:none;color:inherit;
+  transition:border-color .2s ease, background .2s ease, transform .2s ease;
+}
+.contact-row:hover{border-color:rgba(245,158,11,0.4);background:rgba(245,158,11,0.06);transform:translateX(2px)}
+.contact-row-icon{
+  width:38px;height:38px;border-radius:10px;flex:0 0 38px;
+  display:flex;align-items:center;justify-content:center;font-size:0.95rem;
+}
+.contact-row-text{display:flex;flex-direction:column;gap:2px;min-width:0}
+.contact-row-label{font-size:0.68rem;text-transform:uppercase;letter-spacing:0.04em;color:#64748b}
+.contact-row-val{font-size:0.88rem;color:#e2e8f0;font-weight:500;overflow-wrap:anywhere}
+
+.avail-pill{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.25);
+  color:#34d399;font-size:0.78rem;font-weight:600;
+  padding:7px 14px;border-radius:999px;margin-bottom:16px;
+}
+.avail-pill .dot{width:7px;height:7px;border-radius:50%;background:#34d399;box-shadow:0 0 0 3px rgba(52,211,153,0.18)}
+
+.contact-form{display:flex;flex-direction:column;gap:14px}
+.cf-row{display:flex;flex-direction:column;gap:6px}
+.cf-row label{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.04em;color:#64748b;font-weight:600}
+.cf-row input,.cf-row textarea,.cf-row select{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:10px;padding:10px 12px;
+  color:#f1f5f9;font-family:inherit;font-size:0.85rem;
+  outline:none;transition:border-color .2s ease;
+}
+.cf-row input:focus,.cf-row textarea:focus,.cf-row select:focus{border-color:#f59e0b}
+.cf-row textarea{resize:vertical;min-height:90px}
+.cf-submit{
+  margin-top:4px;
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  background:linear-gradient(135deg,#f59e0b,#d97706);
+  color:#0b1220;font-weight:700;font-size:0.85rem;
+  padding:11px 18px;border-radius:10px;border:none;cursor:pointer;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.cf-submit:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(245,158,11,0.25)}
+.cf-note{font-size:0.72rem;color:#475569;margin-top:2px}
+</style>
 </head>
 <body>
 
@@ -33,7 +97,6 @@
       <a href="#publications" class="vk-link">Publications</a>
       <a href="#certifications" class="vk-link">Certifications</a>
       <a href="#opensource" class="vk-link">Open Source</a>
-      <a href="#projects" class="vk-link">Projects</a>
       <a href="#contact" class="vk-link">Contact</a>
     </nav>
     <button class="vk-hamburger" id="ham"><i class="fas fa-bars"></i></button>
@@ -46,7 +109,6 @@
     <a href="#publications" class="vk-mobile-link">Publications</a>
     <a href="#certifications" class="vk-mobile-link">Certifications</a>
     <a href="#opensource" class="vk-mobile-link">Open Source</a>
-    <a href="#projects" class="vk-mobile-link">Projects</a>
     <a href="#contact" class="vk-mobile-link">Contact</a>
   </div>
 </div>
@@ -576,49 +638,6 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="sec reveal">
-  <div class="sec-inner">
-    <div class="sec-eyebrow">Projects</div>
-    <h2 class="sec-title">Featured Projects</h2>
-    <div class="sec-bar"></div>
-    <p style="font-size:0.82rem;color:#475569;margin-bottom:28px">Click any card to explore. For the full portfolio visit <a href="https://github.com/VK-Ant" target="_blank" style="color:#f59e0b">github.com/VK-Ant</a>.</p>
-    <div class="proj-grid">
-
-      <div class="project-card" onclick="openModal('proj1')">
-        <div class="proj-thumb-wrap"><img src="assets/p1.png" class="proj-thumb" alt="3D"><div class="proj-overlay"></div></div>
-        <div class="proj-body"><div class="proj-tags"><span class="proj-tag-pill">Generative AI</span><span class="proj-tag-pill">NeRF</span><span class="proj-tag-pill">3D Vision</span></div><div class="proj-title">Text-to-3D Reconstruction Pipeline</div><div class="proj-brief">Text → Stable Diffusion → RL enhancement → Stable Delight → 3D reconstruction. arXiv published.</div></div>
-      </div>
-
-      <div class="project-card" onclick="openModal('proj2')">
-        <div class="proj-thumb-wrap"><img src="assets/cv.png" class="proj-thumb" alt="CV"><div class="proj-overlay"></div></div>
-        <div class="proj-body"><div class="proj-tags"><span class="proj-tag-pill">Computer Vision</span><span class="proj-tag-pill">Deep Learning</span></div><div class="proj-title">Comprehensive Computer Vision Portfolio</div><div class="proj-brief">Object detection, multi-object tracking, and real-time video analysis solutions.</div></div>
-      </div>
-
-      <div class="project-card" onclick="openModal('proj3')">
-        <div class="proj-thumb-wrap"><img src="assets/p5.png" class="proj-thumb" alt="Attendance"><div class="proj-overlay"></div></div>
-        <div class="proj-body"><div class="proj-tags"><span class="proj-tag-pill">Edge AI</span><span class="proj-tag-pill">Jetson AGX</span></div><div class="proj-title">Face-Based Attendance System</div><div class="proj-brief">Facial recognition attendance system on NVIDIA Jetson AGX Xavier for field employees.</div></div>
-      </div>
-
-      <div class="project-card" onclick="openModal('proj4')">
-        <div class="proj-thumb-wrap"><img src="assets/p4.png" class="proj-thumb" alt="RAG"><div class="proj-overlay"></div></div>
-        <div class="proj-body"><div class="proj-tags"><span class="proj-tag-pill">RAG/CAG</span><span class="proj-tag-pill">Knowledge Graph</span><span class="proj-tag-pill">Multimodal</span></div><div class="proj-title">GenAI RAG/CAG + Knowledge Graph &amp; Multimodal Chatbot</div><div class="proj-brief">PDF/CSV/Vision drag-drop chatbot with multilingual text + audio. Security and drone domains.</div></div>
-      </div>
-
-      <div class="project-card" onclick="openModal('proj5')">
-        <div class="proj-thumb-wrap"><img src="assets/p2.png" class="proj-thumb" alt="Vehicle"><div class="proj-overlay"></div></div>
-        <div class="proj-body"><div class="proj-tags"><span class="proj-tag-pill">Video Analytics</span><span class="proj-tag-pill">KITTI</span></div><div class="proj-title">Advanced Video Analytics for Vehicle Behavior</div><div class="proj-brief">Vehicle behaviour analysis using KITTI dataset with advanced CV and ML.</div></div>
-      </div>
-
-      <div class="project-card" onclick="openModal('proj6')">
-        <div class="proj-thumb-wrap"><img src="assets/p3.png" class="proj-thumb" alt="Recruitment"><div class="proj-overlay"></div></div>
-        <div class="proj-body"><div class="proj-tags"><span class="proj-tag-pill">Real-time CV</span><span class="proj-tag-pill">Emotion AI</span></div><div class="proj-title">AI-Powered Real-Time Video Recruitment Tool</div><div class="proj-brief">Eye contact, emotion, age, gender recognition for data-driven AI recruitment.</div></div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
 <!-- CONTACT -->
 <section id="contact" class="sec sec-alt reveal">
   <div class="sec-inner">
@@ -626,18 +645,77 @@
     <h2 class="sec-title">Get In Touch</h2>
     <div class="sec-bar"></div>
     <div class="contact-wrap">
-      <p class="contact-desc">Always open to new opportunities, collaborations, and meaningful conversations about AI.</p>
-      <div class="contact-email">
-        <div class="contact-email-icon"><i class="fas fa-envelope"></i></div>
-        <div><div class="contact-email-label">Email</div><div class="contact-email-val">venkatkumarr.vk99@gmail.com</div></div>
-      </div>
-      <div class="contact-socials">
-        <a href="https://linkedin.com/in/venkatkumarvk" target="_blank" class="soc-btn li"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/VK-Ant" target="_blank" class="soc-btn gh"><i class="fab fa-github"></i></a>
-        <a href="https://www.kaggle.com/venkatkumar001" target="_blank" class="soc-btn kg"><i class="fab fa-kaggle"></i></a>
-        <a href="https://medium.com/@VK_Venkatkumar" target="_blank" class="soc-btn md"><i class="fab fa-medium"></i></a>
-        <a href="https://x.com/VK_VENKATKUMAR" target="_blank" class="soc-btn tw"><i class="fab fa-twitter"></i></a>
-        <a href="mailto:venkatkumarr.vk99@gmail.com" class="soc-btn em"><i class="fas fa-envelope"></i></a>
+      <div class="avail-pill"><span class="dot"></span>Open to freelance, consulting & full-time opportunities</div>
+      <p class="contact-desc">Always open to new opportunities, collaborations, and meaningful conversations about AI. Reach out directly or drop a message below — I usually reply within a day.</p>
+
+      <div class="contact-grid">
+
+        <!-- LEFT: details -->
+        <div class="contact-panel">
+          <div class="contact-panel-title">Contact Details</div>
+          <div class="contact-rows">
+            <a href="mailto:venkatkumarr.vk99@gmail.com" class="contact-row">
+              <div class="contact-row-icon" style="background:rgba(245,158,11,0.12);color:#f59e0b"><i class="fas fa-envelope"></i></div>
+              <div class="contact-row-text"><div class="contact-row-label">Email</div><div class="contact-row-val">venkatkumarr.vk99@gmail.com</div></div>
+            </a>
+            <div class="contact-row">
+              <div class="contact-row-icon" style="background:rgba(96,165,250,0.12);color:#60a5fa"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-row-text"><div class="contact-row-label">Location</div><div class="contact-row-val">Madurai, Tamil Nadu, India</div></div>
+            </div>
+            <a href="https://linkedin.com/in/venkatkumarvk" target="_blank" class="contact-row">
+              <div class="contact-row-icon" style="background:rgba(10,102,194,0.15);color:#60a5fa"><i class="fab fa-linkedin-in"></i></div>
+              <div class="contact-row-text"><div class="contact-row-label">LinkedIn</div><div class="contact-row-val">linkedin.com/in/venkatkumarvk</div></div>
+            </a>
+            <a href="https://github.com/VK-Ant" target="_blank" class="contact-row">
+              <div class="contact-row-icon" style="background:rgba(255,255,255,0.08);color:#e2e8f0"><i class="fab fa-github"></i></div>
+              <div class="contact-row-text"><div class="contact-row-label">GitHub</div><div class="contact-row-val">github.com/VK-Ant</div></div>
+            </a>
+            <a href="https://www.kaggle.com/venkatkumar001" target="_blank" class="contact-row">
+              <div class="contact-row-icon" style="background:rgba(32,156,238,0.12);color:#20beff"><i class="fab fa-kaggle"></i></div>
+              <div class="contact-row-text"><div class="contact-row-label">Kaggle</div><div class="contact-row-val">kaggle.com/venkatkumar001</div></div>
+            </a>
+            <a href="https://medium.com/@VK_Venkatkumar" target="_blank" class="contact-row">
+              <div class="contact-row-icon" style="background:rgba(255,255,255,0.08);color:#e2e8f0"><i class="fab fa-medium"></i></div>
+              <div class="contact-row-text"><div class="contact-row-label">Medium</div><div class="contact-row-val">medium.com/@VK_Venkatkumar</div></div>
+            </a>
+            <a href="https://x.com/VK_VENKATKUMAR" target="_blank" class="contact-row">
+              <div class="contact-row-icon" style="background:rgba(255,255,255,0.08);color:#e2e8f0"><i class="fab fa-twitter"></i></div>
+              <div class="contact-row-text"><div class="contact-row-label">X / Twitter</div><div class="contact-row-val">@VK_VENKATKUMAR</div></div>
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT: quick message form -->
+        <div class="contact-panel">
+          <div class="contact-panel-title">Send a Message</div>
+          <form class="contact-form" action="mailto:venkatkumarr.vk99@gmail.com" method="get" enctype="text/plain">
+            <div class="cf-row">
+              <label for="cf-name">Name</label>
+              <input id="cf-name" name="name" type="text" placeholder="Your name" required>
+            </div>
+            <div class="cf-row">
+              <label for="cf-email">Email</label>
+              <input id="cf-email" name="email" type="email" placeholder="you@example.com" required>
+            </div>
+            <div class="cf-row">
+              <label for="cf-subject">Subject</label>
+              <select id="cf-subject" name="subject">
+                <option>Freelance / Consulting</option>
+                <option>Full-time Opportunity</option>
+                <option>Collaboration</option>
+                <option>Speaking / Webinar</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="cf-row">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="body" placeholder="Tell me a bit about what you're looking for..." required></textarea>
+            </div>
+            <button type="submit" class="cf-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+            <div class="cf-note">Opens your email client with the message pre-filled — nothing is sent from this page directly.</div>
+          </form>
+        </div>
+
       </div>
     </div>
   </div>
@@ -729,12 +807,6 @@ pub5:{
   cert4:{title:'Self Driving Car Engineer',sub:'Udacity Nanodegree · January 2025',img:'assets/udacity.png',body:'Advanced Nanodegree covering the full self-driving car stack: computer vision, sensor fusion, localisation, path planning, and vehicle control. Topics include CNNs for object detection, Kalman filters, particle filters, and model predictive control.',cta:'View Credential',url:'https://www.udacity.com/certificate/e/e01bebb4-a8e7-11ef-a775-4bbfc380b4ae'},
   cert5:{title:'Reinforcement Learning Specialization',sub:'University of Alberta via Coursera · Oct 2024',img:'assets/coursera.png',body:'4-course specialization covering fundamentals of reinforcement learning: MDPs, dynamic programming, temporal-difference learning, function approximation, and policy gradient methods. Includes hands-on OpenAI Gym implementations.',cta:'View Credential',url:'https://www.coursera.org/account/accomplishments/specialization/59Y70ET9IIND'},
   cert6:{title:'Generative AI for Software Development',sub:'DeepLearning.ai Professional Certificate · Oct 2024',img:'assets/deeplearning_ai.png',body:'Professional certificate covering practical generative AI for software development: prompt engineering, LLM APIs, RAG systems, and integrating AI capabilities into production software applications.',cta:'View Credential',url:'https://www.coursera.org/account/accomplishments/professional-cert/49ZX9ZSE5980'},
-  proj1:{title:'Text-to-3D Reconstruction Pipeline',sub:'Generative AI · NeRF · Research',img:'assets/p1.png',body:'Proposed and built a fully automated pipeline transforming natural language descriptions into 3D models. Multi-stage: text → Stable Diffusion → RL-agent enhancement → Stable Delight reflection removal → image upscaling → volumetric 3D reconstruction. Targets AR/VR and digital content creation. Published on arXiv.',demo:'https://vk-ant.github.io/AHIFA3D',code:'https://github.com/VK-Ant/Text-to-3D-Reconstruction-Research',arxiv:'https://arxiv.org/abs/2503.03664v1'},
-  proj2:{title:'Comprehensive Computer Vision Portfolio',sub:'Object Detection · Tracking · Video Analysis',img:'assets/cv.png',body:'Wide-ranging computer vision solutions covering object detection (YOLO, Faster RCNN), multi-object tracking, semantic and instance segmentation, and real-time video analysis pipelines. Full collection of exploration projects showcasing CV breadth.',code:'https://github.com/VK-Ant/ComputerVision-Upgrade-Project'},
-  proj3:{title:'Face-Based Attendance System',sub:'Edge AI · NVIDIA Jetson AGX Xavier',img:'assets/p5.png',body:'Non-contact facial recognition attendance system deployed on NVIDIA Jetson AGX Xavier edge device. Uses face detection + recognition pipeline for automated attendance tracking for field employees. Real-time inference optimised for edge hardware.',code:'https://github.com/VK-Ant/AttendanceSystem-JetsonAGX',blog:'https://medium.com/@VK_Venkatkumar/face-based-attendance-system-using-nvidia-jetson-agx-xavier-device-c2502ed195d8'},
-  proj4:{title:'GenAI RAG/CAG + Knowledge Graph & Multimodal Chatbot',sub:'LangChain · RAG/CAG · Knowledge Graph · Gemini',img:'assets/p4.png',body:'Generative AI-powered RAG/CAG and knowledge graph system integrating diverse data sources for efficient information retrieval. Multimodal chatbot supporting PDF, CSV, and vision-based drag-and-drop input with multilingual text + audio responses. Applicable to real-time domains like security and drone development.',code:'https://github.com/VK-Ant/PDF_CSV_VISION_DRAGGING_BASED_CHATBOT_WITH_TRANSLATOR_AUDIO_USING_GEMINIAI'},
-  proj5:{title:'Advanced Video Analytics for Vehicle Behavior',sub:'Computer Vision · KITTI Dataset',img:'assets/p2.png',body:'Robust video analytics system for vehicle behaviour analysis using the KITTI dataset. Enhances movement prediction and behaviour analysis through advanced computer vision and machine learning. Final M.Tech dissertation project.',blog:'https://www.linkedin.com/posts/venkatkumarvk_python-pythondeveloper-deeplearning-activity-7274068051904327682-9eCJ'},
-  proj6:{title:'AI-Powered Real-Time Video Recruitment Tool',sub:'Real-time CV · Emotion AI · Analytics',img:'assets/p3.png',body:'Real-time video analysis system for eye contact, emotion, age, and gender recognition aimed at building a data-driven AI recruitment tool. Includes dynamic candidate selection and conversational AI integration for automated interview assessment.',blog:'https://www.linkedin.com/posts/venkatkumarvk_python-pythondeveloper-deeplearning-activity-7179545347281620992--sgP'},
 };
 
 // ── OPEN MODAL ──
