@@ -661,7 +661,7 @@
         <!-- RIGHT: quick message form -->
         <div class="contact-panel">
           <div class="contact-panel-title">Send a Message</div>
-          <form class="contact-form" action="mailto:venkatkumarr.vk99@gmail.com" method="get" enctype="text/plain">
+          <form class="contact-form" id="cf-form">
             <div class="cf-row">
               <label for="cf-name">Name</label>
               <input id="cf-name" name="name" type="text" placeholder="Your name" required>
@@ -672,7 +672,8 @@
             </div>
             <div class="cf-row">
               <label for="cf-subject">Subject</label>
-              <select id="cf-subject" name="subject">
+              <select id="cf-subject" name="subject" required>
+                <option value="" disabled selected>Select a topic</option>
                 <option>Freelance / Consulting</option>
                 <option>Full-time Opportunity</option>
                 <option>Collaboration</option>
@@ -803,6 +804,33 @@ function openModal(id){
 }
 
 // ── CLOSE MODAL ──
+// ── CONTACT FORM (builds mailto link manually — form-action-to-mailto is blocked by modern browsers) ──
+(function(){
+  const form = document.getElementById('cf-form');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('cf-name').value.trim();
+    const email = document.getElementById('cf-email').value.trim();
+    const subject = document.getElementById('cf-subject').value;
+    const message = document.getElementById('cf-message').value.trim();
+
+    if(!name || !email || !subject || !message){
+      alert('Please fill in your name, email, a subject, and a message.');
+      return;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!emailRegex.test(email)){
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    const mailSubject = encodeURIComponent(`${subject} — message from ${name}`);
+    const mailBody = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
+    window.location.href = `mailto:venkatkumarr.vk99@gmail.com?subject=${mailSubject}&body=${mailBody}`;
+  });
+})();
+
 document.getElementById('modal-close').addEventListener('click',closeModal);
 document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)closeModal();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
