@@ -501,47 +501,53 @@
           <div class="oss-name">adaptive-intelligence</div>
 
           <div class="oss-badges">
-            <span class="oss-badge oss-badge-blue">PyPI v1</span>
+            <span class="oss-badge oss-badge-blue">PyPI v4</span>
             <span class="oss-badge oss-badge-green">Active</span>
           </div>
 
           <p class="oss-desc">
-            Self-improving retrieval orchestration framework that learns optimal
-            retrieval strategy for every query through
-            <strong style="color:#cbd5e1">reinforcement learning</strong>.
-            Features RL-based routing (Thompson Sampling), conditional graph activation
-            (5-signal gate), 6-metric evaluation-driven learning loop, and
-            <strong style="color:#cbd5e1">zero-configuration</strong> architecture.
-            Works with any LLM — Ollama, OpenAI, Groq, Grok, HuggingFace.
+            Self-improving retrieval framework that
+            <strong style="color:#cbd5e1">learns, remembers, and connects tools</strong>.
+            Uses reinforcement learning to pick the best retrieval strategy per query type.
+            Connects external tools via MCP. Runs multi-round agentic retrieval.
+            Optimizes the entire context window. Remembers across sessions.
+            Works with any LLM — Ollama, NVIDIA NIM, Groq, Gemini, Claude, HuggingFace.
+            <strong style="color:#cbd5e1">Zero required dependencies.</strong>
           </p>
 
           <p class="oss-roadmap">
-            <strong>v1 Highlights:</strong>
-            RL policy engine replaces hardcoded retrieval rules, conditional knowledge graph
-            activates only when queries need relational reasoning, every response auto-evaluated
-            on 6 metrics (faithfulness, relevance, hallucination, citations, precision, recall),
-            composite score feeds back as RL reward — system measurably improves with every query.
+            <strong>v4 Highlights:</strong>
+            Context engineering optimizes entire context window (chunks, memory, history, tools, prompt).
+            MCP integration connects external tools and serves retrieval as MCP server.
+            Agentic workflow runs multi-round retrieval with query refinement and tool calls.
+            Persistent memory survives restart. Incremental learning continues when new documents added.
+            RL policy learns retrieval routing, tool selection, and graph activation — all through one feedback loop.
           </p>
 
           <div class="oss-checks">
             <div class="oss-check">
               <i class="fas fa-check-circle"></i>
-              RL-based retrieval routing (6 strategies)
+              Context Engineering & MCP Integration
             </div>
 
             <div class="oss-check">
               <i class="fas fa-check-circle"></i>
-              Conditional graph activation
+              Agentic multi-round retrieval
             </div>
 
             <div class="oss-check">
               <i class="fas fa-check-circle"></i>
-              6-metric self-evaluation loop
+              Persistent memory & incremental learning
             </div>
 
             <div class="oss-check">
               <i class="fas fa-check-circle"></i>
-              10+ doc formats & any LLM provider
+              RL routing, conditional graph, 6-metric evaluation
+            </div>
+
+            <div class="oss-check">
+              <i class="fas fa-check-circle"></i>
+              10+ LLM providers & vectorless mode
             </div>
           </div>
 
@@ -556,6 +562,12 @@
                class="btn-ghost"
                style="font-size:0.8rem;padding:9px 16px">
               <i class="fab fa-github"></i> GitHub
+            </a>
+
+            <a href="https://medium.com/@VK_Venkatkumar/134fa927f25a" target="_blank"
+               class="btn-ghost"
+               style="font-size:0.8rem;padding:9px 16px">
+              <i class="fab fa-medium"></i> Article
             </a>
           </div>
         </div>
@@ -580,8 +592,7 @@
 
             <span style="color:#f8fafc">engine</span>
             <span style="color:#94a3b8">=</span>
-            <span style="color:#4ade80">AdaptiveAI</span>(
-            model=<span style="color:#fbbf24">"llama-3.3-70b"</span>)<br>
+            <span style="color:#4ade80">AdaptiveAI</span>()<br>
 
             <span style="color:#f8fafc">engine</span>.ingest(
             <span style="color:#fbbf24">"./documents"</span>)<br>
@@ -593,20 +604,36 @@
 
             <br><br>
 
-            <span style="color:#475569"># RL decided: route=graph_hybrid depth=8</span><br>
+            <span style="color:#475569"># v4: Connect tools via MCP</span><br>
 
-            <span style="color:#60a5fa">print</span>(
-            <span style="color:#f8fafc">response</span>.confidence)
-            <span style="color:#475569">&nbsp;# 0.87</span><br>
+            <span style="color:#f8fafc">engine</span>.add_tool(
+            <span style="color:#fbbf24">"financial"</span>,
+            server=<span style="color:#fbbf24">"http://localhost:8081"</span>)<br>
 
-            <span style="color:#60a5fa">print</span>(
-            <span style="color:#f8fafc">response</span>.evaluation.display())
+            <br>
+
+            <span style="color:#475569"># v4: Agentic multi-round retrieval</span><br>
+
+            <span style="color:#f8fafc">response</span>
+            <span style="color:#94a3b8">=</span>
+            <span style="color:#f8fafc">engine</span>.ask(
+            <span style="color:#fbbf24">"Deep analysis"</span>,
+            mode=<span style="color:#fbbf24">"agentic"</span>)
 
             <br><br>
 
-            <span style="color:#475569"># Faithfulness: ████████████████░░ 94%</span><br>
-            <span style="color:#475569"># Relevance: &nbsp;&nbsp;&nbsp;██████████████░░░░ 88%</span><br>
-            <span style="color:#475569"># Hallucination: █░░░░░░░░░░░░░░░░░ 4%</span>
+            <span style="color:#475569"># v4: Memory persists across sessions</span><br>
+
+            <span style="color:#f8fafc">engine</span>.remember(
+            <span style="color:#fbbf24">"focus"</span>,
+            <span style="color:#fbbf24">"supply chain"</span>)<br>
+
+            <br>
+
+            <span style="color:#475569"># v4: Serve as MCP server</span><br>
+
+            <span style="color:#f8fafc">engine</span>.serve_mcp(
+            port=<span style="color:#fbbf24">8080</span>)
 
           </div>
         </div>
