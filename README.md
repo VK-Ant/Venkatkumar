@@ -1,7 +1,6 @@
 <h1 align="center">Venkatkumar R</h1>
 
 <p align="center">Applied AI Engineer and independent builder.</p>
----
 
 I turn simple ideas into real, working systems, and share what I build as open-source so others can learn from it and put it to use.
 
