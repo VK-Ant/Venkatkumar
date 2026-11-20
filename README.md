@@ -1,12 +1,6 @@
 <h1 align="center">Venkatkumar R</h1>
 
-<p align="center">Applied AI Engineer and independent builder. Founder of Arikizui Lab.</p>
-
-<p align="center">
-  <a href="https://vk-ant.github.io/Venkatkumar">Portfolio</a> ·
-  <a href="https://vk-ant.github.io/arikizui-lab/#landing">Arikizui Lab</a>
-</p>
-
+<p align="center">Applied AI Engineer and independent builder.</p>
 ---
 
 I turn simple ideas into real, working systems, and share what I build as open-source so others can learn from it and put it to use.
@@ -25,6 +19,6 @@ Source for my personal portfolio site, hosted at https://vk-ant.github.io/Venkat
 ## Connect
 
 - Portfolio: https://vk-ant.github.io/Venkatkumar
-- Arikizui Lab: https://vk-ant.github.io/arikizui-lab/#landing
+- Arikizui Lab: https://vk-ant.github.io/arikizui-lab
 - GitHub: https://github.com/VK-Ant
 - Email: venkatkumarr.vk99@gmail.com
